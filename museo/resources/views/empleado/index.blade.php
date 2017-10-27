@@ -1,8 +1,4 @@
 
-
-
-
-
 <div class="container">
 
   <div class="row">
@@ -74,4 +70,3 @@
 </div>
 
   <script src="{{URL::asset('js/sweetalert.min.js')}}"></script>
-@include('sweet::alert')
