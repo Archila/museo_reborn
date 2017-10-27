@@ -30,7 +30,7 @@
         display: flex;
         min-height: 100vh;
         flex-direction: column;
-        background: url({{URL::asset('Images/cover.jpg')}}) no-repeat fixed;
+        background: url({{URL::asset('images/cover.jpg')}}) no-repeat fixed;
   background-size: cover;
   background-position: 50%;
   -webkit-font-smoothing: antialiased;
