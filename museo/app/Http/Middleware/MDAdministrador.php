@@ -12,7 +12,7 @@ class MDAdministrador
 
     public function handle($request, Closure $next)
     {
-      $useractual=Auth::user()->id;
+      $useractual=Auth::User()->id;
       $permisos =permiso::join('users', 'permisos.iduser', '=', 'users.id')
           ->join('roles', 'permisos.idrol', '=', 'roles.id')
           ->select(
