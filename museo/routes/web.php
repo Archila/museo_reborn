@@ -25,8 +25,6 @@ Route::group(['prefix' => '/'], function () {
 
 Route::resource('/Empleado','EmpleadoController');
 
-Route::group(['middleware' => ['auth']], function () {
-
 
 
 Route::resource('boletos','BoletoController');
@@ -65,7 +63,7 @@ Route::group(['prefix' => '/asistente'], function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
-});
+
 
 
 Auth::routes();
