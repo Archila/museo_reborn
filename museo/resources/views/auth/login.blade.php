@@ -87,8 +87,8 @@ main {flex: 1 0 auto;}
 <body>
 <div class="container"><br><br><br>
   <div class="row">
-  <div class="col s2"></div>
-  <div class="col s4">
+  <div class="col s0 m2 l4"></div>
+  <div class="col s12 s10 l4">
 
       <div class="card ">
         <div class="card-content center-align black-text">
