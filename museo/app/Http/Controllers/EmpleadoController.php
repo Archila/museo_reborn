@@ -41,7 +41,7 @@ class EmpleadoController extends Controller
                   'users.id  as iduser'
                   )
           ->get();
-         return view('Empleado.index',compact('empleados'));
+         return view('empleado.index',compact('empleados'));
     }
 
     /**
@@ -52,7 +52,7 @@ class EmpleadoController extends Controller
     public function create()
     {
       $roles = role::all();
-      return view('Empleado.create',compact('roles'));
+      return view('empleado.create',compact('roles'));
 
     }
 
