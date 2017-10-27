@@ -142,7 +142,7 @@
       <?php
 
       $rol=0;
-      $irUsuario=Auth::user()->id;
+      $irUsuario=1; //Auth::user()->id;
 
       $permisos= App\permiso::join('users', 'permisos.iduser', '=', 'users.id')
             ->join('roles', 'permisos.idrol', '=', 'roles.id')
