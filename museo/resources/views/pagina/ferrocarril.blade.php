@@ -3,7 +3,7 @@
 @section('contenido')
 
 <!--========== PROMO BLOCK ==========-->
-        <div class="g-fullheight--md js__parallax-window" style="background: url(pagina/img/1920x1080/vias3.jpg) 50% 0 no-repeat fixed;">
+        <div class="g-fullheight--md js__parallax-window" style="background: url(pagina/img/1920x1080/vias3.JPG) 50% 0 no-repeat fixed;">
             <div class="g-container--md g-text-center--xs g-ver-center--md g-padding-y-150--xs g-padding-y-0--md">
                 <div class="g-margin-b-60--xs">
                     <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">Ferrocarril de los Altos</h1>
