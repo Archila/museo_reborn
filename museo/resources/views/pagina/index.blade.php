@@ -367,7 +367,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".3s">
-                                <img class="s-clients-v1" src="pagina/img/clients/xelapan.png" alt="Clients Logo">
+                                <img class="s-clients-v1" src="pagina/img/clients/xelapan.PNG" alt="Clients Logo">
                             </div>
                         </div>
                         <div class="swiper-slide">
