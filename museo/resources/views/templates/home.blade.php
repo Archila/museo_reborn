@@ -139,12 +139,47 @@
         <div class="search-results"></div>
         </div>
       </li>
+      <?php
+
+      $rol=0;
+      $irUsuario=Auth::user()->id;
+
+      $permisos= App\permiso::join('users', 'permisos.iduser', '=', 'users.id')
+            ->join('roles', 'permisos.idrol', '=', 'roles.id')
+            ->select(
+                    'roles.id as idpermiso',
+                    'roles.nombre as name'
+                    )
+            ->where('iduser', '=', $irUsuario)
+            ->get();
+            $asignado=false;
+  foreach ($permisos as $permiso)
+   {
+      if ($permiso->idpermiso==1) {
+          $rol =$permiso->idpermiso;
+          $asignado=true;
+      }
+      elseif ($permiso->idpermiso==2 && !$asignado) {
+        $rol =$permiso->idpermiso;
+        $asignado=true;
+      }
+      elseif ($permiso->idpermiso==3 && !$asignado) {
+        $rol =$permiso->idpermiso;
+        $asignado=true;
+      }
+      elseif ($permiso->idpermiso==4 && !$asignado) {
+        $rol =$permiso->idpermiso;
+        $asignado=true;
+      }
+   }
+       ?>
+
       <li class="no-padding">
         <ul class="collapsible collapsible-accordion"><br>
           <li class="bold"><a class="collapsible-header waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">account_balance</i>Piezas</a>
             <div class="collapsible-body">
             <ul>
-            @if (Auth::user()->rol === 1)
+            @if ($rol === 1)
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva Adquisicion  </a></li>
             <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
@@ -152,7 +187,7 @@
             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Genero      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisiciones     </a></li>
-            @elseif (Auth::user()->rol=== 2)
+            @elseif ($rol=== 2)
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva Adquisicion  </a></li>
             <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
@@ -160,7 +195,7 @@
             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Genero      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisiciones     </a></li>
-            @elseif (Auth::user()->rol=== 3)
+            @elseif ($rol=== 3)
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva Adquisicion  </a></li>
             <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
@@ -168,7 +203,7 @@
             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Genero      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisiciones     </a></li>
-            @elseif (Auth::user()->rol=== 4)
+            @elseif ($rol=== 4)
             @endif
             </ul>
             </div>
@@ -177,16 +212,16 @@
           <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">theaters</i>Eventos</a>
           <div class="collapsible-body">
             <ul>
-              @if (Auth::user()->rol === 1)
+              @if ($rol === 1)
               <li><a class="waves-effect waves-sbx" href="{{route('Evento.index')}}">Eventos</a></li>
               <li><a class="waves-effect waves-sbx" href="{{route('Evento.create')}}">Nuevo Evento</a></li>
-              @elseif (Auth::user()->rol=== 2)
+              @elseif ($rol=== 2)
               <li><a class="waves-effect waves-sbx" href="{{route('Evento.index')}}">Eventos</a></li>
               <li><a class="waves-effect waves-sbx" href="{{route('Evento.create')}}">Nuevo Evento</a></li>
-              @elseif (Auth::user()->rol=== 3)
+              @elseif ($rol=== 3)
               <li><a class="waves-effect waves-sbx" href="{{route('Evento.index')}}">Eventos</a></li>
               <li><a class="waves-effect waves-sbx" href="{{route('Evento.create')}}">Nuevo Evento</a></li>
-              @elseif (Auth::user()->rol=== 4)
+              @elseif ($rol=== 4)
               @endif
 
             </ul>
@@ -201,16 +236,16 @@
 
 
 
-                  @if (Auth::user()->rol === 1)
+                  @if ($rol === 1)
                   <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.index')}}">Datos</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.create')}}">Nuevo Dato curioso</a></li>
-                  @elseif (Auth::user()->rol=== 2)
+                  @elseif ($rol=== 2)
                   <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.index')}}">Datos</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.create')}}">Nuevo Dato curioso</a></li>
-                  @elseif (Auth::user()->rol=== 3)
+                  @elseif ($rol=== 3)
                   <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.index')}}">Datos</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.create')}}">Nuevo Dato curioso</a></li>
-                  @elseif (Auth::user()->rol=== 4)
+                  @elseif ($rol=== 4)
                   @endif
 
 
@@ -223,28 +258,28 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-sbx"><i class="medium material-icons blue-grey-text text-darken-4">book</i>Libros</a>
               <div class="collapsible-body">
                 <ul>
-                @if (Auth::user()->rol === 1)
+                @if ($rol === 1)
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.create')}}">Nuevo libro</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.index')}}">Listado de libros</a></li>
                     <li><a class="waves-effect waves-sbx" href="{{route('Libro.show',0)}}">Editar libros</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Editorial.index')}}">Editoriales</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Autor.index')}}">Autores</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorias</a></li>
-                  @elseif (Auth::user()->rol=== 2)
+                  @elseif ($rol=== 2)
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.create')}}">Nuevo libro</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.index')}}">Listado de libros</a></li>
                     <li><a class="waves-effect waves-sbx" href="{{route('Libro.show',0)}}">Editar libros</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Editorial.index')}}">Editoriales</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Autor.index')}}">Autores</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorias</a></li>
-                  @elseif (Auth::user()->rol=== 3)
+                  @elseif ($rol=== 3)
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.create')}}">Nuevo libro</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.index')}}">Listado de libros</a></li>
                     <li><a class="waves-effect waves-sbx" href="{{route('Libro.show',0)}}">Editar libros</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Editorial.index')}}">Editoriales</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Autor.index')}}">Autores</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorias</a></li>
-                  @elseif (Auth::user()->rol=== 4)
+                  @elseif ($rol=== 4)
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.create')}}">Nuevo libro</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.index')}}">Listado de libros</a></li>
                     <li><a class="waves-effect waves-sbx" href="{{route('Libro.show',0)}}">Editar libros</a></li>
@@ -262,16 +297,16 @@
         <li class="bold"><a class="collapsible-header waves-effect waves-sbx"><i class="medium material-icons blue-grey-text text-darken-4">account_circle</i>Personal</a>
         <div class="collapsible-body">
           <ul>
-          @if (Auth::user()->rol === 1)
+          @if ($rol === 1)
           <li><a class="waves-effect waves-sbx" href="{{route('Empleado.index')}}">Empleados     </a></li>
           <li><a class="waves-effect waves-sbx" href="{{route('Empleado.create')}}">Nuevo empleado </a></li>
-          @elseif (Auth::user()->rol=== 2)
+          @elseif ($rol=== 2)
           <li><a class="waves-effect waves-sbx" href="{{route('Empleado.index')}}">Empleados     </a></li>
           <li><a class="waves-effect waves-sbx" href="{{route('Empleado.create')}}">Nuevo empleado </a></li>
-          @elseif (Auth::user()->rol=== 3)
+          @elseif ($rol=== 3)
           <li><a class="waves-effect waves-sbx" href="{{route('Empleado.index')}}">Empleados     </a></li>
           <li><a class="waves-effect waves-sbx" href="{{route('Empleado.create')}}">Nuevo empleado </a></li>
-          @elseif (Auth::user()->rol=== 4)
+          @elseif ($rol=== 4)
                   @endif
           </ul>
         </div>
