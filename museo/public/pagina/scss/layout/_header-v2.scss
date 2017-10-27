@@ -8,7 +8,7 @@
   @include position(relative);
   z-index: $zindex-navbar;
   min-height: 3.125rem;
-  border-bottom: .0625rem solid $color-white-opacity-lighter;
+  border-bottom: .0625rem solid $color-gray-lighter;
   @include clearfix;
   @include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
 
