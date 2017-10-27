@@ -61,7 +61,7 @@
 
                 <div class="s-portfolio__item cbp-item logos motion">
                     <div class="s-portfolio__img-effect">
-                        <img src="pagina/pagina/img/ferrocarril/F1.jpg" alt="Portfolio Image">
+                        <img src="pagina/img/ferrocarril/F1.jpg" alt="Portfolio Image">
                     </div>
                     <div class="s-portfolio__caption-hover--cc">
                         <div class="g-margin-b-25--xs">
