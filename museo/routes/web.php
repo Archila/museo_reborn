@@ -24,6 +24,8 @@ Route::group(['prefix' => '/'], function () {
 
 });
 
+Route::resource('/Empleado','EmpleadoController');
+
 Route::group(['middleware' => ['auth']], function () {
 
 
@@ -44,7 +46,7 @@ Route::resource('/Categoria','CategoriaController');
 Route::resource('/Adquisiciones','AdquisicioneController');
 Route::resource('/TipoAdquisicion','TipoAdquisicioneController');
 Route::resource('/Asistente','AsistenteController');
-Route::resource('/Empleado','EmpleadoController');
+
 Route::resource('/Rol','RoleController');
 Route::resource('/PDF','PDF2Controller');
 Route::resource('/FichaInformativa','FichasInformativaController');
