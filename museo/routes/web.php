@@ -64,8 +64,8 @@ Route::group(['prefix' => '/asistente'], function () {
     Route::get('/ficha/{id}', 'AsistenteController@ficha');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
-});
 
+});
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
