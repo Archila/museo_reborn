@@ -22,10 +22,10 @@ class EmpleadoController extends Controller
 
      public function __construct()
       {
-        /*
-          $this->middleware('museo')->only('create');
+
+          $this->middleware('encmuseo')->only('create','destroy','edit','update');
           $this->middleware('secre')->only('index');
-          */
+
       }
 
 

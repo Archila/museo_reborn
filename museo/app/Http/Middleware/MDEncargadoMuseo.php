@@ -5,21 +5,14 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Response;
-use App\permiso;
 use Illuminate\Contracts\Auth\Guard;
-
+use App\permiso;
 class MDEncargadoMuseo
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
-     */
+
     public function handle($request, Closure $next)
     {
-      /*
+
       $useractual=Auth::User()->id;
       $permisos =permiso::join('users', 'permisos.iduser', '=', 'users.id')
           ->join('roles', 'permisos.idrol', '=', 'roles.id')
@@ -38,7 +31,7 @@ class MDEncargadoMuseo
         }
       }
       return new Response(view('MensajeError.Error')->with('msj','No tiene privilegios como encargado de administrar el museo'));
-      */
+
     }
 
 }

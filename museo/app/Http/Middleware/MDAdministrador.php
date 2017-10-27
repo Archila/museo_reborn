@@ -12,7 +12,7 @@ class MDAdministrador
 
     public function handle($request, Closure $next)
     {
-      /*
+
       $useractual=Auth::User()->id;
       $permisos =permiso::join('users', 'permisos.iduser', '=', 'users.id')
           ->join('roles', 'permisos.idrol', '=', 'roles.id')
@@ -31,7 +31,7 @@ class MDAdministrador
         }
       }
       return new Response(view('MensajeError.Error')->with('msj','No tiene privilegios como admin'));
-      */
+
     }
 
 }
