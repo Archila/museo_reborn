@@ -31,6 +31,7 @@ class MDSecretaria
         }
       }
       return new Response(view('MensajeError.Error')->with('msj','No tiene privilegios como Secretaria'));
+      */
     }
-    */
+
 }
