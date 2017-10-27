@@ -19,6 +19,7 @@ class MDEncargadoBiblioteca
      */
     public function handle($request, Closure $next)
     {
+      /*
       $useractual=Auth::User()->id;
       $permisos =permiso::join('users', 'permisos.iduser', '=', 'users.id')
           ->join('roles', 'permisos.idrol', '=', 'roles.id')
@@ -38,4 +39,5 @@ class MDEncargadoBiblioteca
       }
       return new Response(view('MensajeError.Error')->with('msj','No tiene privilegios como encargado del la biblioteca'));
     }
+    */
 }
