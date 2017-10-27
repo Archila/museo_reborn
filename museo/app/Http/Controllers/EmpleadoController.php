@@ -22,8 +22,10 @@ class EmpleadoController extends Controller
 
      public function __construct()
       {
+        /*
           $this->middleware('museo')->only('create');
           $this->middleware('secre')->only('index');
+          */
       }
 
 
@@ -164,7 +166,7 @@ class EmpleadoController extends Controller
 
       $roles = role::all();
 
-      return view('Empleado/edit',compact('empleado','usuario','roles','permisos'));
+      return view('empleado/edit',compact('empleado','usuario','roles','permisos'));
     }
 
     /**
