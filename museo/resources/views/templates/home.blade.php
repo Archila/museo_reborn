@@ -316,19 +316,19 @@
       <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">theaters</i>Boletos</a>
         <div class="collapsible-body">
           <ul>
-          @if (Auth::user()->rol === 1)
+          @if ($rol === 1)
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorias</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
-          @elseif (Auth::user()->rol=== 2)
+          @elseif ($rol=== 2)
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorias</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
-          @elseif (Auth::user()->rol=== 3)
+          @elseif ($rol=== 3)
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorias</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
-          @elseif (Auth::user()->rol=== 4)
+          @elseif ($rol=== 4)
           @endif
           </ul>
         </div>
@@ -338,16 +338,16 @@
       <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">insert_chart</i>Estadisticas</a>
         <div class="collapsible-body">
           <ul>
-          @if (Auth::user()->rol === 1)
+          @if ($rol === 1)
           <li><a class="waves-effect waves-sbx" href="badges.html">Ventas</a></li>
           <li><a class="waves-effect waves-sbx" href="badges.html">Piezas</a></li>
-          @elseif (Auth::user()->rol=== 2)
+          @elseif ($rol=== 2)
           <li><a class="waves-effect waves-sbx" href="badges.html">Ventas</a></li>
           <li><a class="waves-effect waves-sbx" href="badges.html">Piezas</a></li>
-          @elseif (Auth::user()->rol=== 3)
+          @elseif ($rol=== 3)
           <li><a class="waves-effect waves-sbx" href="badges.html">Ventas</a></li>
           <li><a class="waves-effect waves-sbx" href="badges.html">Piezas</a></li>
-          @elseif (Auth::user()->rol=== 4)
+          @elseif ($rol=== 4)
           @endif
 
           </ul>
