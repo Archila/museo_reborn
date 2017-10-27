@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\user;
+use App\User;
 use App\empleado;
 use App\role;
 use App\permiso;
@@ -146,7 +146,7 @@ class EmpleadoController extends Controller
      */
     public function edit($empleado)
     {
-      $usuario = user::where('empleado', $empleado)->first();
+      $usuario = User::where('empleado', $empleado)->first();
       $empleado = empleado::findOrFail($empleado);
 
       $idU=$usuario->id;
@@ -184,7 +184,7 @@ class EmpleadoController extends Controller
        try {
 
 
-           $usuario=user::findOrFail($idusuarioE);
+           $usuario=User::findOrFail($idusuarioE);
            $usuario->name=$request->usuario;
            $usuario->email=$request->email;
            $usuario->password=bcrypt($request->password);
@@ -263,7 +263,7 @@ class EmpleadoController extends Controller
 
         DB::table('permisos')->where('iduser', '=', $idusuario)->delete();
 
-        $user = user::findOrFail($idusuario);
+        $user = User::findOrFail($idusuario);
         $user->delete();
 
         $empleadod = empleado::findOrFail($empleado);
