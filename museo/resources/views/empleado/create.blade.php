@@ -74,7 +74,7 @@
 
 
     <script src="{{URL::asset('js/sweetalert.min.js')}}"></script>
-    @include('sweet::alert')
+    <!--@include('sweet::alert')-->
     <div id="modal1" class="modal">
       <div class="modal-content">
         <h4 class="center-align">Nuevo Rol</h4>
