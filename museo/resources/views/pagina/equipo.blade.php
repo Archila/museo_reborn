@@ -35,7 +35,7 @@
                         <div class="col-xs-6 js__masonry-sizer"></div>
                         <div class="col-xs-8 g-full-width--xs g-margin-b-10--xs g-margin-b-0--sm js__masonry-item">
                             <div class="wow fadeInDown" data-wow-duration=".3" data-wow-delay=".1s">
-                                <img class="img-responsive" src="pagina/img/400x400/sbx.png" alt="Image">
+                                <img class="img-responsive" src="pagina/img/400x400/SBX.png" alt="Image">
                             </div>
                         </div>
                         <div class="col-xs-6 g-full-width--xs g-margin-b-10--xs js__masonry-item">
@@ -158,7 +158,7 @@
           </div>
           <div class="col-sm-1"></div>
           <div class="col-sm-5 g-hor-centered-row__col">
-              <img class="img-responsive" src="pagina/img/400x400/Pasos.png" alt="Mockup Image">
+              <img class="img-responsive" src="pagina/img/400x400/Pasos.PNG" alt="Mockup Image">
           </div>
       </div>
       <div class="row g-hor-centered-row--md g-row-col--5">
