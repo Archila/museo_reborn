@@ -1,5 +1,3 @@
-@extends('templates.home')
-@section('content')
 
 <div class="container ">
 
@@ -8,12 +6,12 @@
       <h5 class="light">Nuevo Empleado</h5>
     </div>
   </div>
-  
+
   <div class="card z-depth-4">
     <div class="card-image">
 	    <a href="{{route('Empleado.index')}}" class="btn-floating halfway-fab tooltipped waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Regresar"><i class="material-icons">arrow_back</i></a>
     </div>
-      <div class="container">  
+      <div class="container">
         <div class="row">
         <br>
           <form class="col s12" method="POST" action="{{route('Empleado.store')}}" id="formValidate">
@@ -73,14 +71,14 @@
         </div>
       </div>
     </div>
-    
+
 
     <script src="{{URL::asset('js/sweetalert.min.js')}}"></script>
     @include('sweet::alert')
     <div id="modal1" class="modal">
       <div class="modal-content">
         <h4 class="center-align">Nuevo Rol</h4>
-    
+
         <form class="col s12" method="POST" action="{{route('Rol.store')}}" id="formValidate">
           {{ csrf_field() }}
           {{ method_field('POST') }}
@@ -101,5 +99,4 @@
           </div>
         </form>
       </div>
-    </div>    
-@endsection
+    </div>
