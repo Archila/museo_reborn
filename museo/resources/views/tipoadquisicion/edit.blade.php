@@ -15,8 +15,9 @@
         <form method="POST" action="{{route('TipoAdquisicion.update',$tpadquisicion->id)}}" id="formValidate">
          {{ csrf_field() }}
          {{ method_field('PUT') }}
+         <h5></h5>
           <div class="row">
-            <div class="input-field col s5 offset-s3">
+            <div class="input-field col s5 l5 offset-s3">
               <i class="material-icons prefix">perm_identity</i>
               <input value="{{$tpadquisicion->nombre}}" id="icon_prefix" type="text"  name="uname" class="required">
               <label for="icon_prefix">Nombre</label>

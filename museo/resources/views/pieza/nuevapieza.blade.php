@@ -77,7 +77,7 @@
 
     <div id="test2" class="col s12 "><!-- FICHA INFORMATIVA -->
       <br><br>
-      <div class="input-field col s3">
+      <div class="input-field col s3 l4">
         <i class="material-icons prefix">date_range</i>
         <input id="" name="epoca" type="text" class="cnumber">
         @if ($errors->has('epoca'))
@@ -164,7 +164,7 @@
     <div id="test5" class="col s12 "><!-- ADQUISICION -->
      <div class="input-field col s12">
        <select  onchange="selecionado()" name="tipoadquisicion" id="tipoadquisicion">
-         <option value="" disabled selected>Tipo de Asquisicion</option>
+         <option value="" disabled selected>Tipo de Adquisición</option>
           @foreach ($tipoadquisiciones as $tipoadquisicione)
           <option value="{{$tipoadquisicione->id}}">{{ $tipoadquisicione->nombre}}</option>
           @endforeach
@@ -172,7 +172,7 @@
         @if ($errors->has('tipoadquisicion'))
         <div id="uname-error" class="error">{{$errors->First('tipoadquisicion')}}</div>
         @endif
-        <label>Seleccion Tipo de aquisicion</label>
+        <label>Seleccion Tipo de adquisición</label>
       </div>
         <!-- Radio button Nuevo donante SI/NO  -->
         <p id="p" style="display:none;" >Nuevo Donante?
