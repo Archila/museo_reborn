@@ -10,14 +10,14 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="theme-color" content="#1b5a6b">
-    
+
     <link rel="icon" href="{{URL::asset('Images/mphoto.png')}}" sizes="32x32">
     <link href="{{URL::asset('css/prism.css')}}" rel="stylesheet">
     <link href="{{URL::asset('css/sweetalert.css')}}" rel="stylesheet">
     <link href="{{URL::asset('css/ghpages-materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <style media="screen">
       * {
   -moz-box-sizing: border-box;
@@ -30,12 +30,12 @@
         display: flex;
         min-height: 100vh;
         flex-direction: column;
-        background: url({{URL::asset('Images/cover.jpg')}}) no-repeat fixed;
+        background: url({{URL::asset('images/cover.jpg')}}) no-repeat fixed;
   background-size: cover;
   background-position: 50%;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-        
+
       }
       body .menu {
   position: absolute;
@@ -87,9 +87,9 @@ main {flex: 1 0 auto;}
 <body>
 <div class="container"><br><br><br>
   <div class="row">
-  <div class="col s4"></div>
-  <div class="col s4">
-      
+  <div class="col s0 m2 l4"></div>
+  <div class="col s12 s10 l4">
+
       <div class="card ">
         <div class="card-content center-align black-text">
           <i class="large material-icons black-text">account_balance</i>
@@ -104,22 +104,22 @@ main {flex: 1 0 auto;}
                 <input id="name" type="text" name="name" class="validate black-text" autocomplete="off">
                 <label for="email" class="blue-grey-text text-darken-3">Usuario</label>
               </div>
-          
+
               <div class="input-field col s12">
                 <input id="password" type="password" name="password" class="validate">
                 <label class="blue-grey-text text-darken-3" for="password">Password</label>
               </div>
-          
+
               <div class="input-field col s12">
                 <button class="col s12 btn waves-effect waves-light" type="submit" name="action">Ingresar</button>
               </div>
-                
+
             </form>
           </div>
-        </div>   
+        </div>
       </div>
     </div>
-    
+
     <div class="col s4"></div>
 
   </div>
@@ -136,6 +136,6 @@ main {flex: 1 0 auto;}
     <script src="{{URL::asset('js/init.js')}}"></script>
 </body>
     <!--  Scripts-->
-   
+
 
 </html>
