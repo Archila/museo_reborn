@@ -44,10 +44,10 @@
                         <img class="img-responsive g-width-100-percent--xs" src="pagina/img/400x400/ivan.jpg" alt="Image">
                         <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
                             <div class="g-bg-color--primary g-padding-x-15--xs g-padding-y-10--xs g-margin-b-20--xs">
-                                <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Esteban Archila Iván</h4>
+                                <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Esteban Archila, Iván</h4>
                             </div>
                             <p class="g-font-weight--400">Originario de Quetzaltenango. Se graduó de Bachiller y Perito en Radio y Televisión en el Instituto Técnico Industrial de Quetzaltenango.
-                              Actualmente, se encuentra cursando el 7mo semestre de la carrera de Ingeniería en Ciencias y Sistemas en la Universidad Mesoamericana y en el 9no semestre de la carrera de Ingeniería Mecánica Industrial de la Universidad de San Carlos de Guatemala.
+                              Actualmente, se encuentra cursando el 8vo semestre de la carrera de Ingeniería en Ciencias y Sistemas en la Universidad Mesoamericana y en el 10mo semestre de la carrera de Ingeniería Mecánica Industrial de la Universidad de San Carlos de Guatemala.
                             </p>
                         </div>
                     </div>
