@@ -29,7 +29,7 @@
           </thead>
 
           <tbody>
-            <?php $roles=""; ?>
+            <?php $roles=","; ?>
             @foreach($empleados as $empleado)
               <tr>
                 <td>{{$empleado->nombre}}</td>
@@ -44,7 +44,7 @@
                       ->get();
 
                       foreach ($permisos as $permiso) {
-                      $roles=$roles."".$permiso->name.",";
+                      $roles=$permiso->name."".$roles;
                       }
                       echo $roles;
                       $roles="";
