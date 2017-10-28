@@ -3,7 +3,7 @@
 @section('contenido')
         <style type="text/css">
 .bgimg {
-  background-image: url('{{URL::asset("Images/libro2.png")}}');
+  background-image: url('{{URL::asset("images/libro2.png")}}');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
