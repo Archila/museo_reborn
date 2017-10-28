@@ -1,5 +1,5 @@
 @extends('templates.home')
-  
+
   @section('content')
     <div class="container">
 
@@ -31,7 +31,7 @@
                   <td>
                     <a class="tooltipped  btn-floating btn-small waves-effect waves-light light-blue darken-4" data-position="bottom"  href="{{route('DatoCurioso.edit',$dato->id)}}" data-delay="50" data-tooltip="Editar tipo"><i class="material-icons">edit</i></a>
                     <a class="tooltipped  btn-floating btn-small waves-effect waves-light red modal-trigger"   data-position="bottom" href="#modal{{$dato->id}}" data-delay="50" data-tooltip="Eliminar tipo"><i class="material-icons">delete</i></a>
-              
+
                   </td>
                   <form action="{{route('DatoCurioso.destroy',$dato->id)}}" method="POST">
               {{csrf_field()}}
@@ -48,13 +48,13 @@
                     </div>
                   </div>
             </form>
-                </tr> 
-                @endforeach 
+                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
         </div>
-      </div>        
+      </div>
 
     </div>
 
@@ -70,11 +70,11 @@
           <div class="modal-content">
             <h4 class="center-align">Registro de Dato Curiso</h4>
             <div class="row">
-            
+
               <div class="input-field col s12">
                 <i class="material-icons prefix">bookmark_border</i>
-                <input id="icon_prefix" type="text"  name="dato" class="required" autocomplete="off" data-length="50"  >
-                <label for="icon_prefix">Dato</label>
+                <input type="text" name="dato" class="required"  data-length="50"  >
+                <label for="dato">Dato</label>
               </div>
               <div class="input-field col s12 center">
                 <button class="btn  waves-effect waves-light  light-blue darken-4" type="submit" name="action">Enviar</button>
@@ -82,7 +82,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <a class="modal-action modal-close waves-effect waves-blue btn-flat ">Cancelar</a>  
+            <a class="modal-action modal-close waves-effect waves-blue btn-flat ">Cancelar</a>
           </div>
       </div>
   </form>
