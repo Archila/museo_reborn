@@ -7,7 +7,7 @@
 
 		<div class="center"><br>
 
-			<h5 class="light">Edicion de Tarifas</h5>
+			<h5 class="light">Edición de Tarifas</h5>
 
 		</div>
 

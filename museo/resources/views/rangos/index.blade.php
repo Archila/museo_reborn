@@ -18,10 +18,10 @@
         <table class="centered highlight responsive-table">
           <thead class="light-blue darken-1 white-text">
             <tr>
-              <th>Codigo</th>
-              <th>nombre</th>
-              <th>Fecha Creacion</th>
-              <th>Actualizacion</th>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Fecha de creación</th>
+              <th>Actualización</th>
               <th></th>
             </tr>
           </thead>
@@ -86,6 +86,6 @@
 @section('sections')
   <div class="center">
     <i class="medium material-icons">account_balance</i>
-    <p><strong>Rangos:</strong><br> Clase que resulta de una clasificación de personas según el criterio en administracion.</p>
+    <p><strong>Rangos:</strong><br> Clase que resulta de una clasificación de personas según el criterio en administración.</p>
   </div>
 @endsection

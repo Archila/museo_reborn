@@ -4,7 +4,7 @@
 <div class="container">
 <div class="row">
     <div class="left"><br>
-      <h5 class="light">Categoria de Visitantes</h5>
+      <h5 class="light">Categoría de Visitantes</h5>
     </div>
     <div class="right"><br>
       <a href="#modal2" class="modal-trigger btn-floating tooltipped btn-large waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Agregar"><i class="material-icons">add</i></a>
@@ -18,10 +18,10 @@
       <table class="centered highlight responsive-table">
         <thead class="blue accent-3 white-text">
           <tr>
-          <th>Codigo</th>
-          <th>nombre</th>
-          <th>Fecha Creacion</th>
-          <th>Actualizacion</th>
+          <th>Código</th>
+          <th>Nombre</th>
+          <th>Fecha de creación</th>
+          <th>Actualización</th>
           <th></th>
           </tr>
         </thead>
@@ -41,7 +41,7 @@
                     <input type="hidden" name="_method" value="DELETE">
                     <div id="modal1" class="modal">
                       <div class="modal-content">
-                        <h4 class="center-align">Desea eliminar la categoria ?</h4>
+                        <h4 class="center-align">Desea eliminar la categoría ?</h4>
                         <center> <i class="center-align medium material-icons">error_outline</i></center>
                         <p class="center-align">Nota: los cambios no pueden deshacerse </p>
                       </div>

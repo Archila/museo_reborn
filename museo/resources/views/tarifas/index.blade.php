@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  
+
   <div class="row">
     <div class="left"><br>
       <h5 class="light text-light-blue text-darken-4">Tarifas</h5>
@@ -11,14 +11,14 @@
       <a href="{{route('tarifas.create')}}" class="modal-trigger btn-floating tooltipped btn-large waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Agregar"><i class="material-icons">add</i></a>
     </div>
   </div>
-  
+
   <div class="row">
     <div class="col s12">
       <div class="card hoverable">
         <table class="bordered centered responsive-table">
           <thead class="light-blue darken-1 white-text">
             <tr>
-              <th>Codigo</th>
+              <th>Código</th>
               <th>Estado</th>
               <th>Monto</th>
               <th>Inicio</th>
@@ -28,7 +28,7 @@
               <th></th>
             </tr>
           </thead>
-          
+
           <tbody>
             @foreach ($result as $r)
               <tr>
@@ -45,10 +45,10 @@
                 <td>{{$r->rangoa}}</td>
                 <td>{{$r->visitante}}</td>
                 <td>
-                
+
                 <a class="tooltipped  btn-floating btn-small waves-effect waves-light light-blue darken-4" data-position="bottom"  href="{{route('tarifas.edit',$r->id)}}" data-delay="50" data-tooltip="Editar tipo"><i class="material-icons">edit</i></a>
                 <a class="tooltipped  btn-floating btn-small waves-effect waves-light red modal-trigger"   data-position="bottom" href="#modal1" data-delay="50" data-tooltip="Eliminar tipo"><i class="material-icons">delete</i></a>
-              
+
                 </td>
               <form action="{{route('tarifas.destroy',$r->id)}}" method="POST">
                 {{csrf_field()}}
