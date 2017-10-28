@@ -1244,7 +1244,7 @@ a {
   position: relative;
   z-index: 1000;
   min-height: 3.125rem;
-  border-bottom: 0.0625rem solid #222324;
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.3);
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
@@ -1255,7 +1255,7 @@ a {
     clear: both; }
   @media (max-width: 61.9em) {
     .s-header-v2__navbar {
-      background: #c54041;
+      background: #222324;
       box-shadow: 0 0 0.9375rem 0.25rem rgba(34, 35, 36, 0.05); } }
 
 /* Navbar Row

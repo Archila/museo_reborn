@@ -8,12 +8,12 @@
   @include position(relative);
   z-index: $zindex-navbar;
   min-height: 3.125rem;
-  border-bottom: .0625rem solid $color-dark;
+  border-bottom: .0625rem solid $color-white-opacity-lighter;
   @include clearfix;
   @include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
 
   @include media-breakpoint-down(md) {
-  	background: $color-red;
+  	background: $color-dark;
     box-shadow: 0 0 .9375rem .25rem rgba($color-dark, .05);
   }
 }
