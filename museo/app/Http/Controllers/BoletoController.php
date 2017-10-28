@@ -55,7 +55,7 @@ class BoletoController extends Controller
 
         if($request->ajax()){
             $boleto = new boleto;
-            $boleto->fecha  = date ('d-m-Y');
+            $boleto->fecha  = date ('Y-m-d');
             $boleto->total  = $request->total;
             $totales = $request->total;
             $boleto->tarifa = $request->tarifa;
