@@ -127,14 +127,14 @@ class LibroController extends Controller
             <div class="col s6 m4 l2">
               <div class="card bgimg z-depth-5">
                 <div class="card-content white-text">
-                  <p class="card-title center">'.$donantes->nombre.'</p>
-                  <p class="medium center"><a href="'.$donantes->idaut.'">'.$donantes->aut.'</a></p>
+                  <p class="card-title center medium">'.$donantes->nombre.'</p>
+                  <p class="medium center">'.$donantes->aut.'</p>
                   <div class="divider"></div>
                   <p class="light left">Edicion: </p><p class="medium">'.$donantes->edicion.'</p>
                   <p class="light left">Año: </p><p class="medium">'.$donantes->anio.'</p>
-                  <p class="light left">Páginas:</p><p class="medium ">'.$donantes->paginas.'</p>
-                  <span class="light">Editorial: </span> <a href="{{route("Editorial.show",'.$donantes->idedit.')}}">'.$donantes->edit.'</a><br>
-                  <span class="light">Categoria: </span> <a href="{{route("Categoria.show",'.$donantes->idcat.')}}">'.$donantes->cat.'</a>
+                  <p class="light left">Páginas:</p><p class="medium">'.$donantes->paginas.'</p>
+                  <p class="light left">Editorial:</p> <p class="medium">'.$donantes->edit.'</p>
+                  <p class="light left ">Categoria: </p> <p class="medium">'.$donantes->cat.'</p>
                 </div>
               </div>
            </div>';
