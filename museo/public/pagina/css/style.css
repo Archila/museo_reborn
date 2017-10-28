@@ -1255,7 +1255,7 @@ a {
     clear: both; }
   @media (max-width: 61.9em) {
     .s-header-v2__navbar {
-      background: #fff;
+      background: #242526;
       box-shadow: 0 0 0.9375rem 0.25rem rgba(34, 35, 36, 0.05); } }
 
 /* Navbar Row
