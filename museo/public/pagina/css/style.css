@@ -1399,7 +1399,7 @@ a {
     clear: both; }
   @media (max-width: 61.9em) {
     .s-header-v2__nav {
-      background: #cecece;
+      background: #242526;
       padding: 1.25rem 0; } }
   .s-header-v2__nav-item {
     position: relative;
@@ -1489,7 +1489,7 @@ a {
 
   /* Toggle */
   .s-header__shrink .s-header-v2__toggle-icon-bar--white, .s-header__shrink .s-header-v2__toggle-icon-bar--white:before, .s-header__shrink .s-header-v2__toggle-icon-bar--white:after {
-    background: #222324; }
+    background: #fff; }
 
   /* Logo */
   .s-header__shrink .s-header-v2__logo-img--default {

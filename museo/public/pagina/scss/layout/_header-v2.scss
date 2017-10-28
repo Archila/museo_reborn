@@ -198,7 +198,7 @@
   @include clearfix;
 
   @include media-breakpoint-down(md) {
-		background: $color-gray-light;
+		background: $color-dark-light;
     padding: 1.25rem 0;
   }
 
@@ -327,7 +327,7 @@
 	.s-header__shrink {
 		.s-header-v2__toggle-icon-bar--white {
 		  @include plain-before-after {
-		    background: $color-dark;
+		    background: $color-white;
 		  }
 		}
 	}
