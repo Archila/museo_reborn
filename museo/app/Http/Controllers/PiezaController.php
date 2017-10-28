@@ -41,20 +41,20 @@ class PiezaController extends Controller
       $a="SBX0";
         $last_piece= pieza::orderBy('id','DESC')->take(1)->get();
         $r =$last_piece;
-        
+
       try
       {
         foreach ($r as $tp)
         {$a= $tp->cod_pieza;}
       }
-        
+
       catch (\Exception $e)
       {$a="SBX0";}
-        
+
         list($asoc, $num) = explode("X", $a); //separa las letras de los numeros
         $last= $num; //contiene la ultima numeración
         $newcod=$last+1; //Numeración de nueva pieza
-        
+
         $tipo_p = tipo_pieza::all();
         $genero= genero::all();
         $tipoadquisiciones =tipo_adquisicione::all();
@@ -62,7 +62,7 @@ class PiezaController extends Controller
         ->with('newcod',$newcod)->with('tipoadquisiciones', $tipoadquisiciones);
     }
 
-    
+
     public function store(Request $request)
     {
       $this->validate($request, [
@@ -71,17 +71,17 @@ class PiezaController extends Controller
         'idgenero' => 'required',
         'tipoadquisicion' => 'required',
        ]);
- 
- 
+
+
        $mes="Ingreso";
        DB::beginTransaction(); //Inicia la transacción
               try {  //Try general por si sucede un problema al insertar la nueva pieza
- 
+
                 //Si no hay epoca lo deja como SF
                 $epoca='s.f';
                 if ($request->epoca != null) {
                    $epoca=$request->epoca; }
- 
+
                 //FOTOGRAFIA -Se mostrara en la página-
                 //Verifica si no se selecciono una foto asigna una por defecto
                 if ($request->file('foto')==null) {
@@ -91,7 +91,7 @@ class PiezaController extends Controller
                   $ruta=$request->file('foto')->store('img_navegador');
                   $ruta="multimedia/".$ruta;
                 }
- 
+
                 //MULTIMEDIA -Se mostrara en la tablet-
                  //Verifica si no se selecciono multimedia lo asigna como nulo
                 if ($request->file('media')==null) {
@@ -101,7 +101,7 @@ class PiezaController extends Controller
                   $multimedia=$request->file('media')->store('img_tablet');
                   $multimedia="multimedia/".$multimedia;
                 }
- 
+
                 //Ingresa una nueva pieza
                 $pieza = new pieza; //Inicializa una nueva instancia del model pieza
                 $pieza->cod_pieza = $request->codigopieza; //signa los nuevos datos
@@ -109,7 +109,7 @@ class PiezaController extends Controller
                 $pieza->fotografia = $ruta;
                 $pieza->id_tipopieza = $request->idtipo;
                 $pieza->save();
- 
+
                 //Obtiene el ID de la pieza ingresada
                 $id="0"; //inicializa la variable id con valor cero
                 $last_piece= pieza::orderBy('id','DESC')->take(1)->get(); //Obtiene la ultima pieza ingresada
@@ -123,7 +123,7 @@ class PiezaController extends Controller
                     {
                         $id="0";
                     }
- 
+
                //FICHA INFORMATIVA
                 $fh = new fichas_informativa; //Inicializa una nueva instancia del modelo fichas_informativa
                 $fh->historia = $request->historia; //asigna los nuevos valores
@@ -132,7 +132,7 @@ class PiezaController extends Controller
                 $fh->epoca = $epoca;
                 $fh->id_pieza = $id; //ID de la pieza ingresada arriba
                 $fh->save();
- 
+
                 //FICHA TECNNICA
                 $ft= new fichas_tecnica; //Inicializa una nueva instancia del modelo fichas_tecnica
                 $ft->peso=$request->peso; //asigna los nuevos valores
@@ -141,16 +141,16 @@ class PiezaController extends Controller
                 $ft->genero=$request->idgenero;
                 $ft->idpieza=$id; //ID de la pieza ingresada arriba
                 $ft->save();
- 
+
                 //ADQUISICION
                 $user = Auth::user(); //Exrae los datos del empleado logeado actualmente
                 $idemp=$user->empleado; //extrae el id del empleado
                 $date = date ('Y-m-d'); //Fecha actual del sistema
- 
+
                  //Verifica que tipo de adquisicion se selecciono
                  $tipoadquisicion = tipo_adquisicione::findOrFail($request->tipoadquisicion);
                  $tipo=$tipoadquisicion->nombre;
- 
+
                  //Si se selecciono que la pieza sera heredada asigna un donante por defecto
                  //Este donante sera el mismo museo
                  if ($tipo=="Heredado")
@@ -163,12 +163,12 @@ class PiezaController extends Controller
                    $adquisicione->idempleado = $idemp; //Empleado actual logeado
                    $adquisicione->idtipoad = $request->tipoadquisicion;
                    $adquisicione->save();
- 
+
                  }
                  else //Si el tipo de adquisision no es Heredado
                  {
                    $sino=$request->grp1; //radio buton si es nuevo donante o no
- 
+
                      if ($sino=="si") //Si es un nuevo donante lo inserta
                      {
                        $donante = new Donante; //Inicializa una nueva instancia del modelo Donante
@@ -184,7 +184,7 @@ class PiezaController extends Controller
                                  ->get();
                        $idDonG=$donanteG[0]; //Extrae solo el campo del ID
                        $resultadoCidDon = intval(preg_replace('/[^0-9]+/', '', $idDonG), 10); //extrae el ID del nuevo donante
- 
+
                        $adquisicione = new adquisicione; //Inicializa una nueva instancia del modelo adquisicione
                        $adquisicione->fecha = $date; //fecha atual del sistema
                        $adquisicione->idpieza =$id ; //ID de la nueva pieza
@@ -212,9 +212,9 @@ class PiezaController extends Controller
                       DB::rollback(); //si hubo un fallo retrocede toda la transaccion
                       $mes=$e->getMessage(); //Extrae el mensaje de error
               }
- 
+
               DB::commit(); //Realiza el commit de la transaccion
- 
+
               if ($mes!="Ingreso correcto") { //Si es el mensaje retornado no es igual a ingreso correcto muestra un manesaje de error
                 alert()->error(''.$mes.'', 'Error');
                 return redirect('Pieza/create');
@@ -225,7 +225,7 @@ class PiezaController extends Controller
               }
     }
 
-  
+
     public function show()
     {
       $pieza = pieza::all();
@@ -249,9 +249,8 @@ class PiezaController extends Controller
         'nombrepieza' => 'required',
         'idtipo' => 'required',
         'idgenero' => 'required',
-        'tipoadquisicion' => 'required',
        ]);
- 
+
          //Modificar imagen
          $ruta=$request->nfoto; //Ruta actual de la foto que fue enviada desde el formulario por un input oculto
          if (isset($request->foto)) { //Si se selecciono una imagen
@@ -259,7 +258,7 @@ class PiezaController extends Controller
            $ruta="multimedia/".$ruta; //Crea la ruta
            File::delete($request->nfoto); //Elimina la fotografia actual
          }
- 
+
          //Verificar si se activa o desactiva la pieza
         $act=0;
         if ($request->si == true ) { //si el checkbox esta checkeado
@@ -268,16 +267,16 @@ class PiezaController extends Controller
         elseif($request->si == false){ //si el checkbox esta descheckeado
             $act=0; //pieza desactivada
         }
- 
+
         //Actualiza los datos de la ficha informativa donde el id del apieza sea igual al ID $pieza
          $fi= fichas_informativa::where('id_pieza', $pieza)
            ->update(['epoca' => $request->epoca,'historia' => $request->historia]);
- 
+
            //Actualiza los datos de la ficha tecnica donde el id del apieza sea igual al ID $pieza
          $ft= fichas_tecnica::where('idpieza', $pieza)
            ->update(['peso' => $request->peso,'altura' => $request->altura,
              'ancho' => $request->ancho,'genero' => $request->idgenero]);
- 
+
              //Actualiza los campos de la pieza
          $pieza = pieza::find($pieza);
          $pieza->nombre =$request->nombrepieza;
@@ -285,7 +284,7 @@ class PiezaController extends Controller
          $pieza->activo =$act;
          $pieza->fotografia =$ruta;
          $pieza->save();
- 
+
          alert()-> success('Se actualizaron los campos','pieza');
          return redirect('Pieza/list');
     }
