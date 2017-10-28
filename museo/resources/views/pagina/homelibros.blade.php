@@ -114,7 +114,7 @@
         <div class="row">
           <div class="col l4 s12">
             <h5 class="white-text"><i class="material-icons">pin_drop</i>Ubicación</h5>
-            <p class="grey-text text-lighten-4">Segundo Nivel, Centro Interculltural</p>
+            <p class="grey-text text-lighten-4">21 Avenida. Segundo Nivel, Centro Interculltural</p>
           </div>
           <div class="col l4 s12">
             <h5 class="white-text"><i class="material-icons">alarm</i>Horario</h5>
