@@ -55,7 +55,7 @@ class BoletoController extends Controller
 
         if($request->ajax()){
             $boleto = new boleto;
-            $boleto->fecha  = $request->fecha;
+            $boleto->fecha  = date ('d-m-Y');
             $boleto->total  = $request->total;
             $totales = $request->total;
             $boleto->tarifa = $request->tarifa;
@@ -88,7 +88,7 @@ class BoletoController extends Controller
 
 
                 //$img = EscposImage::load("../public/images/LogoBoleto.png");
-                $printer -> graphics($img);
+                //$printer -> graphics($img);
                 $printer -> setJustification(Printer::JUSTIFY_CENTER);
                 $printer -> text("\n".$fecha."\n");
                 $printer -> text("_______________________________________\n");
