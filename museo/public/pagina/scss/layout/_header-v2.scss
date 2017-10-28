@@ -13,7 +13,7 @@
   @include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
 
   @include media-breakpoint-down(md) {
-  	background: $color-dark;
+  	background: $color-dark-light;
     box-shadow: 0 0 .9375rem .25rem rgba($color-dark, .05);
   }
 }
@@ -198,7 +198,7 @@
   @include clearfix;
 
   @include media-breakpoint-down(md) {
-		background: $color-white;
+		background: $color-gray-light;
     padding: 1.25rem 0;
   }
 
