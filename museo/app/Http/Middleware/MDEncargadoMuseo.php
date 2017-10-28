@@ -30,7 +30,7 @@ class MDEncargadoMuseo
           return $next($request);
         }
       }
-      return new Response(view('MensajeError.Error')->with('msj','No tiene privilegios como encargado de administrar el museo'));
+      return new Response(view('mensajeError.Error')->with('msj','No tiene privilegios como encargado de administrar el museo'));
 
     }
 
