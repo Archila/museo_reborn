@@ -20,7 +20,7 @@
                {!! csrf_field() !!}
                <h5></h5>
                  <div class="row"> <!-- INFORMACION GENERAL PIEZA -->
-                   <div class="input-field col s5 l6 offset-s3">
+                   <div class="input-field col s5 l7 offset-l2">
                      <i class="material-icons prefix">mode_edit</i>
                      <input name="nombregenero" type="text" value="{{$genero->genero}}" class="required">
                      <label for="uname">Nombre del genero</label>
