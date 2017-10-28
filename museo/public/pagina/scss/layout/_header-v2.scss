@@ -13,6 +13,8 @@
   @include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
 
   @include media-breakpoint-down(md) {
+/* Color de fondo del menu
+------------------------------ */
   	background: $color-dark-light;
     box-shadow: 0 0 .9375rem .25rem rgba($color-dark, .05);
   }
@@ -88,6 +90,8 @@
     @include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
 
     @include plain-before-after {
+/* Color del icono del menu responsivo
+------------------------------ */
       background: $color-white;
     }
 
@@ -192,6 +196,7 @@
 /* Nav Menu
 ------------------------------ */
 .s-header-v2__nav {
+  
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
@@ -199,7 +204,7 @@
 
   @include media-breakpoint-down(md) {
 		background: $color-dark-light;
-    padding: 1.25rem 0;
+    padding: 1.25rem 0;   
   }
 
   &-item {
@@ -226,7 +231,9 @@
     @include position(relative);
     display: block;
     @include font($size: $font-size-13, $weight: 700, $family: $font-family-secondary);
-    color: rgba($color-white, .75);
+/* Color de las letras del menu principal
+------------------------------ */
+    color: rgba($color-white-opacity, .75);
     line-height: $navbar-height;
     text-transform: uppercase;
     margin: 0 .9rem;
@@ -245,12 +252,14 @@
 	  }
 
     @include media-breakpoint-down(md) {
-      color: rgba($color-dark, .7);
+/* Color de las letras del menu responsivo
+------------------------------ */
+      color: $color-white-opacity;
       line-height: $line-height;
       margin: 1.5rem 0;
 
       @include hover-focus {
-        color: rgba($color-dark, .7);
+        color: $color-white,;
       }
 
       &.-is-active {
@@ -266,10 +275,12 @@
   display: none;
   @include font($size: $font-size-13);
   min-width: 13.750rem;
-  background: $color-white;
+/* Color del fondo del menu desplegable
+------------------------------ */
+  background: $color-dark-light;
   border: none;
   @include border-radius(0);
-  box-shadow: 0 .3125rem .75rem rgba($color-dark, .05);
+  box-shadow: 0 .3125rem .75rem rgba($color-red, .05);
   padding: .9375rem 0;
   margin-top: 0;
 
@@ -287,12 +298,14 @@
 
   &-link {
     @include font($size: $font-size-14, $weight: 400, $family: $font-family-primary);
-    color: rgba($color-dark, .7) !important;
+/* Color de las letras del menu desplegable
+------------------------------ */
+    color: rgba($color-gray-light, .7) !important;
     padding: .4375rem 2rem .4375rem 1.375rem !important;
     @include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
 
     @include hover {
-	    color: $color-primary !important;
+	    color: $color-white !important;
     }
 
 	  &.-is-active {
@@ -343,14 +356,14 @@
 	/* Nav Link */
 	.s-header__shrink {
 		.s-header-v2__nav-link {
-	  	color: rgba($color-dark, .7);
+	  	color: rgba($color-red, .7);
 
       @include hover {
         color: $color-primary;
       }
 
 	  	@include focus {
-	  		color: rgba($color-dark, .7);
+	  		color: rgba($color-red, .7);
 	  	}
 
 	  	&.-is-active {
