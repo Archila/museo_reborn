@@ -8,13 +8,13 @@
         <h3 class="center-align">Registro Dato Curioso</h3>
         <div class="row">
 
-          <form method="POST" action="{{route('DatoCurioso.store')}}">
+          <form method="POST" action="{{route('DatoCurioso.store')}}" id="formValidate">
            {{ csrf_field() }}
            {{ method_field('POST') }}
           <div class="row">
           <div class="input-field col s6">
             <i class="material-icons prefix">bookmark_border</i>
-            <input id="icon_prefix" type="text"  name="dato"  autofocus>
+            <input id="icon_prefix" type="text"  name="dato" class="required"  autofocus>
             @if ($errors->has('dato'))
                 <span class="help-block" style="color:red;">
                     <strong>{{ $errors->first('dato') }}</strong>
