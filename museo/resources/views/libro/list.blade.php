@@ -8,7 +8,7 @@
 
   </div>
   @if(($libros)==('[]'))
-  <h5 class=" center">No se ha agregado ningun libro la base de datos</h5>
+  <h5 class=" center">No se ha agregado ningún libro a la base de datos</h5>
   @else
   <div class="row">
     <div class="col s12">
@@ -16,11 +16,11 @@
         <table class="highlight bordered centered responsive-table">
         <thead class="blue accent-3 white-text">
             <tr>
-              <th>Codigo</th>
+              <th>Código</th>
               <th>Nombre libro</th>
               <th>Autor</th>
               <th>Editorial</th>
-              <th>Categoria</th>
+              <th>Categoría</th>
               <th></th>
             </tr>
           </thead>

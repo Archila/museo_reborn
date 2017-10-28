@@ -30,7 +30,7 @@
             <div class="input-field col s6">
               <i class="material-icons prefix">phone</i>
               <input class="required" placeholder="{{$empleado->telefono}}"  id="icon_telephone" type="text" name="phone" value="{{$empleado->telefono}}">
-              <label for="icon_telephone">Telefono</label>
+              <label for="icon_telephone">Teléfono</label>
             </div>
 
             <div class="input-field col s6">

@@ -17,7 +17,7 @@
         <table class="highlight bordered centered responsive-table">
           <thead class=" light-blue darken-4 white-text ">
             <tr>
-              <th>Codigo</th>
+              <th>Código</th>
               <th>Tipo de adquisición</th>
               <th></th>
             </tr>
@@ -61,7 +61,7 @@
           <div class="modal-content">
             <div class="row">
               <div class="center">
-                <h5 class="light">Nuevo tipo de adquisicion</h5>
+                <h5 class="light">Nuevo tipo de adquisición</h5>
               </div>
             </div>
             <div class="row">

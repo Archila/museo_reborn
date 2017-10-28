@@ -21,12 +21,12 @@
       <div class="container">
 
 			  <div class="row">
-  
+
           <form id="formValidate" method="POST" action="{{route('Evento.store')}}"><br>
            {{ csrf_field() }}
            {{ method_field('POST') }}
           <div class="row">
-          
+
           <div class="input-field col s6">
             <i class="material-icons prefix">bookmark_border</i>
             <input id="icon_prefix" type="text"  name="nombre" data-length="30" autocomplete="off" class="required" >
@@ -47,7 +47,7 @@
                       <strong>{{ $errors->first('desc') }}</strong>
                   </span>
               @endif
-              <label for="icon_prefix">Descripcion</label>
+              <label for="icon_prefix">Descripción</label>
             </div>
           </div>
 
@@ -69,13 +69,13 @@
               </button>
             </div>
             </div><br>
-            
+
                             </form>
                         </div>
                     </div>
                 </div>
-            
-           
+
+
 @endsection
 @section('sections')
   <div class="center">

@@ -32,11 +32,11 @@
           <p class="card-title center">{{$libro->nombre}}</p>
           <p class="medium center"><a href="{{route('Autor.show',$libro->idaut)}}">{{$libro->aut}}</a></p>
           <div class="divider"></div>
-          <p class="light left">Edicion: </p><p class="medium"> {{$libro->edicion}} </p>
+          <p class="light left">Edición: </p><p class="medium"> {{$libro->edicion}} </p>
           <p class="light left">Año: </p><p class="medium"> {{$libro->anio}} </p>
           <p class="light left">Páginas:</p><p class="medium "> {{$libro->paginas}} </p>
           <span class="light">Editorial: </span> <a href="{{route('Editorial.show',$libro->idedit)}}">{{$libro->edit}}</a><br>
-          <span class="light">Categoria: </span> <a href="{{route('Categoria.show',$libro->idcat)}}">{{$libro->cat}}</a>
+          <span class="light">Categoría: </span> <a href="{{route('Categoria.show',$libro->idcat)}}">{{$libro->cat}}</a>
         </div>
       </div>
     </div>

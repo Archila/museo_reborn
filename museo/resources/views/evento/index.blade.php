@@ -20,9 +20,9 @@
             <thead class="light-blue darken-1 white-text">
               <tr>
                 <th>Nombre</th>
-                <th>Descripcion</th>
-                <th>Fecha Inicial</th>
-                <th>Fecha Final</th>
+                <th>Descripción</th>
+                <th>Fecha inicial</th>
+                <th>Fecha final</th>
                 <th>Activo</th>
                 <th></th>
               </tr>
@@ -83,10 +83,10 @@
       </div>
     </div>
   </div>
-    
+
 </div>
 
-  
+
 
 <script src="{{URL::asset('js/sweetalert.min.js')}}"></script>
   @include('sweet::alert')

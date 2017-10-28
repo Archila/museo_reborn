@@ -27,7 +27,7 @@
                 <div class="input-field col s6">
                   <i class="material-icons prefix">phone</i>
                   <input id="icon_telephone" type="text" name="phone"  class="required">
-                  <label for="icon_telephone">Telefono</label>
+                  <label for="icon_telephone">Teléfono</label>
                 </div>
                 <div class="input-field col s6">
                   <i class="material-icons prefix">email</i>

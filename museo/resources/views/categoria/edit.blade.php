@@ -3,7 +3,7 @@
 @section('content')
   <div class="row">
     <div class="center">
-      <h5 class="light">Editar categoria de libros</h5>
+      <h5 class="light">Editar categoría de libros</h5>
     </div>
   </div>
   <div class="row">
@@ -22,7 +22,7 @@
                    <div class="input-field col s7 offset-s2">
                      <i class="material-icons prefix">mode_edit</i>
                      <input class="required" id="" name="nombrecategoria" type="text" value="{{$categoria->nombre}}">
-                     <label for="uname">Nombre de la categoria</label>
+                     <label for="uname">Nombre de la categoría</label>
                    </div>
                    <div class="input-field col s12">
                      <button class="btn light-blue waves-effect waves-light  light-blue darken-4 center" type="submit" name="action">
@@ -41,6 +41,6 @@
 @section('section')
   <div class="center">
     <i class="medium material-icons">account_balance</i>
-    <p><strong>Tipo de pieza:</strong>Es una categoria de donde pertenece la pieza. Ej: Pieza de ferrocarril pertenece al tipo Ferrocarril</p>
+    <p><strong>Tipo de pieza:</strong>Es una categoría de donde pertenece la pieza. Ej: Pieza de ferrocarril pertenece al tipo Ferrocarril</p>
   </div>
 @endsection

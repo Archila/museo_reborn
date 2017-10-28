@@ -19,7 +19,7 @@
         <table class="highlight bordered centered responsive-table">
           <thead class=" light-blue darken-4 white-text ">
             <tr>
-              <th>Codigo</th>
+              <th>Código</th>
               <th>Nombre tipo</th>
               <th></th>
             </tr>

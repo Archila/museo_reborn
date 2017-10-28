@@ -4,8 +4,8 @@
 <div class="container">
   <div class="row">
     <div class="center">
-      <h5 class="light">Edicion de libro</h5>
-      
+      <h5 class="light">Edición de libro</h5>
+
     </div>
   </div>
     <div class="col s12 card z-depth-4"> <!-- Borde -->
@@ -41,11 +41,11 @@
                 <label>Autor</label>
               </div>
 
-              
+
                 <div class="input-field col s4">
                   <i class="material-icons prefix">collections_bookmark</i>
                   <input  id="" name="edicion" type="text" value="{{$libro->edicion}}">
-                  <label for="uname">Edicion</label>
+                  <label for="uname">Edición</label>
                 </div>
                 <div class="input-field col s4">
                   <i class="material-icons prefix">date_range</i>
@@ -55,10 +55,10 @@
                 <div class="input-field col s4">
                   <i class="material-icons prefix">pages</i>
                   <input id="" name="paginas" type="text" value="{{$libro->paginas}}" class="required cnumber">
-                  <label for="uname">Paginas</label>
+                  <label for="uname">Páginas</label>
                 </div>
-            
-              
+
+
                 <div class="input-field col s4">
                   <i class="material-icons prefix">bookmark_border</i>
                   <select name="editorial" class=" required_option">
@@ -84,10 +84,10 @@
                     @endif
                     @endforeach
                   </select>
-                  <label>Categoria</label>
+                  <label>Categoría</label>
                 </div>
 
-         
+
               <div class="input-field col s12 center">
                 <button class="btn waves-effect waves-light  light-blue darken-4" type="submit" name="action">
                   Actualizar
@@ -107,6 +107,6 @@
   <div class="center">
     <i class="medium material-icons">book</i>
     <p><strong>Nuevo libro:</strong><br>
-    Edicion de libros disponibles en la bilbioteca</p>
+    Edición de libros disponibles en la bilbioteca</p>
   </div>
 @endsection

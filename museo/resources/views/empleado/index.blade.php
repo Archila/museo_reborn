@@ -23,7 +23,7 @@
               <th>Rol</th>
               <th>Email</th>
               <th>Usuario</th>
-              <th>Telefono</th>
+              <th>Teléfono</th>
               <th></th>
             </tr>
           </thead>

@@ -1,5 +1,5 @@
 @extends('templates.home')
-  
+
   @section('content')
     <div class="container">
 
@@ -19,7 +19,7 @@
               <thead class="light-blue darken-1 white-text">
                 <tr>
                   <th>Dato</th>
-                  <th>Fecha Creacion</th>
+                  <th>Fecha creación</th>
                   <th></th>
                 </tr>
               </thead>
@@ -31,7 +31,7 @@
                   <td>
                     <a class="tooltipped  btn-floating btn-small waves-effect waves-light light-blue darken-4" data-position="bottom"  href="{{route('DatoCurioso.edit',$dato->id)}}" data-delay="50" data-tooltip="Editar tipo"><i class="material-icons">edit</i></a>
                     <a class="tooltipped  btn-floating btn-small waves-effect waves-light red modal-trigger"   data-position="bottom" href="#modal{{$dato->id}}" data-delay="50" data-tooltip="Eliminar tipo"><i class="material-icons">delete</i></a>
-              
+
                   </td>
                   <form action="{{route('DatoCurioso.destroy',$dato->id)}}" method="POST">
               {{csrf_field()}}
@@ -48,13 +48,13 @@
                     </div>
                   </div>
             </form>
-                </tr> 
-                @endforeach 
+                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
         </div>
-      </div>        
+      </div>
 
     </div>
 
@@ -68,9 +68,9 @@
     {{ method_field('POST') }}
       <div id="modaln" class="modal">
           <div class="modal-content">
-            <h4 class="center-align">Registro de Dato Curiso</h4>
+            <h4 class="center-align">Registro de Dato Curioso</h4>
             <div class="row">
-            
+
               <div class="input-field col s12">
                 <i class="material-icons prefix">bookmark_border</i>
                 <input id="icon_prefix" type="text"  name="dato" class="required" autocomplete="off" data-length="50"  >
@@ -82,7 +82,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <a class="modal-action modal-close waves-effect waves-blue btn-flat ">Cancelar</a>  
+            <a class="modal-action modal-close waves-effect waves-blue btn-flat ">Cancelar</a>
           </div>
       </div>
   </form>
@@ -91,6 +91,6 @@
   <div class="center">
     <i class="medium material-icons">plus_one</i>
     <p><strong>Datos Curiosos:</strong><br>
-     Frases con funcion de registrar una anecdota sobre el museo del ferrocarril.</p>
+     Frases con función de registrar una anecdota sobre el museo del ferrocarril.</p>
   </div>
 @endsection

@@ -184,7 +184,7 @@
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
             <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Genero      </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
             @elseif ($rol=== 2)
@@ -192,7 +192,7 @@
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
             <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Genero      </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
             @elseif ($rol=== 3)
@@ -200,7 +200,7 @@
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
             <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Genero      </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
             @elseif ($rol=== 4)

@@ -3,14 +3,14 @@
 <div class="container">
   <div class="row">
     <div class="left"><br>
-      <h5 class="light text-light-blue text-darken-4">Categorias de libros</h5>
+      <h5 class="light text-light-blue text-darken-4">Categorías de libros</h5>
     </div>
     <div class="right"><br>
       <a href="#modalcreate" class="modal-trigger btn-floating tooltipped btn-large waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Agregar"><i class="material-icons">add</i></a>
     </div>
   </div>
   @if(($result)==('[]'))
-  <h5 class=" center">No se ha agregado ninguna categoria a la base de datos</h5>
+  <h5 class=" center">No se ha agregado ninguna categoría a la base de datos</h5>
   @else
   <div class="row">
     <div class="col s12">
@@ -18,8 +18,8 @@
         <table class="highlight bordered centered responsive-table">
           <thead class=" light-blue darken-4 white-text ">
             <tr>
-              <th>Codigo</th>
-              <th>Nombre categoria</th>
+              <th>Código</th>
+              <th>Nombre categoría</th>
               <th></th>
             </tr>
           </thead>
@@ -39,7 +39,7 @@
                   <input type="hidden" name="_method" value="DELETE">
                     <div id="modal{{$r->id}}" class="modal">
                       <div class="modal-content">
-                        <h4 class="center-align">Desea eliminar la categoria ?</h4>
+                        <h4 class="center-align">Desea eliminar la categoría ?</h4>
                         <center> <i class="center-align medium material-icons">error_outline</i></center>
                         <p class="center-align">Nota: los cambios no pueden deshacerse </p>
                       </div>
@@ -63,7 +63,7 @@
             <div class="modal-content">
               <div class="row">
                 <div class="center">
-                  <h5 class="light">Nueva categoria de libros</h5>
+                  <h5 class="light">Nueva categoría de libros</h5>
                 </div>
               </div>
 
@@ -71,7 +71,7 @@
                 <div class="input-field col s12 center">
                   <i class="material-icons prefix">mode_edit</i>
                   <input id="" name="categoria" type="text" class="required">
-                  <label for="uname">Nombre de categoria</label>
+                  <label for="uname">Nombre de categoría</label>
                 </div>
                 <div class="input-field col s12 center">
                   <button class="btn waves-effect waves-light  light-blue darken-4 center" type="submit" name="action">
@@ -96,7 +96,7 @@
 @section('sections')
   <div class="center">
     <i class="medium material-icons">library_books</i>
-    <p><strong>Categoria:</strong><br> 
-    Division para poder distingir a que rama educativa pertenece el libro. Ej: <em>Matematica, Historia, Fisica</em></p>
+    <p><strong>Categoria:</strong><br>
+    División para poder distingir a que rama educativa pertenece el libro. Ej: <em>Matematica, Historia, Fisica</em></p>
   </div>
 @endsection

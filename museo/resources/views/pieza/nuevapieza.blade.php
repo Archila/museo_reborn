@@ -23,7 +23,7 @@
         <li class="tab col s3"><a class="active" href="#test1" onclick="javascript: resetActive(event, 25, 'step-2');">Pieza</a></li>
         <li class="tab col s3"><a href="#test2" onclick="javascript: resetActive(event, 50, 'step-2');"><i class="material-icons prefix">import_contacts</i> Ficha informativa</a></li>
         <li class="tab col s3"><a href="#test3" onclick="javascript: resetActive(event, 75, 'step-2');"><i class="material-icons prefix">border_outer</i>Ficha técnica</a></li>
-        <li class="tab col s3"><a href="#test5" onclick="javascript: resetActive(event, 100, 'step-2');"><i class="material-icons prefix">person</i>Adquisicion</a></li>
+        <li class="tab col s3"><a href="#test5" onclick="javascript: resetActive(event, 100, 'step-2');"><i class="material-icons prefix">person</i>Adquisición</a></li>
       </ul>
     </div>
   <form method="POST" action="{{route('Pieza.store')}}" enctype="multipart/form-data" class="col s12" name="datos" id="formValidate">   <!-- FORMULARIO -->

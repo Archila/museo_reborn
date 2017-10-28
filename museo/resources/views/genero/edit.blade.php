@@ -3,7 +3,7 @@
 @section('content')
   <div class="row">
     <div class="center">
-      <h5 class="light">Editar genero</h5>
+      <h5 class="light">Editar género</h5>
     </div>
   </div>
   <div class="row">
@@ -23,7 +23,7 @@
                    <div class="input-field col s5 l7 offset-l2">
                      <i class="material-icons prefix">mode_edit</i>
                      <input name="nombregenero" type="text" value="{{$genero->genero}}" class="required">
-                     <label for="uname">Nombre del genero</label>
+                     <label for="uname">Nombre del género</label>
                    </div>
                    <div class="input-field col s12">
                      <button class="btn light-blue waves-effect waves-light center" type="submit" name="action">

@@ -25,9 +25,9 @@
         <form id="formValidate" method="POST" action="{{route('Evento.update',$evento->id)}}"><br>
           {{ csrf_field() }}
           {{ method_field('PUT') }}
-          
+
           <div class="row">
-            
+
             <div class=" col s12 center">
 
               <label for="icon_prefix">Activo</label>
@@ -45,7 +45,7 @@
                 </div>
               </label>
             </div>
-            
+
 
           <div class="input-field col s6">
             <i class="material-icons prefix">bookmark_border</i>
@@ -67,15 +67,15 @@
                       <strong>{{ $errors->first('desc') }}</strong>
                   </span>
               @endif
-              <label for="icon_prefix">Descripcion</label>
+              <label for="icon_prefix">Descripción</label>
           </div>
-      
+
           <div class="input-field col s6">
             <i class="material-icons prefix">av_timer</i>
             <input id="icon_prefix" type="text" name="fechai" class="datepicker required" value="{{$evento->fecha_inicial}}">
             <label for="icon_prefix">Fecha inicial</label>
           </div>
-          
+
           <div class="input-field col s6">
               <i class="material-icons prefix">av_timer</i>
               <input id="icon_prefix" type="text"  name="fechaf" class="datepicker required" value="{{$evento->fecha_final}}">

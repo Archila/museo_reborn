@@ -36,7 +36,7 @@
               <div class="input-field col s5">
                 <i class="material-icons prefix">face</i>
                 <select name="autor" class=" required_option">
-                  <option value="" disabled selected>Eliga el autor</option>
+                  <option value="" disabled selected>Seleccione un autor</option>
                     @foreach($autores as $autor)
                       <option value="{{$autor->id}}">{{$autor->nombre}}</option>
                     @endforeach
@@ -53,7 +53,7 @@
               <div class="input-field col s6">
                 <i class="material-icons prefix">collections_bookmark</i>
                 <input  id="" name="edicion" type="text" >
-                <label for="uname">Edicion</label>
+                <label for="uname">Edición</label>
               </div>
               <div class="input-field col s6">
                 <i class="material-icons prefix">date_range</i>
@@ -67,7 +67,7 @@
               <div class="input-field col s6">
                 <i class="material-icons prefix">pages</i>
                 <input id="" name="paginas" type="text" class="required cnumber">
-                <label for="uname">Paginas</label>
+                <label for="uname">Páginas</label>
               </div>
 
               <div class="input-field col s5">
@@ -89,12 +89,12 @@
               <div class="input-field col s5">
                 <i class="material-icons prefix">library_books</i>
                   <select name="categoria" class=" required_option">
-                    <option value="" disabled selected>Eliga la categoria</option>
+                    <option value="" disabled selected>Eliga la categoría</option>
                       @foreach($categorias as $categoria)
                         <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
                       @endforeach
                   </select>
-                  <label>Categoria</label>
+                  <label>Categoría</label>
               </div>
               <div class="input-field col s1">
                 <a class="tooltipped  btn-floating btn-small  blue modal-trigger" data-position="bottom" href="#modalcategoria" data-delay="50" data-tooltip="Agregar categoria"><i class="material-icons">add</i></a>
