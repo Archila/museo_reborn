@@ -209,7 +209,7 @@
             </div>
           </li>
           <div class="divider"></div>
-          <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">theaters</i>Eventos</a>
+          <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">event</i>Eventos</a>
           <div class="collapsible-body">
             <ul>
               @if ($rol === 1)

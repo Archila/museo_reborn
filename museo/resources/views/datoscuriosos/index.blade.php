@@ -73,8 +73,8 @@
 
               <div class="input-field col s12">
                 <i class="material-icons prefix">bookmark_border</i>
-                <input id="icon_prefix" type="text"  name="dato" class="required" autocomplete="off" data-length="50"  >
-                <label for="icon_prefix">Dato</label>
+                <input type="text" name="dato" class="required"  data-length="50"  >
+                <label for="dato">Dato</label>
               </div>
               <div class="input-field col s12 center">
                 <button class="btn  waves-effect waves-light  light-blue darken-4" type="submit" name="action">Enviar</button>

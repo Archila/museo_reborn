@@ -30,7 +30,7 @@ class MDAdministrador
           return $next($request);
         }
       }
-      return new Response(view('MensajeError.Error')->with('msj','No tiene privilegios como admin'));
+      return new Response(view('mensajeerror.Error')->with('msj','No tiene privilegios como admin'));
 
     }
 
