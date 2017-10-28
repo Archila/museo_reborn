@@ -77,7 +77,7 @@
 
     <div id="test2" class="col s12 "><!-- FICHA INFORMATIVA -->
       <br><br>
-      <div class="input-field col s3 l4">
+      <div class="input-field col s3 l3 offset-l2">
         <i class="material-icons prefix">date_range</i>
         <input id="" name="epoca" type="text" class="cnumber">
         @if ($errors->has('epoca'))
