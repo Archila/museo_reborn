@@ -116,7 +116,7 @@
     <nav class="top-nav light-blue darken-4">
       <div class="container">
         <div class="nav-wrapper center"><a class="page-title" href="#">
-        <img src="{{URL::asset('Images/logo.png')}}" width="330" height="130" alt=""></a>
+        <img src="{{URL::asset('images/logo.png')}}" width="330" height="130" alt=""></a>
         <ul class="right" style="margin-top:30px;">
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i style="font-size:30px;" class=" material-icons right">expand_more</i></a></li>
         </ul>
@@ -131,7 +131,7 @@
 
     <ul id="nav-mobile" class="side-nav fixed">
       <li class="logo"><a id="logo-container" href="" class="brand-logo">
-          <img src="{{URL::asset('Images/sbx.jpg')}}" style="margin-top:-25px;" width="110" height="110" alt=""></a>
+          <img src="{{URL::asset('images/sbx.jpg')}}" style="margin-top:-25px;" width="110" height="110" alt=""></a>
       </li>
       <li class="search">
         <div class="search-wrapper card">
@@ -317,14 +317,17 @@
         <div class="collapsible-body">
           <ul>
           @if ($rol === 1)
+          <li><a class="waves-effect waves-sbx" href="{{url('/boletos')}}">Generar boleto</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorías</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
           @elseif ($rol=== 2)
+          <li><a class="waves-effect waves-sbx" href="{{url('/boletos')}}">Generar boleto</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorías</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
           @elseif ($rol=== 3)
+          <li><a class="waves-effect waves-sbx" href="{{url('/boletos')}}">Generar boleto</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorías</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
