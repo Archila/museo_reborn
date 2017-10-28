@@ -1255,7 +1255,7 @@ a {
     clear: both; }
   @media (max-width: 61.9em) {
     .s-header-v2__navbar {
-      background: #242526;
+      background: #fff;
       box-shadow: 0 0 0.9375rem 0.25rem rgba(34, 35, 36, 0.05); } }
 
 /* Navbar Row
@@ -1314,7 +1314,7 @@ a {
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
     .s-header-v2__toggle-icon-bar, .s-header-v2__toggle-icon-bar:before, .s-header-v2__toggle-icon-bar:after {
-      background: #222324; }
+      background: #fff; }
     .s-header-v2__toggle-icon-bar:before, .s-header-v2__toggle-icon-bar:after {
       position: absolute;
       left: 0;
