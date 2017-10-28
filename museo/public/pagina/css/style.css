@@ -1244,7 +1244,7 @@ a {
   position: relative;
   z-index: 1000;
   min-height: 3.125rem;
-  border-bottom: 0.0625rem solid #aeaeae;
+  border-bottom: 0.0625rem solid #222324;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
