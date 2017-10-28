@@ -1,4 +1,5 @@
-
+@extends('templates.home')
+@section('content')
 <div class="container">
 
   <div class="row">
@@ -28,11 +29,27 @@
           </thead>
 
           <tbody>
+            <?php $roles=","; ?>
             @foreach($empleados as $empleado)
               <tr>
                 <td>{{$empleado->nombre}}</td>
                 <td>{{$empleado->dpi}}</td>
-                <td>{{$empleado->rol}}</td>
+                <td>  <?php
+                  $idusua=$empleado->iduser;
+                  $permisos = DB::table('permisos')
+                      ->join('users', 'permisos.iduser', '=', 'users.id')
+                      ->join('roles', 'permisos.idrol', '=', 'roles.id')
+                      ->select('roles.nombre as name')
+                      ->where('iduser', '=', $idusua)
+                      ->get();
+
+                      foreach ($permisos as $permiso) {
+                      $roles=$permiso->name."".$roles;
+                      }
+                      echo $roles;
+                      $roles="";
+                   ?>
+                 </td>
                 <td>{{$empleado->email}}</td>
                 <td>{{$empleado->name}}</td>
                 <td>{{$empleado->telefono}}</td>
@@ -70,3 +87,5 @@
 </div>
 
   <script src="{{URL::asset('js/sweetalert.min.js')}}"></script>
+  @include('sweet::alert')
+@endsection

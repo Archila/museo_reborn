@@ -19,8 +19,9 @@
              <form method="POST" action="{{route('TipoPieza.update',$tp->id_tipo)}}" class="col s12" id="formValidate">
                <input name="_method" type="hidden" value="PUT">
                {!!csrf_field() !!}
+               <h5></h5>
                  <div class="row"> <!-- INFORMACION GENERAL PIEZA -->
-                   <div class="input-field col s5 offset-s3">
+                   <div class="input-field col s5 l6 offset-l3 ">
                      <i class="material-icons prefix">mode_edit</i>
                      <input name="nombretipo" type="text" value="{{$tp->nombre}}" class="required">
                      <label for="uname">Nombre del tipo</label>

@@ -18,8 +18,9 @@
              <form method="POST" action="{{route('Genero.update',$genero->id)}}" class="col s12" id="formValidate">
                <input name="_method" type="hidden" value="PUT">
                {!! csrf_field() !!}
+               <h5></h5>
                  <div class="row"> <!-- INFORMACION GENERAL PIEZA -->
-                   <div class="input-field col s5 offset-s3">
+                   <div class="input-field col s5 l7 offset-l2">
                      <i class="material-icons prefix">mode_edit</i>
                      <input name="nombregenero" type="text" value="{{$genero->genero}}" class="required">
                      <label for="uname">Nombre del genero</label>

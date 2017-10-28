@@ -1,4 +1,5 @@
-
+@extends('templates.home')
+@section('content')
 <div class="container ">
 
   <div class="row">
@@ -48,19 +49,21 @@
                   <input id="password" type="password"  name="password" class="required" >
                   <label for="password">Password</label>
                 </div>
-                <div class="input-field col s5"  >
+
+                <div class="input-field col s6"  >
                   <i class="material-icons prefix">person_add</i>
-                  <select name="rol" id="rol"  class="required_option">
+
+                  <select multiple name="roles[]">
                     <option value="" disabled selected>Rol</option>
-                      @foreach ($roles as $rol)
-                        <option value="{{$rol->id}}">{{ $rol->nombre}}</option>
-                      @endforeach
+                    @foreach ($roles as $rol)
+                      <option value="{{$rol->id}}">{{ $rol->nombre}}</option>
+                    @endforeach
                   </select>
-                  <label>Seleccione un Rol</label>
+
+                    <label>Seleccion de Rol</label>
                 </div>
-                <div class="input-field col s2"  >
-                  <a href="#modal1" class="btn-floating btn-smallwaves-effect waves-light  light-blue darken-4 modal-trigger" ><i class="material-icons">add</i></a>
-                </div>
+
+
                 <div class="input-field col s5">
                   <p class="center-align">
                   <button class="btn waves-effect waves-light  light-blue darken-4" type="submit" name="action">Crear</button>
@@ -74,29 +77,12 @@
 
 
     <script src="{{URL::asset('js/sweetalert.min.js')}}"></script>
-    <!--@include('sweet::alert')-->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4 class="center-align">Nuevo Rol</h4>
+    @include('sweet::alert')
+    <script type="text/javascript">
+    $(document).ready(function() {
+     $('select').material_select();
+    });
 
-        <form class="col s12" method="POST" action="{{route('Rol.store')}}" id="formValidate">
-          {{ csrf_field() }}
-          {{ method_field('POST') }}
-          <div class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">perm_identity</i>
-              <input id="icon_prefix" type="text"  name="nombre" >
-              <label for="icon_prefix">Nombre</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">perm_identity</i>
-              <input id="icon_prefix" type="text"  name="desc" >
-              <label for="icon_prefix">Descripcion</label>
-            </div>
-            <div class="input-field col s12 center-align">
-              <button class="btn waves-effect waves-light  light-blue darken-4" type="submit" name="action">Agregar</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+    </script>
+
+@endsection
