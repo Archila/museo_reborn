@@ -181,28 +181,28 @@
             <ul>
             @if ($rol === 1)
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva Adquisicion  </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
             <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de Pieza      </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Genero      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisiciones     </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
             @elseif ($rol=== 2)
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva Adquisicion  </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
             <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de Pieza      </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Genero      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisiciones     </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
             @elseif ($rol=== 3)
             <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva Adquisicion  </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
             <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de Pieza      </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Genero      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisiciones     </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
             @elseif ($rol=== 4)
             @endif
             </ul>
@@ -214,13 +214,13 @@
             <ul>
               @if ($rol === 1)
               <li><a class="waves-effect waves-sbx" href="{{route('Evento.index')}}">Eventos</a></li>
-              <li><a class="waves-effect waves-sbx" href="{{route('Evento.create')}}">Nuevo Evento</a></li>
+              <li><a class="waves-effect waves-sbx" href="{{route('Evento.create')}}">Nuevo evento</a></li>
               @elseif ($rol=== 2)
               <li><a class="waves-effect waves-sbx" href="{{route('Evento.index')}}">Eventos</a></li>
-              <li><a class="waves-effect waves-sbx" href="{{route('Evento.create')}}">Nuevo Evento</a></li>
+              <li><a class="waves-effect waves-sbx" href="{{route('Evento.create')}}">Nuevo evento</a></li>
               @elseif ($rol=== 3)
               <li><a class="waves-effect waves-sbx" href="{{route('Evento.index')}}">Eventos</a></li>
-              <li><a class="waves-effect waves-sbx" href="{{route('Evento.create')}}">Nuevo Evento</a></li>
+              <li><a class="waves-effect waves-sbx" href="{{route('Evento.create')}}">Nuevo evento</a></li>
               @elseif ($rol=== 4)
               @endif
 
@@ -238,13 +238,13 @@
 
                   @if ($rol === 1)
                   <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.index')}}">Datos</a></li>
-                  <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.create')}}">Nuevo Dato curioso</a></li>
+                  <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.create')}}">Nuevo dato curioso</a></li>
                   @elseif ($rol=== 2)
                   <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.index')}}">Datos</a></li>
-                  <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.create')}}">Nuevo Dato curioso</a></li>
+                  <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.create')}}">Nuevo dato curioso</a></li>
                   @elseif ($rol=== 3)
                   <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.index')}}">Datos</a></li>
-                  <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.create')}}">Nuevo Dato curioso</a></li>
+                  <li><a class="waves-effect waves-sbx" href="{{route('DatoCurioso.create')}}">Nuevo dato curioso</a></li>
                   @elseif ($rol=== 4)
                   @endif
 
@@ -264,28 +264,28 @@
                     <li><a class="waves-effect waves-sbx" href="{{route('Libro.show',0)}}">Editar libros</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Editorial.index')}}">Editoriales</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Autor.index')}}">Autores</a></li>
-                  <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorias</a></li>
+                  <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorías</a></li>
                   @elseif ($rol=== 2)
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.create')}}">Nuevo libro</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.index')}}">Listado de libros</a></li>
                     <li><a class="waves-effect waves-sbx" href="{{route('Libro.show',0)}}">Editar libros</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Editorial.index')}}">Editoriales</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Autor.index')}}">Autores</a></li>
-                  <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorias</a></li>
+                  <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorías</a></li>
                   @elseif ($rol=== 3)
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.create')}}">Nuevo libro</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.index')}}">Listado de libros</a></li>
                     <li><a class="waves-effect waves-sbx" href="{{route('Libro.show',0)}}">Editar libros</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Editorial.index')}}">Editoriales</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Autor.index')}}">Autores</a></li>
-                  <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorias</a></li>
+                  <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorías</a></li>
                   @elseif ($rol=== 4)
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.create')}}">Nuevo libro</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.index')}}">Listado de libros</a></li>
                     <li><a class="waves-effect waves-sbx" href="{{route('Libro.show',0)}}">Editar libros</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Editorial.index')}}">Editoriales</a></li>
                   <li><a class="waves-effect waves-sbx" href="{{route('Autor.index')}}">Autores</a></li>
-                  <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorias</a></li>
+                  <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorías</a></li>
                   @endif
 
 
@@ -318,15 +318,15 @@
           <ul>
           @if ($rol === 1)
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
-          <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorias</a></li>
+          <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorías</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
           @elseif ($rol=== 2)
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
-          <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorias</a></li>
+          <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorías</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
           @elseif ($rol=== 3)
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
-          <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorias</a></li>
+          <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorías</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
           @elseif ($rol=== 4)
           @endif
