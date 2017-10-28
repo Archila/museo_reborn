@@ -21,7 +21,7 @@
                {!!csrf_field() !!}
                <h5></h5>
                  <div class="row"> <!-- INFORMACION GENERAL PIEZA -->
-                   <div class="input-field col s5 l6 offset-l3 ">
+                   <div class="input-field col s5 l6 offset-l2 ">
                      <i class="material-icons prefix">mode_edit</i>
                      <input name="nombretipo" type="text" value="{{$tp->nombre}}" class="required">
                      <label for="uname">Nombre del tipo</label>

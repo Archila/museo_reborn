@@ -20,7 +20,7 @@ class EventoController extends Controller
     public function index()
     {
       $eventos = evento::all();
-      return view('Evento.index')->with('eventos', $eventos);
+      return view('evento.index')->with('eventos', $eventos);
     }
 
     /**
@@ -30,7 +30,7 @@ class EventoController extends Controller
      */
     public function create()
     {
-          return view('Evento/create');
+          return view('evento/create');
     }
 
     /**
@@ -101,7 +101,7 @@ class EventoController extends Controller
     public function edit($evento)
     {
       $evento = evento::findOrFail($evento);
-      return view('Evento/edit',compact('evento'));
+      return view('evento/edit',compact('evento'));
     }
 
     /**
