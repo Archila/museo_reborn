@@ -9,7 +9,7 @@
   <div class="center">
     <div class="col s6 card z-depth-4 offset-s3"> <!-- Borde -->
     <div class="card-image">
-      <a href="{{route('Genero.index')}}" class="btn-floating halfway-fab tooltipped waves-effect waves-light light-blue accent-4" data-position="bottom" data-delay="50" data-tooltip="Regresar"><i class="material-icons">arrow_back</i></a>
+      <a href="{{route('TipoAdquisicion.index')}}" class="btn-floating halfway-fab tooltipped waves-effect waves-light light-blue accent-4" data-position="bottom" data-delay="50" data-tooltip="Regresar"><i class="material-icons">arrow_back</i></a>
     </div>
       <div class="row">
         <form method="POST" action="{{route('TipoAdquisicion.update',$tpadquisicion->id)}}" id="formValidate">
