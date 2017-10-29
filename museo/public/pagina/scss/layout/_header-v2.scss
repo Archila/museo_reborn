@@ -280,7 +280,7 @@
   background: $color-dark-light;
   border: none;
   @include border-radius(0);
-  box-shadow: 0 .3125rem .75rem rgba($color-red, .05);
+  box-shadow: 0 .3125rem .75rem rgba($color-dark, .05);
   padding: .9375rem 0;
   margin-top: 0;
 
@@ -356,7 +356,7 @@
 	/* Nav Link */
 	.s-header__shrink {
 		.s-header-v2__nav-link {
-	  	color: rgba($color-red, .7);
+	  	color: rgba($color-dark, .7);
 
       @include hover {
         color: $color-primary;

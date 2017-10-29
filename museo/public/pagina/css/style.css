@@ -1460,7 +1460,7 @@ a {
   background: #242526;
   border: none;
   border-radius: 0;
-  box-shadow: 0 0.3125rem 0.75rem rgba(197, 64, 65, 0.05);
+  box-shadow: 0 0.3125rem 0.75rem rgba(34, 35, 36, 0.05);
   padding: .9375rem 0;
   margin-top: 0; }
   @media (max-width: 61.9em) {
@@ -1511,7 +1511,7 @@ a {
 
   /* Nav Link */
   .s-header__shrink .s-header-v2__nav-link {
-    color: rgba(197, 64, 65, 0.7); }
+    color: rgba(34, 35, 36, 0.7); }
     .s-header__shrink .s-header-v2__nav-link:hover {
       color: #13b1cd; }
     .s-header__shrink .s-header-v2__nav-link:focus {
