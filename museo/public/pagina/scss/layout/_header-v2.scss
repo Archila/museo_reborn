@@ -8,14 +8,14 @@
   @include position(relative);
   z-index: $zindex-navbar;
   min-height: 3.125rem;
-  border-bottom: .0625rem solid $color-white-opacity-lighter;
+  border-bottom: .0625rem solid $color-white-opacity-light;
   @include clearfix;
   @include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
 
   @include media-breakpoint-down(md) {
-/* Color de fondo del menu
+/* Color de fondo del menu responsivo
 ------------------------------ */
-  	background: $color-dark-light;
+  	background: $color-white;
     box-shadow: 0 0 .9375rem .25rem rgba($color-dark, .05);
   }
 }
@@ -92,7 +92,7 @@
     @include plain-before-after {
 /* Color del icono del menu responsivo
 ------------------------------ */
-      background: $color-white;
+      background: $color-dark;
     }
 
     @include before-after {
@@ -203,7 +203,8 @@
   @include clearfix;
 
   @include media-breakpoint-down(md) {
-		background: $color-dark-light;
+/* Color de fondo de los titulos menu responsivo*/
+		background: $color-white;
     padding: 1.25rem 0;   
   }
 
@@ -254,12 +255,12 @@
     @include media-breakpoint-down(md) {
 /* Color de las letras del menu responsivo
 ------------------------------ */
-      color: $color-white-opacity;
+      color: $color-dark;
       line-height: $line-height;
       margin: 1.5rem 0;
 
       @include hover-focus {
-        color: $color-white,;
+        color: $color-gray,;
       }
 
       &.-is-active {
@@ -277,7 +278,7 @@
   min-width: 13.750rem;
 /* Color del fondo del menu desplegable
 ------------------------------ */
-  background: $color-dark-light;
+  background: rgba($color-white, .4);
   border: none;
   @include border-radius(0);
   box-shadow: 0 .3125rem .75rem rgba($color-dark, .05);
@@ -300,12 +301,12 @@
     @include font($size: $font-size-14, $weight: 400, $family: $font-family-primary);
 /* Color de las letras del menu desplegable
 ------------------------------ */
-    color: rgba($color-gray-light, .7) !important;
+    color: $color-dark !important;
     padding: .4375rem 2rem .4375rem 1.375rem !important;
     @include cubic-transition($delay: 0, $duration: 300ms, $property: (all));
 
     @include hover {
-	    color: $color-white !important;
+	    color: rgba($color-primary, 1.5) !important;
     }
 
 	  &.-is-active {
@@ -331,6 +332,7 @@
 @include media-breakpoint-up(lg) {
 	.s-header__shrink {
 	  .s-header-v2__navbar {
+/* Color de fondo del menu al bajar la pagina */
 	    background: $color-white;
 	    box-shadow: 0 0 .9375rem .25rem rgba($color-dark, .05);
 	  }
@@ -349,12 +351,12 @@
 	.s-header__shrink {
 		.s-header-v2__logo-img {
       &--default { display: none; }      
-/* &--shrink { display: block; } */
-      &--shrink { display: none; }
+      &--shrink { display: block; }
+      
 		}
 	}
 
-/* Nav Link  (Barra que aparece al bajar en la página) */
+  /* Nav Link  (Barra que aparece al bajar en la pagina) */
 	.s-header__shrink {
 		.s-header-v2__nav-link {
 	  	color: $color-dark;
@@ -364,7 +366,7 @@
       }
 
 	  	@include focus {
-	  		color: rgba($color-red, .7);
+	  		color: rgba($color-dark, .7);
 	  	}
 
 	  	&.-is-active {
