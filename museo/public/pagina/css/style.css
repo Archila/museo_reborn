@@ -8,7 +8,7 @@ Error: Invalid US-ASCII character "\xC3"
 354: 		}
 355: 	}
 356: 
-357: /* Nav Link  (Barra que aparece al bajar en la página)*\/
+357: /* Nav Link  (Barra que aparece al bajar en la página) *\/
 358: 	.s-header__shrink {
 359: 		.s-header-v2__nav-link {
 360: 	  	color: $color-dark;
@@ -71,4 +71,4 @@ scss/style.scss:27
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid US-ASCII character \"\xC3\"\A         on line 357 of scss/layout/_header-v2.scss\A         from line 27 of scss/style.scss\A \A 352: /* &--shrink { display: block; } */\A 353:       &--shrink { display: none; }\A 354: 		}\A 355: 	}\A 356: \A 357: /* Nav Link  (Barra que aparece al bajar en la página)*/\A 358: 	.s-header__shrink {\A 359: 		.s-header-v2__nav-link {\A 360: 	  	color: $color-dark;\A 361: \A 362:       @include hover {"; }
+  content: "Error: Invalid US-ASCII character \"\xC3\"\A         on line 357 of scss/layout/_header-v2.scss\A         from line 27 of scss/style.scss\A \A 352: /* &--shrink { display: block; } */\A 353:       &--shrink { display: none; }\A 354: 		}\A 355: 	}\A 356: \A 357: /* Nav Link  (Barra que aparece al bajar en la página) */\A 358: 	.s-header__shrink {\A 359: 		.s-header-v2__nav-link {\A 360: 	  	color: $color-dark;\A 361: \A 362:       @include hover {"; }
