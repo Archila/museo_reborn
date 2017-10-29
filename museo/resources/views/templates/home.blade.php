@@ -229,7 +229,7 @@
         </li>
 
             <div class="divider"></div>
-            <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">theaters</i>Datos Curiosos</a>
+            <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">sms</i>Datos Curiosos</a>
               <div class="collapsible-body">
                 <ul>
 
@@ -313,7 +313,7 @@
       </li>
       <div class="divider"></div>
 
-      <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">theaters</i>Boletos</a>
+      <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">confirmation_number</i>Boletos</a>
         <div class="collapsible-body">
           <ul>
           @if ($rol === 1)
