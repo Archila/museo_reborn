@@ -348,18 +348,19 @@
 	/* Logo */
 	.s-header__shrink {
 		.s-header-v2__logo-img {
-		  &--default { display: none; }
-		  &--shrink { display: block; }
+      &--default { display: none; }      
+/* &--shrink { display: block; } */
+      &--shrink { display: none; }
 		}
 	}
 
-	/* Nav Link */
+	/* Nav Link  (Barra que aparece al bajar en la página)*/
 	.s-header__shrink {
 		.s-header-v2__nav-link {
-	  	color: rgba($color-dark, .7);
+	  	color: $color-dark;
 
       @include hover {
-        color: $color-primary;
+        color: $color-gray;
       }
 
 	  	@include focus {
