@@ -164,7 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
-        Barryvdh\DOMPDF\ServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -231,7 +231,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
-        'PDF' => 'Barryvdh\DOMPDF\Facade',
+        'PDF' => 'Barryvdh\DomPDF\Facade',
 
     ],
 
