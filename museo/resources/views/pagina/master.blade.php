@@ -111,25 +111,22 @@
                     <div class="row">
                         <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
                             <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Home</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">About</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Work</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Contact</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="{{ url('/') }}">Inicio</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="{{ url('/team') }}">Equipo administrativo</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="{{ url('/ferrocarril') }}">Ferrocarril de los altos</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="{{ url('/libros') }}">Libros de biblioteca</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
                             <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Twitter</a></li>
                                 <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.facebook.com/MuseodeQuetzaltenango/">Facebook</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Instagram</a></li>
                                 <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.youtube.com/channel/UCBI2nUnge2cS7oFGmVKoDSA/">YouTube</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-2 g-margin-b-40--xs g-margin-b-0--md">
                             <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Subscribe to Our Newsletter</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Privacy Policy</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Terms &amp; Conditions</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Politica de privacidad</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Terminos &amp; Condiciones</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1  g-padding-y-0--md">
@@ -150,7 +147,7 @@
                         </a>
                     </div>
                     <div class="col-xs-6 g-text-right--xs">
-                      <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light">Desarrolladad por: <a href="{{ url('/team') }}">DeveloperSociety</a></p>
+                      <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light">Creado por: <a href="{{ url('/team') }}">Desarrolladores</a></p>
                     </div>
                 </div>
             </div>
