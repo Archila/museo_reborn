@@ -87,8 +87,8 @@ class BoletoController extends Controller
                 $fecha = date ('d-m-Y');
                
         
-                $img = EscposImage::load("../public/images/LogoBoleto.png");
-                $printer -> graphics($img);
+                //$img = EscposImage::load("../public/images/LogoBoleto.png");
+                //$printer -> graphics($img);
                 $printer -> setJustification(Printer::JUSTIFY_CENTER);
                 $printer -> text("\n".$fecha."\n");
                 $printer -> text("_______________________________________\n");
