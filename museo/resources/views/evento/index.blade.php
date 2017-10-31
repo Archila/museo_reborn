@@ -11,7 +11,7 @@
         <div class="right"><br>
           <a href="{{route('Evento.create')}}" class="modal-trigger btn-floating tooltipped btn-large waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Agregar"><i class="material-icons">add</i></a>
         </div>
-    </div>
+      </div>
 
     <div class="row">
       <div class="col s12">
