@@ -29,7 +29,7 @@
           </thead>
 
           <tbody>
-            <?php $roles=","; ?>
+            <?php $roles=""; ?>
             @foreach($empleados as $empleado)
               <tr>
                 <td>{{$empleado->nombre}}</td>
@@ -42,9 +42,16 @@
                       ->select('roles.nombre as name')
                       ->where('iduser', '=', $idusua)
                       ->get();
-
+                      $primero = true;
                       foreach ($permisos as $permiso) {
-                      $roles=$permiso->name."".$roles;
+                        if (!$primero) {
+                            $roles=$roles." - ".$permiso->name;
+                        }
+                        else {
+                            $roles=$permiso->name;
+                            $primero=false;
+                        }
+
                       }
                       echo $roles;
                       $roles="";
