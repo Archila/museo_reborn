@@ -29,16 +29,16 @@ class BoletoController extends Controller
         return view('boletos.index',compact('visitante','rango'));
     }
     public function findtarifa(Request $request,$param1,$param2)
-    {   
+    {
         if($request->ajax()){
             $data=tarifa::towns($param1,$param2);
             return response()->json($data);
         }
-        
+
          return response()->json($data);
-   
+
     }
- 
+
     public function create()
     {
         //
@@ -52,7 +52,7 @@ class BoletoController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         if($request->ajax()){
             $boleto = new boleto;
             $boleto->fecha  = $request->fecha;
@@ -70,31 +70,31 @@ class BoletoController extends Controller
             {
                 $nombreD=$daton->dato;
             }
-            
-            
+
+
             try {
                 //Conector de windows para la impresora
-                $connector = new WindowsPrintConnector("EPSON20");
+                $connector = new WindowsPrintConnector("termica");
                 $printer = new Printer($connector); //se declara una nueva impresora que recibe el conector windows
-        
+
                 function title($printer, $str) {
                     $printer -> selectPrintMode(Printer::MODE_DOUBLE_HEIGHT | Printer::MODE_DOUBLE_WIDTH);
                     $printer -> text($str);
                     $printer -> selectPrintMode();
                 }
-        
-                                
+
+
                 $fecha = date ('d-m-Y');
-               
-        
+
+
                 //$img = EscposImage::load("../public/images/LogoBoleto.png");
                 //$printer -> graphics($img);
                 $printer -> setJustification(Printer::JUSTIFY_CENTER);
                 $printer -> text("\n".$fecha."\n");
                 $printer -> text("_______________________________________\n");
                 title($printer,"\nBienvenido ".$nombre. "\n");
-        
-                
+
+
                 title($printer, "\n Total Q.".$totales."\n \n");
                 //QR pequeño en el centro
                 $testStr = "http://museodehistoriaxela.com/";
@@ -104,11 +104,11 @@ class BoletoController extends Controller
                 $printer -> text("\n"."¿Sabias qué? ".$nombreD."\n");
                 $printer -> setJustification();
                 $printer -> feed();
-              
-        
+
+
                 $printer -> cut(); //Cortar papel
                 $printer -> close(); //Cerrar impresora
-        
+
               } catch (Exception $e) {
                 echo "Couldn't print to this printer: " . $e -> getMessage() . "\n";
               }
@@ -117,7 +117,7 @@ class BoletoController extends Controller
             ]);
 
         }
-        
+
     }
 
     /**
