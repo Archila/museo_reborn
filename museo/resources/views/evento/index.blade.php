@@ -34,7 +34,7 @@
                 @if ($evento->activo == 1)
                 Activo
                 @else
-                Innactivo
+                Inactivo
                 @endif
               </td>
             <td>{{$evento->nombre}}</td>
