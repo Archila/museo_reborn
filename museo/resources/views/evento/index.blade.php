@@ -19,44 +19,28 @@
           <table class="centered highlight responsive-table">
             <thead class="light-blue darken-1 white-text">
               <tr>
+                <th>Estado</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Fecha inicial</th>
                 <th>Fecha final</th>
-                <th>Activo</th>
                 <th></th>
               </tr>
             </thead>
           <tbody>
           @foreach ($eventos as $evento)
             <tr>
+              <td>
+                @if ($evento->activo == 1)
+                Activo
+                @else
+                Innactivo
+                @endif
+              </td>
             <td>{{$evento->nombre}}</td>
             <td>{{$evento->descripcion}}</td>
             <td>{{$evento->fecha_inicial}}</td>
             <td>{{$evento->fecha_final}}</td>
-            <td>
-              @if ($evento->activo == 1)
-              <div class="switch">
-                 <label>
-                   Off
-                   <input disabled type="checkbox" checked>
-                   <span class="lever"></span>
-                   On
-                 </label>
-               </div>
-
-              @else
-              <div class="switch">
-                 <label>
-                   Off
-                   <input disabled type="checkbox">
-                   <span class="lever"></span>
-                   On
-                 </label>
-               </div>
-              @endif
-
-            </td>
             <td>
               <a class="tooltipped  btn-floating btn-small waves-effect waves-light light-blue darken-4" data-position="bottom"  href="{{route('Evento.edit',$evento->id)}}" data-delay="50" data-tooltip="Editar"><i class="material-icons">edit</i></a>
               <a class="tooltipped  btn-floating btn-small waves-effect waves-light red modal-trigger"   data-position="bottom" href="#modal{{$evento->id}}" data-delay="50" data-tooltip="Eliminar"><i class="material-icons">delete</i></a>
