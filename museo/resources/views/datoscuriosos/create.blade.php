@@ -20,7 +20,7 @@
           <div class="row">
 
           <div class="input-field col s6">
-            <i class="material-icons prefix">more</i>
+            <i class="material-icons prefix">sms</i>
             <input id="icon_prefix" type="text"  name="dato" data-length="100" autocomplete="off" class="required" >
             @if ($errors->has('dato'))
                 <span class="help-block" style="color:red;">
