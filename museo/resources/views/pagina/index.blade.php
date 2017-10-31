@@ -215,10 +215,10 @@
                         <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
                             <div class="g-padding-x-20--xs g-padding-x-50--lg">
                                 <div class="g-margin-b-40--xs">
-                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>" I have purchased many great templates over the years but this product and this company have taken it to the next level. Exceptional customizability. "</i></p>
+                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>"La Guatemala que el mundo ve ahora, es una Guatemala que florece en espiritu de unidad"</i></p>
                                 </div>
                                 <div class="center-block g-hor-divider__solid--white-opacity-lightest g-width-100--xs g-margin-b-30--xs"></div>
-                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">Jake Richardson / Google</h4>
+                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">Jimmy Morales / Presidente de Guatemala 2016-2020</h4>
                             </div>
                         </div>
                         <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
