@@ -1,9 +1,9 @@
 @extends('templates.home')
 
 @section('content')
-
+ 
     <div class="row ">
-
+      
       <div class="col s6 center-align ">
         <p class="center-align caption">Tipo de visitante</p>
           @foreach ($visitante as $v)
@@ -19,21 +19,21 @@
             <label for="{{$r->nombre}}">{{$r->nombre}}</label>
           @endforeach
       </div>
-
+    
     </div>
-
+   
 
   <div class="row ">
       <div class="col s7 m7 ">
-
+        
         <div class="row ">
           <form id="formValidate" name="boleto">
           <div class="col s12">
             <h5 class="light">Precio:</h5>
           </div>
-
+         
           <div class="col s12" id='town'>
-
+           
           </div>
             <input type="hidden" name="_token" value="{{csrf_token()}}" id="token">
             <div class="input-field col s10 center-align">
@@ -46,12 +46,12 @@
             <div class="input-field col s0 center-align">
               <input id="ingreso4" type="hidden" name="ingreso4" value="">
             </div>
-
+            
           </form>
           <div class="col s4 center">
-            <button id="add" class="btn-floating btn-large  waves-effect waves-light  light-blue darken-4 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Agregar" type="submit" name="add"><i class="material-icons">done</i></button>
+            <button id="add" class="btn-floating btn-large  waves-effect waves-light  light-blue darken-4 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Agregar" type="submit" name="add"><i class="material-icons">done</i></button>    
           </div>
-
+          
           <div class="col s12 center">
       <table id="tableboleto" class="bordered highlight responsive-table">
           <thead>
@@ -66,7 +66,7 @@
 
           <tbody id="content_table">
             <tr>
-
+              
             </tr>
           </tbody>
           <tfoot>
@@ -83,20 +83,20 @@
         </div>
       </div>
       <!-- -->
-
+    
     <div class="col s5 m5 ">
       <div class="card hoverable z-depth-2">
         <div class="card-content">
         <div class="card-image">
-          <img style="margin-top:-1cm;margin-bottom:-0.5cm;" src="{{URL::asset('images/museologo.png')}}">
+          <img style="margin-top:-1cm;margin-bottom:-0.5cm;" src="{{URL::asset('Images/museologo.png')}}">
         </div>
-
+          
           <p id="date" class="caption center-align"></p>
         </div>
         <div class="row">
         <div class="col s6 offset-s3 divider"></div>
         </div>
-
+        
           <div class="row">
               <div class="col s6">
                 <h5 class="light right-align">Total:</h5>
@@ -112,20 +112,20 @@
           </div>
           <div class="row">
           <div class="col s12 center">
-            <button id="action" class="btn  waves-effect waves-light  light-blue darken-4" type="submit" name="action"><i class="material-icons left">done_all</i>Enviar</button>
+            <button id="action" class="btn  waves-effect waves-light  light-blue darken-4" type="submit" name="action"><i class="material-icons left">done_all</i>Enviar</button>       
           </div></div>
           <br>
           </div>
-
+      
   </div>
 
   <div class="row">
-
-
+    
+  
   </div>
-
+    
 </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    
 <script type="text/javascript">
   var fecha,tarifa,usuario;
   var total = 0;
@@ -150,7 +150,7 @@
                     }
 
                     $(this).css("background-color", "#ECF8E0");
-
+                
                 })
                 $.ajax({
                   url: '{!!URL::to('boletos')!!}',
@@ -171,10 +171,10 @@
       });
                // alert(campo1 + ' - ' + campo2 + ' - ' + campo3+ ' - ' + campo4);
             })
-
-
-
-
+     
+    
+      
+    
   });
 
 $(document).ready(function(){
@@ -199,7 +199,7 @@ $(document).ready(function(){
       var dato3 = tarifa;
       var dato4 = usuario;
       var dato2 = parseFloat(total);
-
+    	
       var name_table=document.getElementById("tableboleto");
       var row = name_table.insertRow(0+1);
 
@@ -208,7 +208,7 @@ $(document).ready(function(){
       var cell3 = row.insertCell(2);
       var cell4 = row.insertCell(3);
       var cell5 = row.insertCell(4);
-
+      
 
       cell1.innerHTML = '<p >'+fecha+'</p>';
       cell2.innerHTML = '<p >'+tarifa+'</p>';
@@ -219,9 +219,9 @@ $(document).ready(function(){
       //Para calcular los totales enviando los parametros
       calculateTotals(total, 1);
       document.getElementById("ingreso3").value = '';
-
+      
       //Para calcular los totales sin enviar los parametros, solo adquiriendo los datos de la columna con mismo tipo de datos
-
+    
 }
 function getRowSelected(objectPressed){
 	//Obteniendo la linea que se esta eliminando
@@ -231,35 +231,35 @@ function getRowSelected(objectPressed){
 	var tarifa=a.getElementsByTagName("td")[1].getElementsByTagName("p")[0].innerHTML;
 	var usuario=a.getElementsByTagName("td")[2].getElementsByTagName("p")[0].innerHTML;
 	var total=a.getElementsByTagName("td")[3].getElementsByTagName("p")[0].innerHTML;
-
+	
 	var array_fila = [fecha, tarifa, usuario,total];
 
 	return array_fila;
 	//console.log(numero+' '+codigo+' '+descripcion);
 }
 function calculateTotals(total,accion){
-
+	
 	var t_total=parseFloat(document.getElementById("total_total").innerHTML);
   var t_total2=parseFloat(document.getElementById("resultado").innerHTML);
-
+  
 	//accion=1		Sumarle al los totales
 	//accion=2		Restarle al los totales
 	if (accion==1) {
-
+		
 		document.getElementById("total_total").innerHTML=parseFloat(t_total)+parseFloat(total);
     document.getElementById("resultado").innerHTML=parseFloat(t_total)+parseFloat(total);
-
+    
 	}else if(accion==2){
-
+		
 		document.getElementById("total_total").innerHTML=parseFloat(t_total)-parseFloat(total);
     document.getElementById("resultado").innerHTML=parseFloat(t_total)-parseFloat(total);
-
+    
 	}else{
 		alert('Accion Invalida');
 	}
 }
 function calculateTotalsBySumColumn(){
-
+	
 	var totales_n=0;
 	var array_totalesn=document.getElementsByName("total_f[]");
 	for (var i=0; i<array_totalesn.length; i++) {
@@ -275,28 +275,28 @@ function calculateTotalsBySumColumn(){
   document.getElementById("date").innerHTML = (day + "/" + month + "/" + year);
   var prod_id="";
   fecha= (year + "/" + month + "/" + day);
-
+  
 
 	$(document).on('change','.visitante',function(event){
-
+		
     $(document).on('change','.rango',function () {
-
+    
       prod_id=$(this).val();
       var a=$(this).parent();
-
+      		
 			$.get("/find/"+event.target.value+""+prod_id, function(response,state){
 			console.log(response);
-
+			
 			$("#town").empty();
 			for(i=0;i<response.length;i++)
       {
 			  $("#town").append("<input class='with-gap' name='grupo' onClick='boleteria()' type='radio' value='"+response[i].monto+"' id='"+response[i].id+"'>"+"<label for='"+response[i].id+"'>"+response[i].monto+"</label></p>");
-
+        
       }
 		});
 
 	});
-
+		
 	});
 
 });
