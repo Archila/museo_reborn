@@ -9,3 +9,4 @@ composer.lock
 .env.example
 composer.phar
 /public/pagina/scss
+/vendor/dompdf
