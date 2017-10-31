@@ -139,7 +139,7 @@
             <!-- End Links -->
 
             <!-- Copyright -->
-            <div class="container g-padding-y-50--xs">
+            <div class="container g-padding-y-20--xs">
                 <div class="row">
                     <div class="col-xs-6">
                         <a href="index.html">
