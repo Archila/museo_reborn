@@ -1,3 +1,5 @@
+@extends('templates.home')
+@section('content')
 <div class="container">
 
   <div class="row">
@@ -59,13 +61,18 @@
               <input  type="hidden"  name="idusuario" value="{{$usuario->id}}" >
             <div class="input-field col s6"  >
               <i class="material-icons prefix">person_add</i>
-                <select class="required_option" name="rol" id="rol">
+                <select class="required_option" name="roles[]" >
                   <option value="" disabled selected>Rol</option>
-                    @foreach ($roles as $rol)
-                    @if ( ($usuario->rol) == ($rol->id))
-                                <option value="{{$rol->id}}" selected>{{$rol->nombre}}</option>
-                                @else
-                      <option value="{{$rol->id}}">{{ $rol->nombre}}</option>
+                  @foreach ($roles as $rol)
+                    @php $desplegado=false; @endphp
+                      @foreach ($permisos as $permiso)
+                        @if (($rol->id)==($permiso->idpermiso))
+                        <option value="{{$rol->id }}" selected>{{ $rol->nombre}}</option>@php $desplegado=true; @endphp
+                        @endif
+                    @endforeach
+                      @if(!$desplegado)
+                      <option value="{{$rol->id }}">{{ $rol->nombre}}</optio>
+                      @php $desplegado=true; @endphp
                       @endif
                     @endforeach
                 </select>
@@ -83,3 +90,4 @@
     </div>
 
 </div>
+@endsection
