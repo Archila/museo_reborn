@@ -262,11 +262,11 @@
                     <a href="{{ url('/eventos') }}"> Ver todos <i class="g-font-size-18--xs  ti-layers-alt"></i></a>
                 </div>
 
-                <div class="row g-row-col--5">
+                <div class="row g-row-col--12">
 
                     @foreach ($eventos as $evento)
                     <!-- Evento -->
-                    <div class="col-md-4 g-margin-b-10--xs g-margin-b-0--lg">
+                    <div class="col-md-3 col-lg-4 g-margin-b-10--xs g-margin-b-0--lg">
                         <div class="wow fadeInUp" data-wow-duration=".3" data-wow-delay=".1s">
                             <div class="s-plan-v1 g-text-center--xs g-bg-color--white g-padding-y-100--xs">
                                 <h3 class="g-font-size-25--xs g-color--primary g-margin-b-30--xs">{{$evento->nombre}}</h3>
@@ -286,7 +286,6 @@
                                   <span class="s-plan-v1__price-mark">{{ mostrarMesAnio($evento->fecha_final)}}</span>
                                   <!-- /Fecha final-->
                                 </div>
-
                             </div>
                         </div>
                     </div>
