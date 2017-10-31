@@ -61,7 +61,7 @@
               <input  type="hidden"  name="idusuario" value="{{$usuario->id}}" >
             <div class="input-field col s6"  >
               <i class="material-icons prefix">person_add</i>
-                <select class="required_option" name="roles[]" >
+                <select class="required_option" multiple name="roles[]" >
                   <option value="" disabled selected>Rol</option>
                   @foreach ($roles as $rol)
                     @php $desplegado=false; @endphp
