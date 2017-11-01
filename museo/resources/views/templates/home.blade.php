@@ -335,6 +335,7 @@
           <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorías</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/PruebaBoleto')}}">Prueba</a></li>
+          <li><a class="waves-effect waves-sbx" href="{{url('http://127.0.0.1:8000')}}">BoletoLocal</a></li>
           @elseif ($rol=== 4)
           @endif
           </ul>
