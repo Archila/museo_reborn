@@ -1,6 +1,4 @@
-@extends('templates.home')
 
-@section('content')
 
   <h1>Prueba de Iván Archila</h1>
 
@@ -50,12 +48,3 @@
         }
 
    ?>
-@endsection
-
-@section('sections')
-  <div class="center">
-    <i class="medium material-icons">account_balance</i>
-    <p><strong>Boleto:</strong><br>
-    Documento que se entrega a la persona interesada en el que se garantiza que esta ha realizado el pago por un servicio.</p>
-  </div>
-@endsection
