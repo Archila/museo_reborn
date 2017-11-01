@@ -90,7 +90,7 @@
       @else
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                  {{ Auth::user()->name }} <span class="caret"></span>
+                <i class="material-icons">face</i>  {{ Auth::user()->name }}
               </a>
 
               <ul class="dropdown-menu" role="menu">
@@ -98,6 +98,7 @@
                       <a href="{{ route('logout') }}"
                           onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
+                        <i class="material-icons">keyboard_tab</i>
                           Salir
                       </a>
 
@@ -179,30 +180,45 @@
           <li class="bold"><a class="collapsible-header waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">account_balance</i>Piezas</a>
             <div class="collapsible-body">
             <ul>
+              @if ($rol === 1)
+              <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
+              <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
+              <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
+              <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
+              @elseif ($rol=== 2)
+              <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
+              <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
+              <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
+              <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
+              @elseif ($rol=== 3)
+              <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
+              <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
+              <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
+              <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
+              @elseif ($rol=== 4)
+              @endif
+            </ul>
+            </div>
+          </li>
+          <div class="divider"></div>
+          <li class="bold"><a class="collapsible-header waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">description</i>Nomeclatura</a>
+            <div class="collapsible-body">
+            <ul>
             @if ($rol === 1)
-            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
-            <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('Donante.index')}}"> Donantes</a></li>
             @elseif ($rol=== 2)
-            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
-            <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('Donante.index')}}"> Donantes</a></li>
             @elseif ($rol=== 3)
-            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.index')}}">   Inventario         </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Pieza.create')}}">   Nueva adquisición  </a></li>
-            <li><a class="waves-effect waves-sbx" href="/Pieza/show">    Editar pieza       </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
-            <li><a class="waves-effect waves-sbx" href="{{route('Adquisiciones.index')}}">    Adquisiciones     </a></li>
             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
+            <li><a class="waves-effect waves-sbx" href="{{route('Donante.index')}}"> Donantes</a></li>
             @elseif ($rol=== 4)
             @endif
             </ul>
