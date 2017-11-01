@@ -166,7 +166,6 @@
                     document.boleto.ingreso3.value = "";
                     document.getElementById('resultado').innerHTML ="Q. 0";
                     document.getElementById('resultado2').innerHTML="Nombre";
-                    http://127.0.0.1:8000/boletoprueba
                  }
       });
                // alert(campo1 + ' - ' + campo2 + ' - ' + campo3+ ' - ' + campo4);
