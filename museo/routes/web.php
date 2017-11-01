@@ -12,6 +12,7 @@
 */
 #Rutas para la página informativa
 Route::group(['prefix' => '/'], function () {
+    Route::get('/prueba',function(){return view('boletos.pruebaIvan');});
     Route::get('/', 'Pagina@index');
     Route::post('/conctacto', 'Pagina@contact');
     Route::get('/team', function() { return view('pagina.desarrolladores'); });
