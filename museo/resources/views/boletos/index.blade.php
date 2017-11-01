@@ -153,7 +153,7 @@
 
                 })
                 $.ajax({
-                  url: '{!!URL::to('boletos')!!}',
+                  url: '{!!URL::to('http://127.0.0.1:8000/boletoprueba')!!}',
                   headers: {'X-CSRF-TOKEN':token},
                   type: 'POST',
                   dataType: 'json',
