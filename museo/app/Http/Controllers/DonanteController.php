@@ -7,14 +7,12 @@ use Illuminate\Http\Request;
 
 class DonanteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function index()
     {
-        //
+      $donantes = Donante::all();
+      return view('donantes.index')->with('donantes', $donantes);
     }
 
     /**
@@ -24,7 +22,7 @@ class DonanteController extends Controller
      */
     public function create()
     {
-        //
+        return view('donantes.create');
     }
 
     /**
@@ -35,7 +33,34 @@ class DonanteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $mes="Ingreso";
+      DB::beginTransaction();
+       try {
+         $donante = new Donante;
+         $donante->nombre = $request->nombre;
+         $donante->apellido = $request->apellido;
+         $donante->telefono = $request->phone;
+         $donante->email = $request->email;
+         $donante->save();
+              DB::commit();
+
+          $mes="Ingreso correcto";
+         }
+         catch (\Exception $e)
+         {
+             DB::rollback();
+             $mes=$e->getMessage();
+         }
+         if ($mes!="Ingreso correcto")
+          {
+           alert()->error(''.$mes.'', 'Error');
+           return redirect('Donante');
+         }
+         else
+         {
+           alert()-> success(''.$mes.'','Donante');
+          return redirect('Donante');
+         }
     }
 
     /**
@@ -55,11 +80,11 @@ class DonanteController extends Controller
      * @param  \App\donante  $donante
      * @return \Illuminate\Http\Response
      */
-    public function edit(donante $donante)
+    public function edit($donante)
     {
-        //
+      $donante = Donante::findOrFail($donante);
+      return view('donantes.edit',compact('donante'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -67,9 +92,16 @@ class DonanteController extends Controller
      * @param  \App\donante  $donante
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, donante $donante)
+    public function update(Request $request,  $donante)
     {
-        //
+      $donante = Donante::findOrFail($donante);
+      $donante->nombre = $request->uname;
+      $donante->apellido = $request->apellido;
+      $donante->telefono = $request->phone;
+      $donante->email = $request->email;
+      $donante->save();
+      alert()->success('Transaccion', 'Transaccion completa');
+      return redirect('Donante');    //
     }
 
     /**
@@ -78,8 +110,12 @@ class DonanteController extends Controller
      * @param  \App\donante  $donante
      * @return \Illuminate\Http\Response
      */
-    public function destroy(donante $donante)
+    public function destroy($donante)
     {
-        //
+      $donanted = Donante::findOrFail($donante);
+      $donanted->delete();
+      alert()->success('Transaccion', 'Transaccion completa');
+      return redirect('Donante');
     }
-}
+
+  }
