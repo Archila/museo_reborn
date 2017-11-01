@@ -321,16 +321,20 @@
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorías</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
+          <li><a class="waves-effect waves-sbx" href="{{url('/PruebaBoleto')}}">Prueba</a></li>
           @elseif ($rol=== 2)
           <li><a class="waves-effect waves-sbx" href="{{url('/boletos')}}">Generar boleto</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorías</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
+          <li><a class="waves-effect waves-sbx" href="{{url('/PruebaBoleto')}}">Prueba</a></li>
+
           @elseif ($rol=== 3)
           <li><a class="waves-effect waves-sbx" href="{{url('/boletos')}}">Generar boleto</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/tarifas')}}">Tarifas</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/visitantes')}}">Categorías</a></li>
           <li><a class="waves-effect waves-sbx" href="{{url('/rangos')}}">Rangos</a></li>
+          <li><a class="waves-effect waves-sbx" href="{{url('/PruebaBoleto')}}">Prueba</a></li>
           @elseif ($rol=== 4)
           @endif
           </ul>

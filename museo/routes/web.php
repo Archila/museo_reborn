@@ -25,7 +25,7 @@ Route::group(['prefix' => '/'], function () {
 });
 
 Route::resource('/Empleado','EmpleadoController');
-
+Route::resource('/PruebaBoleto','TestBoletoController');
 
 
 Route::resource('boletos','BoletoController');
