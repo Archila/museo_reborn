@@ -13,7 +13,7 @@
 
         try {
           //Conector de windows para la impresora
-          $connector = new WindowsPrintConnector("EPSON20");
+          $connector = new NetworkPrintConnector("EPSON20");
           $printer = new Printer($connector); //se declara una nueva impresora que recibe el conector windows
 
           function title($printer, $text) {
