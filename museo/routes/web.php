@@ -63,8 +63,19 @@ Route::group(['prefix' => '/asistente'], function () {
     Route::post('/ver_qr', 'AsistenteController@guardarQR');
     Route::get('/ficha/{id}', 'AsistenteController@ficha');
 });
+Route::group(['prefix' => '/home'], function () {
+   Route::get('/','ChartsController@main');
 
-Route::get('/home', 'HomeController@index')->name('home');
+});
+Route::group(['prefix' => '/Estadistica'], function () {
+
+    Route::get('/','ChartsController@main');
+    Route::get('Tarifas','ChartsController@Highchart');
+    Route::get('Ventas','ChartsController@LineChart');
+    Route::get('Piezas','ChartsController@Chartpieces');
+});
+
+
 
 
 
