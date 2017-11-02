@@ -304,15 +304,13 @@ class WindowsPrintConnector implements PrintConnector
      */
     protected function getCurrentPlatform()
     {
-        /*if (PHP_OS == "WINNT") {
+        if (PHP_OS == "WINNT") {
             return self::PLATFORM_WIN;
         }
         if (PHP_OS == "Darwin") {
             return self::PLATFORM_MAC;
         }
-        return self::PLATFORM_LINUX;*/
-
-        return self::PLATFORM_WIN;
+        return self::PLATFORM_LINUX;
     }
 
     /* (non-PHPdoc)

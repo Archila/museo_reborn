@@ -7,13 +7,13 @@
   use Mike42\Escpos;
   use Mike42\Escpos\Printer;
   use Mike42\Escpos\EscposImage;
-  use Mike42\Escpos\PrintConnectors\NetworkPrintConnector;
+  use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
 
   use Illuminate\Http\Request;
 
         try {
           //Conector de windows para la impresora
-          $connector = new NetworkPrintConnector("EPSON20");
+          $connector = new WindowsPrintConnector("EPSON20");
           $printer = new Printer($connector); //se declara una nueva impresora que recibe el conector windows
 
           function title($printer, $text) {
