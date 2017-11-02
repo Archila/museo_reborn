@@ -74,7 +74,7 @@ class BoletoController extends Controller
 
             try {
                 //Conector de windows para la impresora
-                $connector = new WindowsPrintConnector("termica");
+                $connector = new WindowsPrintConnector("EPSON20");
                 $printer = new Printer($connector); //se declara una nueva impresora que recibe el conector windows
 
                 function title($printer, $str) {
@@ -82,8 +82,6 @@ class BoletoController extends Controller
                     $printer -> text($str);
                     $printer -> selectPrintMode();
                 }
-
-
                 $fecha = date ('d-m-Y');
 
 
