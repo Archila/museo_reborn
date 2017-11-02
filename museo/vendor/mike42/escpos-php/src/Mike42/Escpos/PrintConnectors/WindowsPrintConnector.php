@@ -193,7 +193,7 @@ class WindowsPrintConnector implements PrintConnector
             if ($this -> userPassword == null) {
                 // No password
                 $command = sprintf(
-                    "smbclient %s -U %s -c %s -N",
+                    "Errorsito smbclient %s -U %s -c %s -N",
                     escapeshellarg($device),
                     escapeshellarg($user),
                     escapeshellarg("print -")
@@ -242,7 +242,7 @@ class WindowsPrintConnector implements PrintConnector
     {
         throw new Exception("Mac printing not implemented.");
     }
-    
+
     /**
      * Send data to printer -- platform-specific Windows code.
      *
@@ -298,21 +298,23 @@ class WindowsPrintConnector implements PrintConnector
             }
         }
     }
-    
+
     /**
      * @return string Current platform. Separated out for testing purposes.
      */
     protected function getCurrentPlatform()
     {
-        if (PHP_OS == "WINNT") {
+        /*if (PHP_OS == "WINNT") {
             return self::PLATFORM_WIN;
         }
         if (PHP_OS == "Darwin") {
             return self::PLATFORM_MAC;
         }
-        return self::PLATFORM_LINUX;
+        return self::PLATFORM_LINUX;*/
+
+        return self::PLATFORM_WIN;
     }
-    
+
     /* (non-PHPdoc)
 	 * @see PrintConnector::read()
 	 */
@@ -321,7 +323,7 @@ class WindowsPrintConnector implements PrintConnector
         /* Two-way communication is not supported */
         return false;
     }
-    
+
     /**
      * Run a command, pass it data, and retrieve its return value, standard output, and standard error.
      *
@@ -359,7 +361,7 @@ class WindowsPrintConnector implements PrintConnector
             return -1;
         }
     }
-    
+
     /**
      * Copy a file. Separated out so that nothing is actually printed during test runs.
      *
@@ -371,7 +373,7 @@ class WindowsPrintConnector implements PrintConnector
     {
         return copy($from, $to);
     }
-    
+
     /**
      * Write data to a file. Separated out so that nothing is actually printed during test runs.
      *
