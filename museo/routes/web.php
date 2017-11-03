@@ -22,6 +22,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/contacto', function() { return view('pagina.contacto'); });
     Route::get('/eventos', 'Pagina@eventos');
     Route::get('/libros', 'Pagina@libros');
+    Route::get('/libros2', function() { return view('pagina.libros2'); });
     Route::get('/buscarLibro','LibroController@search');
     Route::get('/buscarLibro2','LibroController@searchsystem');
 });
