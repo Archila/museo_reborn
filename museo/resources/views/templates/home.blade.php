@@ -264,19 +264,9 @@
                    <li><a class="waves-effect waves-sbx" href="{{route('Autor.index')}}">Autores</a></li>
                    <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorías</a></li>
                    @elseif ($rol=== 2)
-                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.create')}}">Nuevo libro</a></li>
-                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.index')}}">Listado de libros</a></li>
-                     <li><a class="waves-effect waves-sbx" href="{{route('Libro.show',0)}}">Editar libros</a></li>
-                   <li><a class="waves-effect waves-sbx" href="{{route('Editorial.index')}}">Editoriales</a></li>
-                   <li><a class="waves-effect waves-sbx" href="{{route('Autor.index')}}">Autores</a></li>
-                   <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorías</a></li>
+
                    @elseif ($rol=== 3)
-                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.create')}}">Nuevo libro</a></li>
-                   <li><a class="waves-effect waves-sbx" href="{{route('Libro.index')}}">Listado de libros</a></li>
-                     <li><a class="waves-effect waves-sbx" href="{{route('Libro.show',0)}}">Editar libros</a></li>
-                   <li><a class="waves-effect waves-sbx" href="{{route('Editorial.index')}}">Editoriales</a></li>
-                   <li><a class="waves-effect waves-sbx" href="{{route('Autor.index')}}">Autores</a></li>
-                   <li><a class="waves-effect waves-sbx" href="{{route('Categoria.index')}}">Categorías</a></li>
+
                    @elseif ($rol=== 4)
                    <li><a class="waves-effect waves-sbx" href="{{route('Libro.create')}}">Nuevo libro</a></li>
                    <li><a class="waves-effect waves-sbx" href="{{route('Libro.index')}}">Listado de libros</a></li>
@@ -325,11 +315,9 @@
            <li><a class="waves-effect waves-sbx" href="{{route('Empleado.index')}}">Empleados     </a></li>
            <li><a class="waves-effect waves-sbx" href="{{route('Empleado.create')}}">Nuevo empleado </a></li>
            @elseif ($rol=== 2)
-           <li><a class="waves-effect waves-sbx" href="{{route('Empleado.index')}}">Empleados     </a></li>
-           <li><a class="waves-effect waves-sbx" href="{{route('Empleado.create')}}">Nuevo empleado </a></li>
+
            @elseif ($rol=== 3)
-           <li><a class="waves-effect waves-sbx" href="{{route('Empleado.index')}}">Empleados     </a></li>
-           <li><a class="waves-effect waves-sbx" href="{{route('Empleado.create')}}">Nuevo empleado </a></li>
+          
            @elseif ($rol=== 4)
                    @endif
            </ul>
@@ -367,8 +355,6 @@
 
        <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">insert_chart</i>Estadisticas</a>
          <div class="collapsible-body">
-           Tarifas
-           Ventas
            <ul>
            @if ($rol === 1)
            <li><a class="waves-effect waves-sbx" href="{{url('/Estadistica/Ventas')}}">Ventas</a></li>
