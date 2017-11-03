@@ -151,7 +151,7 @@ class LibroController extends Controller
       if ($request->ajax())
       {
      $output="";
-      $donantes=libro::join('autores', 'libros.idautor', '=', 'autores.id')
+      $libros=libro::join('autores', 'libros.idautor', '=', 'autores.id')
           ->join('editoriales', 'libros.ideditorial', '=', 'editoriales.id')
           ->join('categorias', 'libros.idcategoria', '=', 'categorias.id')
           ->select('libros.*', 'autores.nombre as aut','autores.id as idaut',
@@ -162,22 +162,22 @@ class LibroController extends Controller
                   ->orWhere('autores.nombre','LIKE','%'.$request->search.'%')
                    ->get();
      $cont=1;
-      if ($donantes)
+      if ($libros)
        {
-         foreach ($donantes as $key => $donantes)
+         foreach ($libros as $key => $libros)
           {
             $output.='
             <div class="col s6 m4 l3">
               <div class="card bgimg z-depth-5">
                 <div class="card-content white-text">
-                  <p class="card-title center medium">'.$donantes->nombre.'</p>
-                  <p class="medium center">'.$donantes->aut.'</p>
+                  <p class="card-title center medium">'.$libros->nombre.'</p>
+                  <p class="medium center">'.$libros->aut.'</p>
                   <div class="divider"></div>
-                  <p class="light left">Edicion: </p><p class="medium">'.$donantes->edicion.'</p>
-                  <p class="light left">Año: </p><p class="medium">'.$donantes->anio.'</p>
-                  <p class="light left">Páginas:</p><p class="medium">'.$donantes->paginas.'</p>
-                  <p class="light left">Editorial:</p> <p class="medium">'.$donantes->edit.'</p>
-                  <p class="light left ">Categoria: </p> <p class="medium">'.$donantes->cat.'</p>
+                  <p class="light left">Edicion: </p><p class="medium">'.$libros->edicion.'</p>
+                  <p class="light left">Año: </p><p class="medium">'.$libros->anio.'</p>
+                  <p class="light left">Páginas:</p><p class="medium">'.$libros->paginas.'</p>
+                  <p class="light left">Editorial:</p> <p class="medium">'.$libros->edit.'</p>
+                  <p class="light left ">Categoria: </p> <p class="medium">'.$libros->cat.'</p>
                 </div>
               </div>
            </div>';
