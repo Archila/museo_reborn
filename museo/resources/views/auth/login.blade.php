@@ -131,6 +131,8 @@ main {flex: 1 0 auto;}
     <script src="{{URL::asset('js/jquery.timeago.min.js')}}"></script>
     <script src="{{URL::asset('js/prism.js')}}"></script>
     <script src="{{URL::asset('jade/lunr.min.js')}}"></script>
+    <script src="{{URL::asset('js/jquery.validate.min.js')}}"></script>
+    <script src="{{URL::asset('js/valid.js')}}"></script>
     <script src="{{URL::asset('jade/search.js')}}"></script>
     <script src="{{URL::asset('bin/materialize.js')}}"></script>
     <script src="{{URL::asset('js/init.js')}}"></script>
