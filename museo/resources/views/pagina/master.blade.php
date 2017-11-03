@@ -54,7 +54,7 @@
                           <div class="s-header__logo">
                               <a href="{{ url('/') }}" class="s-header-v2__logo-link">
                                 <img class="s-header__logo-img s-header__logo-img-default" src="{{URL::asset('pagina/img/logo-blanco-prueba.png')}}" alt="SBX Logo">
-                                <img class="s-header__logo-img s-header__logo-img-shrink" src="{{URL::asset('pagina/img/logo-negro.png')}}" alt="SBX Logo">
+                                <img class="s-header__logo-img s-header__logo-img-shrink" src="{{URL::asset('pagina/img/logo-blanco-prueba.png')}}" alt="SBX Logo">
                               </a>
                           </div>
                           <!-- End Logo -->
@@ -119,7 +119,7 @@
                         </div>
                         <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
                             <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.facebook.com/MuseodeQuetzaltenango/">Facebook</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity"  href="https://www.facebook.com/MuseodeQuetzaltenango/">Facebook</a></li>
                                 <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.youtube.com/channel/UCBI2nUnge2cS7oFGmVKoDSA/">YouTube</a></li>
                             </ul>
                         </div>

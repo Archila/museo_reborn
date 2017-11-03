@@ -1257,7 +1257,7 @@ a {
     .s-header-v2__navbar {
       /* Color de fondo del menu responsivo
       ------------------------------ */
-      background: #fff;
+      background: rgba(34, 35, 36, 0.9);
       box-shadow: 0 0 0.9375rem 0.25rem rgba(34, 35, 36, 0.05); } }
 
 /* Navbar Row
@@ -1318,7 +1318,7 @@ a {
     .s-header-v2__toggle-icon-bar, .s-header-v2__toggle-icon-bar:before, .s-header-v2__toggle-icon-bar:after {
       /* Color del icono del menu responsivo
       ------------------------------ */
-      background: #222324; }
+      background: #fff; }
     .s-header-v2__toggle-icon-bar:before, .s-header-v2__toggle-icon-bar:after {
       position: absolute;
       left: 0;
@@ -1404,7 +1404,7 @@ a {
   @media (max-width: 61.9em) {
     .s-header-v2__nav {
       /* Color de fondo de los titulos menu responsivo*/
-      background: #fff;
+      background: transparent;
       padding: 1.25rem 0; } }
   .s-header-v2__nav-item {
     position: relative;
@@ -1425,7 +1425,7 @@ a {
     font-family: Montserrat, sans-serif;
     /* Color de las letras del menu principal
     ------------------------------ */
-    color: rgba(255, 255, 255, 0.75);
+    color: #fff;
     line-height: 5.5rem;
     text-transform: uppercase;
     margin: 0 .9rem;
@@ -1433,7 +1433,7 @@ a {
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
     .s-header-v2__nav-link:hover {
-      color: #fff; }
+      color: #13b1cd; }
     .s-header-v2__nav-link:focus {
       color: rgba(255, 255, 255, 0.75); }
     .s-header-v2__nav-link.-is-active {
@@ -1442,11 +1442,11 @@ a {
       .s-header-v2__nav-link {
         /* Color de las letras del menu responsivo
         ------------------------------ */
-        color: #222324;
+        color: #aeaeae;
         line-height: 1.6;
         margin: 1.5rem 0; }
         .s-header-v2__nav-link:focus, .s-header-v2__nav-link:hover {
-          color: #7e7e7e; }
+          color: #fff; }
         .s-header-v2__nav-link.-is-active {
           color: #13b1cd; } }
 
@@ -1458,7 +1458,7 @@ a {
   min-width: 13.750rem;
   /* Color del fondo del menu desplegable
   ------------------------------ */
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(36, 37, 38, 0.8);
   border: none;
   border-radius: 0;
   box-shadow: 0 0.3125rem 0.75rem rgba(34, 35, 36, 0.05);
@@ -1477,7 +1477,7 @@ a {
     font-family: Lato, sans-serif;
     /* Color de las letras del menu desplegable
     ------------------------------ */
-    color: #222324 !important;
+    color: #cecece !important;
     padding: .4375rem 2rem .4375rem 1.375rem !important;
     transition-duration: 300ms;
     transition-property: all;
@@ -1498,7 +1498,7 @@ a {
 @media (min-width: 62em) {
   .s-header__shrink .s-header-v2__navbar {
     /* Color de fondo del menu al bajar la pagina */
-    background: #fff;
+    background: rgba(34, 35, 36, 0.9);
     box-shadow: 0 0 0.9375rem 0.25rem rgba(34, 35, 36, 0.05); }
 
   /* Toggle */
@@ -1513,11 +1513,11 @@ a {
 
   /* Nav Link  (Barra que aparece al bajar en la pagina) */
   .s-header__shrink .s-header-v2__nav-link {
-    color: #222324; }
+    color: #aeaeae; }
     .s-header__shrink .s-header-v2__nav-link:hover {
-      color: #7e7e7e; }
+      color: #fff; }
     .s-header__shrink .s-header-v2__nav-link:focus {
-      color: rgba(34, 35, 36, 0.7); }
+      color: rgba(19, 177, 205, 0.7); }
     .s-header__shrink .s-header-v2__nav-link.-is-active {
       color: #13b1cd; } }
 /*----------------------------------

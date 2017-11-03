@@ -6,10 +6,10 @@
         <div class="s-swiper">
             <!-- Swiper Wrapper -->
             <div class="swiper-wrapper">
-                <div class="g-fullheight--xs g-bg-position--center swiper-slide" style="background: url('pagina/img/1920x1080/014.jpg');">
+                <div class="g-fullheight--xs g-bg-position--center swiper-slide" style="background: url('pagina/img/1920x1080/014.png');">
                     <div class="container g-text-center--xs g-ver-center--xs">
                         <div class="g-margin-b-30--xs">
-                            <h1  class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white">Museo de Historia<br>de Quetzaltenango</h1>
+                            <h1  class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white"> Museo de Historia <br>de Quetzaltenango</h1>
                         </div>
                         <img class="logo-img s-header" src="pagina/img/museo-lg.png" alt="SBX Logo">
                         </a>
@@ -19,8 +19,8 @@
             </div>
             <!-- End Swiper Wrapper -->
             <a href="#js__scroll-to-section" class="s-scroll-to-section-v1--bc g-margin-b-15--xs">
-                <span class="g-font-size-18--xs  ti-angle-double-down"></span>
-                <p class="text-uppercase g-color--white g-letter-spacing--3 g-margin-b-0--xs">Aprende más</p>
+                <span class="g-font-size-18--xs  ti-angle-double-down" style="color: white;"></span>
+                <p class="text-uppercase g-color--white g-letter-spacing--3 g-margin-b-0--xs"><b>Aprende más</b></p>
             </a>
         </div>
         <!--========== END SWIPER SLIDER ==========-->
@@ -30,7 +30,7 @@
         <div id="js__scroll-to-section" class="container g-padding-y-80--xs g-padding-y-125--sm">
             <div class="g-text-center--xs g-margin-b-100--xs">
                 <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Bienvendio a la página del Museo de Historia de Quezaltenango</p>
-                <h2 class="g-font-size-22--xs g-font-size-36--md">El Museo de Historia de Quetzaltenango se dedica al estudio, preservación y difusión de la historia del occidente de Guatemala</h2>
+
                 <h2 class="g-font-size-16--xs g-font-size-26--md">presentando varias exhibiciones:  </h2>
             </div>
             <div class="row g-margin-b-60--xs g-margin-b-70--md">
@@ -121,11 +121,9 @@
         <!-- End Features -->
 
         <!-- Frase-->
-        <div class="js__parallax-window" style="background: url(pagina/img/1920x1080/banderas.jpg) 50% 0 no-repeat fixed;">
+        <div class="js__parallax-window" style="background: url(pagina/img/1920x1080/banderas.png) 100% 0 no-repeat fixed;">
             <div class="container g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
-                <div class="g-margin-b-80--xs">
-                    <h2 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white">Juntos Por Nuestra Ciudad</h2>
-                </div>
+
                 <h3 class="g-font-size-25--xs g-color--white">Dedicados a elevar la calidad de vida de los ciudadanos en el espacio público.</h3>
             </div>
         </div>
