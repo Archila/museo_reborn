@@ -20,13 +20,6 @@ class EmpleadoController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function __construct()
-      {
-
-          $this->middleware('encmuseo')->only('create','destroy','edit','update');
-          $this->middleware('secre')->only('index');
-
-      }
 
 
     public function index()
