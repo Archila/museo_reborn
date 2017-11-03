@@ -19,14 +19,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style >
-    
+
       * {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
-     
+
       .waves-effect.waves-sbx .waves-ripple{background-color: rgba(2, 86, 156, 1);}
       body{display: flex;min-height: 100vh;flex-direction: column;background: url({{URL::asset('images/cover.jpg')}}) no-repeat fixed;background-size: cover;background-position: 50%;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;}
       .card{background-color:rgba(255, 255, 255, 0.87);}
       ::-webkit-input-placeholder {color: #302c2c;}
-    
+
       .input-field div.error
       {
         position: relative;
@@ -52,13 +52,13 @@
       -webkit-filter: blur(3px);
       filter: blur(3px);
     }
-  body .menu .mainmenu:after 
+  body .menu .mainmenu:after
     {
       clear: both;
       content: "";
       display: block;
     }
-  body .menu .mainmenu .menuitem 
+  body .menu .mainmenu .menuitem
   {
     float: left;
     width: 10%;
@@ -71,27 +71,25 @@
   }
   main {flex: 1 0 auto;}
   .card{background-color:rgba(255, 255, 255, 0.87);}
- 
+
 
     </style>
 </head>
 <nav>
   <div class="nav-wrapper cyan darken-4">
-    <a href="" class="brand-logo center"> <i class="material-icons white-text">account_balance</i></a>
-    <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-    
+    <a href="{{ url('/') }}" class="brand-logo center"> <i class="material-icons white-text">account_balance</i></a>
+    <a href="{{ url('/') }}" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
     <ul class="left hide-on-med-and-down">
-      <li><a href="">Pagina Web</a></li>
-      
+      <li><a href="{{ url('/') }}">Pagina Web</a></li>
+
     </ul>
     <ul class="right hide-on-med-and-down">
-      <li><a href="">Politica</a></li>
       <li><a href="">Terminos & Condiciones</a></li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
-      <li><a href="">Politica</a></li>
       <li><a href="">Terminos & Condiciones</a></li>
-      <li><a href="">Pagina Web</a></li>
+      <li><a href="{{ url('/') }}">Pagina Web</a></li>
     </ul>
   </div>
 </nav>
@@ -104,24 +102,24 @@
   <br><br><br>
 
   <div class="row">
-   
-    
+
+
     <div class="col m4 s12 l4 offset-l4">
 
       <div class="card"><br><br>
         <div class="card-content center-align black-text">
-          
+
           <i class="large material-icons black-text">account_balance</i>
           <span class="card-title center-align">Museo de Historia</span>
           <div class="col s8 offset-s2 divider black">
-           
+
           </div> <br>
 
           <div class="row ">
             <form id="formValidate" class="col s12 " method="POST" action="{{route('login')}}" >
               {{ csrf_field() }}
               {{ method_field('POST') }}
-              
+
                 <div class="input-field col s12">
                   <input id="name" type="text" name="name" class="required black-text" autocomplete="off" >
                   <label for="email" class="blue-grey-text text-darken-3">Usuario</label>
@@ -142,12 +140,12 @@
       </div>
     </div>
   </div>
-  
+
 
 </div>
 
 
-    
+
 </body>
 
 <script src="{{URL::asset('js/sweetalert.min.js')}}"></script>
