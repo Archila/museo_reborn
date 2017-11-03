@@ -60,7 +60,7 @@ Route::middleware(['admin'])->group(function () {
 });
 
 
-Route::middleware(['secre', 'encmuseo'])->group(function () {
+Route::middleware(['encmuseo', 'secre'])->group(function () {
   Route::resource('/PruebaBoleto','TestBoletoController');
   Route::resource('boletos','BoletoController');
   Route::resource('rangos','RangoEdadeController');
