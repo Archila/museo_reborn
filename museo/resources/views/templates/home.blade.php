@@ -367,16 +367,21 @@
 
        <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">insert_chart</i>Estadisticas</a>
          <div class="collapsible-body">
+           Tarifas
+           Ventas
            <ul>
            @if ($rol === 1)
-           <li><a class="waves-effect waves-sbx" href="badges.html">Ventas</a></li>
-           <li><a class="waves-effect waves-sbx" href="badges.html">Piezas</a></li>
+           <li><a class="waves-effect waves-sbx" href="{{url('/Estadistica/Ventas')}}">Ventas</a></li>
+           <li><a class="waves-effect waves-sbx" href="{{url('/Estadistica/Tarifas')}}">Tarifas</a></li>
+           <li><a class="waves-effect waves-sbx" href="{{url('/Estadistica/Piezas')}}">Piezas</a></li>
            @elseif ($rol=== 2)
-           <li><a class="waves-effect waves-sbx" href="badges.html">Ventas</a></li>
-           <li><a class="waves-effect waves-sbx" href="badges.html">Piezas</a></li>
+           <li><a class="waves-effect waves-sbx" href="{{url('/Estadistica/Ventas')}}">Ventas</a></li>
+           <li><a class="waves-effect waves-sbx" href="{{url('/Estadistica/Tarifas')}}">Tarifas</a></li>
+           <li><a class="waves-effect waves-sbx" href="{{url('/Estadistica/Piezas')}}">Piezas</a></li>
            @elseif ($rol=== 3)
-           <li><a class="waves-effect waves-sbx" href="badges.html">Ventas</a></li>
-           <li><a class="waves-effect waves-sbx" href="badges.html">Piezas</a></li>
+           <li><a class="waves-effect waves-sbx" href="{{url('/Estadistica/Ventas')}}">Ventas</a></li>
+           <li><a class="waves-effect waves-sbx" href="{{url('/Estadistica/Tarifas')}}">Tarifas</a></li>
+           <li><a class="waves-effect waves-sbx" href="{{url('/Estadistica/Piezas')}}">Piezas</a></li>
            @elseif ($rol=== 4)
            @endif
 
