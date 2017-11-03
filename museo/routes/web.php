@@ -104,9 +104,7 @@ Route::middleware(['admin'])->group(function () {
       Route::post('/ver_qr', 'AsistenteController@guardarQR');
       Route::get('/ficha/{id}', 'AsistenteController@ficha');
   });
-  Route::group(['prefix' => '/home'], function () {
-     Route::get('/','ChartsController@main');
-  });
+
   Route::group(['prefix' => '/Estadistica'], function () {
       Route::get('/','ChartsController@main');
       Route::get('Tarifas','ChartsController@Highchart');
@@ -144,9 +142,6 @@ Route::middleware(['secre'])->group(function () {
       Route::post('/ver_qr', 'AsistenteController@guardarQR');
       Route::get('/ficha/{id}', 'AsistenteController@ficha');
   });
-  Route::group(['prefix' => '/home'], function () {
-     Route::get('/','ChartsController@main');
-  });
   Route::group(['prefix' => '/Estadistica'], function () {
       Route::get('/','ChartsController@main');
       Route::get('Tarifas','ChartsController@Highchart');
@@ -183,9 +178,7 @@ Route::middleware(['encmuseo'])->group(function () {
       Route::post('/ver_qr', 'AsistenteController@guardarQR');
       Route::get('/ficha/{id}', 'AsistenteController@ficha');
   });
-  Route::group(['prefix' => '/home'], function () {
-     Route::get('/','ChartsController@main');
-  });
+
   Route::group(['prefix' => '/Estadistica'], function () {
       Route::get('/','ChartsController@main');
       Route::get('Tarifas','ChartsController@Highchart');
