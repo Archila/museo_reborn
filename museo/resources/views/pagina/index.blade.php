@@ -124,7 +124,7 @@
         <div class="js__parallax-window" style="background: url(pagina/img/1920x1080/banderas.png) 100% 0 no-repeat fixed;">
             <div class="container g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
 
-                <h3 class="g-font-size-25--xs g-color--white">Dedicados a elevar la calidad de vida de los ciudadanos en el espacio público.</h3>
+                <h3 class="g-font-size-25--xs g-font-size-50--md g-color--white">El Museo de Historia de Quetzaltenango se dedica al estudio, preservación y difusión de la historia del occidente de Guatemala</h3>
             </div>
         </div>
         <!-- Frase -->
