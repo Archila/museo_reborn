@@ -104,11 +104,9 @@
   <br><br><br>
 
   <div class="row">
-    <div class="col s4">
+   
     
-    </div>
-    
-    <div class="col s4">
+    <div class="col m4 s12 l4 offset-l4">
 
       <div class="card"><br><br>
         <div class="card-content center-align black-text">
