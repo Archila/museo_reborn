@@ -20,7 +20,7 @@
   <div class="center">
 <div class="col s10 m8 l6 offset-s1 offset-s2 offset-l3 center">
     <nav>
-      <div class="nav-wrapper blue lighten-2">
+      <div class="nav-wrapper teal darken-3">
           <div class="input-field">
             <input id="buscar" type="search" placeholder="Nombre de libro, autor, categoria" onclick="ocular()" >
             <label class="label-icon" for="search"><i class="material-icons prefix">search</i></label>
