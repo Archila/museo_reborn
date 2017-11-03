@@ -149,4 +149,8 @@ Route::middleware(['encbibli'])->group(function () {
   Route::resource('/Editorial','EditorialeController');
   Route::resource('/Autor','AutoreController');
 });
+
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
