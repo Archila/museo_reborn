@@ -30,7 +30,7 @@ class MDSecretaria
           return $next($request);
         }
       }
-      return new Response(view('mensajeerror.Error')->with('msj','No tiene privilegios como Secretaria'));
+      return new Response(view('mensajeerror.Error403')->with('msj','No tiene privilegios como Secretaria'));
 
     }
 
