@@ -93,34 +93,7 @@
   </div>
 </bdi>
 
-<footer class="page-footer light-blue darken-4">
-  <div class="container">
-        <div class="row">
-          <div class="col l4 s12">
-            <h5 class="white-text"><i class="material-icons">pin_drop</i>Ubicación</h5>
-            <p class="grey-text text-lighten-4">21 Avenida. Segundo Nivel, Centro Interculltural</p>
-          </div>
-          <div class="col l4 s12">
-            <h5 class="white-text"><i class="material-icons">alarm</i>Horario</h5>
-            <p class="grey-text text-lighten-4">De Lunes a Domingo de 9:00 am a 8:00 pm</p>
-          </div>
-          <div class="col l4 s12" style="overflow: hidden;">
-            <h5 class="white-text"><i class="material-icons">touch_app</i>Conectar</h5>
-            <a href="https://www.facebook.com/BibliotecaPublicaQuetzaltenango">
-            <div class="chip indigo darken-4 white-text">
-               <img src="pagina/img/facebook.png" alt="Facebook">
-               @BibliotecaPublicaQuetzaltenango
-            </div>
-            </a>
-            <div class="chip deep-purple darken-1 white-text">
-               <img src="pagina/img/phonelogo.png" alt="Facebook">
-               5058 1108
-            </div>
-          </div>
-        </div>
-      </div>
 
-</footer>
 <script src="{{URL::asset('js/sweetalert.min.js')}}"></script>
 <script src="{{URL::asset('js/jquery-3.2.1.min.js')}}"></script>
 <script src="{{URL::asset('js/jquery.validate.min.js')}}"></script>
