@@ -71,7 +71,7 @@
                                           <li><a href="{{ url('/administracion') }}" class="s-header-v2__dropdown-menu-link">Administración</a></li>
                                           <li><a href="{{ url('/eventos') }}" class="s-header-v2__dropdown-menu-link">Eventos</a></li>
                                           <li><a href="{{ url('/#piezas') }}" class="s-header-v2__dropdown-menu-link">Piezas</a></li>
-                                          <li><a href="{{ url('//busquedalibros') }}" class="s-header-v2__dropdown-menu-link">Libros</a></li>
+                                          <li><a href="{{ url('/busquedalibros') }}" class="s-header-v2__dropdown-menu-link">Libros</a></li>
 
                                       </ul>
                                   </li>
