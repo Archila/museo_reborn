@@ -27,7 +27,9 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/buscarLibro2','LibroController@searchsystem');
 });
 
-Route::middleware(['auth'])->group(function () {
+
+
+Route::group(['middleware' => ['auth']],function () {
   Route::resource('/Empleado','EmpleadoController');
   Route::resource('/PruebaBoleto','TestBoletoController');
   Route::resource('boletos','BoletoController');
@@ -70,6 +72,7 @@ Route::middleware(['auth'])->group(function () {
       Route::get('Piezas','ChartsController@Chartpieces');
   });
 });
+
 
 
 Route::middleware(['admin'])->group(function () {
