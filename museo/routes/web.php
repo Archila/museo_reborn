@@ -151,6 +151,8 @@ Route::middleware(['encbibli'])->group(function () {
 });
 
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::group(['prefix' => '/home'], function () {
+     Route::get('/','ChartsController@main');
+  });
+  
 Auth::routes();
