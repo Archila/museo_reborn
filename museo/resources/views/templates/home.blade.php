@@ -35,7 +35,8 @@
         transform: translateY(0%);
       }
       .input-field label.active{
-          width:100%;      }
+          width:100%;
+      }
       .left-alert input[type=text] + label:after,
       .left-alert input[type=password] + label:after,
       .left-alert input[type=email] + label:after,
@@ -61,9 +62,9 @@
       .right-alert input[type=search] + label:after,
       .right-alert textarea.materialize-textarea + label:after{ right:70px;}
       /* label color */
-      .input-field label {
-        color: #1792a4;
-      }
+   .input-field label {
+     color: #1792a4;
+   }
    /* label focus color */
    .input-field input[type=email]:focus + label {color: #1792a4;}
    .input-field input[type=password]:focus + label {color: #1792a4;}
@@ -80,26 +81,45 @@
 <body class="white">
   <header>
 
+
+
     <ul id="dropdown1" class="dropdown-content">
      <!--guest-->
      @guest
       <li><a href="{{ route('login') }}">Ingresar</a></li>
       @else
-          <li><a href="#" class="waves-effect waves-teal black-text" >{{ Auth::user()->name }}</a></li>
-          <li class="divider"></li>
-          <li>
-            <a class="waves-effect waves-teal black-text" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Salir</a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> {{ csrf_field() }}</form>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="material-icons">face</i>  {{ Auth::user()->name }}
+              </a>
+
+              <ul class="dropdown-menu" role="menu">
+                  <li>
+                      <a href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                        <i class="material-icons">keyboard_tab</i>
+                          Salir
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                      </form>
+                  </li>
+              </ul>
           </li>
       @endguest
     </ul>
 
+
+
+
     <nav class="top-nav light-blue darken-4">
       <div class="container">
         <div class="nav-wrapper center"><a class="page-title" href="#">
-          <img src="{{URL::asset('images/logo.png')}}" width="330" height="130" alt=""></a>
+        <img src="{{URL::asset('images/logo.png')}}" width="330" height="130" alt=""></a>
         <ul class="right" style="margin-top:30px;">
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i style="font-size:30px;" class=" material-icons right">expand_more</i></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i style="font-size:30px;" class=" material-icons right">expand_more</i></a></li>
         </ul>
         </div>
       </div>
@@ -134,26 +154,26 @@
             ->where('iduser', '=', $irUsuario)
             ->get();
             $asignado=false;
-          foreach ($permisos as $permiso)
-          {
-              if ($permiso->idpermiso==1) {
-                  $rol =$permiso->idpermiso;
-                  $asignado=true;
-              }
-              elseif ($permiso->idpermiso==2 && !$asignado) {
-                $rol =$permiso->idpermiso;
-                $asignado=true;
-              }
-              elseif ($permiso->idpermiso==3 && !$asignado) {
-                $rol =$permiso->idpermiso;
-                $asignado=true;
-              }
-              elseif ($permiso->idpermiso==4 && !$asignado) {
-                $rol =$permiso->idpermiso;
-                $asignado=true;
-              }
-            }
-          ?>
+  foreach ($permisos as $permiso)
+   {
+      if ($permiso->idpermiso==1) {
+          $rol =$permiso->idpermiso;
+          $asignado=true;
+      }
+      elseif ($permiso->idpermiso==2 && !$asignado) {
+        $rol =$permiso->idpermiso;
+        $asignado=true;
+      }
+      elseif ($permiso->idpermiso==3 && !$asignado) {
+        $rol =$permiso->idpermiso;
+        $asignado=true;
+      }
+      elseif ($permiso->idpermiso==4 && !$asignado) {
+        $rol =$permiso->idpermiso;
+        $asignado=true;
+      }
+   }
+       ?>
        <li class="no-padding">
          <ul class="collapsible collapsible-accordion"><br>
            <li class="bold"><a class="collapsible-header waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">account_balance</i>Piezas</a>
