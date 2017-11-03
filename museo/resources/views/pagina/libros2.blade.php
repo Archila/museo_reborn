@@ -31,9 +31,13 @@
                     </div>
                 </div>
             </div>
+            <a href="#js__scroll-to-section" class="s-scroll-to-section-v1--bc g-margin-b-15--xs">
+                <span class="g-font-size-20--xs  ti-angle-double-down" style="color: white;"></span>
+                <p class="text-uppercase g-color--white g-letter-spacing--3 g-margin-b-0--xs"><strong>Buscar libros</strong></p>
+            </a>
         </div>
         <!--========== END PROMO BLOCK ==========-->
-<iframe src="http://104.236.19.18/libros" style="width:100%; height:1000px;" scrolling="no">
+<iframe id="js__scroll-to-section" src="http://104.236.19.18/libros" style="width:100%; height:1000px;" scrolling="yes">
   <p>Your browser does not support iframes.</p>
 </iframe>
 

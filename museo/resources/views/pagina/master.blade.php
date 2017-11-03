@@ -107,31 +107,27 @@
         <footer class="g-bg-color--dark">
             <!-- Links -->
             <div class="g-hor-divider__dashed--white-opacity-lightest">
-                <div class="container g-padding-y-80--xs">
+                <div class="container g-padding-y-50--xs">
                     <div class="row">
-                        <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
-                            <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="{{ url('/') }}">Inicio</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="{{ url('/team') }}">Equipo administrativo</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="{{ url('/ferrocarril') }}">Ferrocarril de los altos</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="{{ url('/libros') }}">Libros de biblioteca</a></li>
-                            </ul>
+                      <div class="col-sm-2 g-margin-b-10--xs g-margin-b-0--md">
+                          <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
+                              <li><a class="g-font-size-15--xs g-color--white-opacity"  href="https://www.facebook.com/MuseodeQuetzaltenango/"><i class="g-color--white g-font-size-20--xs  ti-facebook"></i>Facebook</a></li>
+                              <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.youtube.com/channel/UCBI2nUnge2cS7oFGmVKoDSA/"><i class="g-color--white g-font-size-20--xs  ti-youtube"></i>YouTube</a></li>
+                          </ul>
+                      </div>
+                        <div class="col-sm-3 g-margin-b-20--xs g-margin-b-0--md">
+                          <h4 class="g-font-size-18--xs g-color--white-opacity g-margin-b-5--xs"><i class="g-color--white g-font-size-20--xs  ti-location-pin"></i>Ubicación</h4>
+                          <p class="g-font-size-8--xs g-color--white"> 4ta. Calle y 19 Av. zona 3, tercer nivel de Centro Intercultural</p>
                         </div>
-                        <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
-                            <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                                <li><a class="g-font-size-15--xs g-color--white-opacity"  href="https://www.facebook.com/MuseodeQuetzaltenango/">Facebook</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.youtube.com/channel/UCBI2nUnge2cS7oFGmVKoDSA/">YouTube</a></li>
-                            </ul>
+                        <div class="col-sm-3 g-margin-b-40--xs g-margin-b-0--md">
+                          <h4 class="g-font-size-18--xs g-color--white-opacity g-margin-b-5--xs"><i class="g-color--white g-font-size-20--xs  ti-alarm-clock"></i>Horario</h4>
+                          <p class="g-color--white">De Lunes a Domingo de 9:00 am a 8:00 pm</p>
                         </div>
-                        <div class="col-sm-2 g-margin-b-40--xs g-margin-b-0--md">
-                            <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Politica de privacidad</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Terminos &amp; Condiciones</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1  g-padding-y-0--md">
+
+                        <div class="col-md-4  col-sm-3 g-padding-y-0--md">
                             <h3 class="g-font-size-18--xs g-color--white">Museo</h3>
                             <p class="g-color--white-opacity">Página oficial del Museo de Historia de Quetzaltenango</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -11,8 +11,27 @@
                         <div class="g-margin-b-30--xs">
                             <h1  class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white"> Museo de Historia <br>de Quetzaltenango</h1>
                         </div>
-                        <img class="logo-img s-header" src="pagina/img/museo-lg.png" alt="SBX Logo">
+                        <img class="logo-img s-header" src="pagina/img/museo-lg.png" alt="SBX Logo"><br> <br>
+                        <div class="col-xs-6   g-margin-b-0--sm">
+                            <div class="g-text-center--xs">
+                                <i class="g-display-block--xs g-font-size-40--xs g-color--white g-margin-b-30--xs ti-location-pin"></i>
+                                <h4 class="g-font-size-22--xs g-color--white-opacity g-margin-b-5--xs"><strong>Ubicación</strong></h4>
+                                <p class="g-font-size-18--xs g-color--white"> 4ta. Calle y 19 avenida de la zona 3, tercer nivel de Centro Intercultural</p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6  g-margin-b-0--sm">
+                            <div class="g-text-center--xs">
+                                <i class="g-display-block--xs g-font-size-40--xs g-color--white g-margin-b-30--xs ti-alarm-clock"></i>
+                                <h4 class="g-font-size-22--xs g-color--white-opacity g-margin-b-5--xs"><strong>Horario</strong></h4>
+                                <p class="g-font-size-18--xs g-color--white">De Lunes a Domingo de 9:00 am a 8:00 pm</p>
+                            </div>
+                        </div>
+
+
+
                     </div>
+
                 </div>
 
             </div>
