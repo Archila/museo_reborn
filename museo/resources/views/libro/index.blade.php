@@ -48,7 +48,7 @@ $(document).ready(function(){
 $value=$(this).val();
 $.ajax({
   type : 'get',
-   url : '{{URL::to('buscarLibro')}}',
+   url : '{{URL::to('buscarLibro2')}}',
    data : {'search':$value},
    success:function(data){
      $('section').html(data);
