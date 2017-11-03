@@ -317,7 +317,7 @@
            @elseif ($rol=== 2)
 
            @elseif ($rol=== 3)
-          
+
            @elseif ($rol=== 4)
                    @endif
            </ul>
