@@ -26,7 +26,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/buscarLibro2','LibroController@searchsystem');
 });
 
-Route::middleware(['Auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
   Route::resource('/Empleado','EmpleadoController');
   Route::resource('/PruebaBoleto','TestBoletoController');
   Route::resource('boletos','BoletoController');
