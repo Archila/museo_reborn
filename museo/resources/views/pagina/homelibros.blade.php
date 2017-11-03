@@ -79,13 +79,6 @@
 </head>
 
 <body >
-    <nav class="top-nav  light-blue darken-4">
-      <div class="container ">
-        <div >
-        <img class="left"  src="{{URL::asset('images/logo-biblioteca.png')}}" width="330" height="120"  alt="">
-        </div>
-      </div>
-    </nav>
 
 <bdi>
   <div class="row">
@@ -97,15 +90,6 @@
       </div>
     </div>
 
-    <div class="col hide-on-small-only m12 l2 s12">
-      <div class="toc-wrapper">
-        <div style="height: 1px;">
-
-          @yield('sections')
-
-        </div>
-      </div>
-    </div>
   </div>
 </bdi>
 

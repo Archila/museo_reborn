@@ -12,7 +12,6 @@
                             <h1  class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white"> Museo de Historia <br>de Quetzaltenango</h1>
                         </div>
                         <img class="logo-img s-header" src="pagina/img/museo-lg.png" alt="SBX Logo">
-                        </a>
                     </div>
                 </div>
 
