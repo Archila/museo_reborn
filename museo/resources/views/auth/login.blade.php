@@ -97,16 +97,16 @@ main {flex: 1 0 auto;}
           <div class="col s8 offset-s2 divider black"></div><br>
 
           <div class="row ">
-            <form class="col s12 " method="POST" action="{{route('login')}}" >
+            <form class="col s12 " method="POST" action="{{route('login')}}"  id="formValidate">
             {{ csrf_field() }}
              {{ method_field('POST') }}
               <div class="input-field col s12">
-                <input id="name" type="text" name="name" class="validate black-text" autocomplete="off">
+                <input id="name" type="text" name="name" class="required" autocomplete="off">
                 <label for="email" class="blue-grey-text text-darken-3">Usuario</label>
               </div>
 
               <div class="input-field col s12">
-                <input id="password" type="password" name="password" class="validate">
+                <input id="password" type="password" name="password" class="required">
                 <label class="blue-grey-text text-darken-3" for="password">Password</label>
               </div>
 
