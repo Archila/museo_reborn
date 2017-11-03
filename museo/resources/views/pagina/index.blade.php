@@ -121,7 +121,7 @@
         <!-- End Features -->
 
         <!-- Frase-->
-        <div class="js__parallax-window" style="background: url(pagina/img/1920x1080/banderas.JPG) 50% 0 no-repeat fixed;">
+        <div class="js__parallax-window" style="background: url(pagina/img/1920x1080/banderas.jpg) 50% 0 no-repeat fixed;">
             <div class="container g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
 
                 <h3 class="g-font-size-25--xs g-color--white">El Museo de Historia de Quetzaltenango se dedica al estudio, preservación y difusión de la historia del occidente de Guatemala</h3>
