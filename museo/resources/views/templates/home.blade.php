@@ -35,8 +35,7 @@
         transform: translateY(0%);
       }
       .input-field label.active{
-          width:100%;
-      }
+          width:100%;      }
       .left-alert input[type=text] + label:after,
       .left-alert input[type=password] + label:after,
       .left-alert input[type=email] + label:after,
