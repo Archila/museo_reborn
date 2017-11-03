@@ -69,9 +69,9 @@
                                       <a href="index.html" class="dropdown-toggle s-header-v2__nav-link -is-active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Museo<span class="g-font-size-10--xs g-margin-l-5--xs ti-angle-down"></span></a>
                                       <ul class="dropdown-menu s-header-v2__dropdown-menu">
                                           <li><a href="{{ url('/administracion') }}" class="s-header-v2__dropdown-menu-link">Administración</a></li>
-                                          <li><a href="/#eventos" class="s-header-v2__dropdown-menu-link">Eventos</a></li>
+                                          <li><a href="{{ url('/eventos') }}" class="s-header-v2__dropdown-menu-link">Eventos</a></li>
                                           <li><a href="{{ url('/#piezas') }}" class="s-header-v2__dropdown-menu-link">Piezas</a></li>
-                                          <li><a href="{{ url('/libros') }}" class="s-header-v2__dropdown-menu-link">Libros</a></li>
+                                          <li><a href="{{ url('//busquedalibros') }}" class="s-header-v2__dropdown-menu-link">Libros</a></li>
 
                                       </ul>
                                   </li>

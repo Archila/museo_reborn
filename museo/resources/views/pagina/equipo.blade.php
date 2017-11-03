@@ -9,6 +9,7 @@
                         <div class="row">
                             <div class="col-md-7">
                                 <div class="container ">
+                                  <p class="g-font-size-20--xs g-font-size-22--sm g-color--white">El Museo de historia de Quetzaltenango esta administrado actualmente por:</p>
                                     <h1 class="g-font-size-32--xs g-font-size-45--sm g-font-size-60--md g-color--white text-align=center">Asociacion Sacandole Brillo a Xela</h1>
                                     <p class="g-font-size-20--xs g-font-size-22--sm g-color--white-opacity">Juntos por nuestra ciudad.</p>
                                 </div>
