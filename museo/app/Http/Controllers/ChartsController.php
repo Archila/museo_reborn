@@ -11,6 +11,11 @@ use Charts;
 
 class ChartsController extends Controller
 {
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
   public function main()
   {
     $fecha      = date ('Y-m-d');

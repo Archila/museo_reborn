@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Auth;
 
 class LibroController extends Controller
 {
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
     public function index()
     {
         $libros=libro::join('autores', 'libros.idautor', '=', 'autores.id')

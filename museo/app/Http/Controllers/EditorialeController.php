@@ -9,6 +9,11 @@ use Rimorsoft\Http\Requests\EditorialRequest;
 
 class EditorialeController extends Controller
 {
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
     public function index()
     {
       $result=editoriale::all();
@@ -22,7 +27,7 @@ class EditorialeController extends Controller
 
     public function store(Request $request)
     {
-      
+
       $editorial = new editoriale;
       $editorial->nombre = $request->nombreeditorial;
       $editorial->save();

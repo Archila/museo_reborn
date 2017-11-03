@@ -8,7 +8,11 @@ use Illuminate\Http\Request;
 
 class GeneroController extends Controller
 {
-   
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
     public function index()
     {
         $result=genero::all();
@@ -37,7 +41,7 @@ class GeneroController extends Controller
             ->where('genero', '=', $id)
             ->get();
         $genero=genero::find($id);
-        return view('genero.show', compact('piezas','genero')); 
+        return view('genero.show', compact('piezas','genero'));
     }
 
     public function edit($id)
@@ -51,7 +55,7 @@ class GeneroController extends Controller
         $genero = genero::find($id);
         $genero->genero =$request->nombregenero;
         $genero->save();
-  
+
         alert()-> success('Se actualizaron los campos','Genero');
         return redirect('Genero/');
     }

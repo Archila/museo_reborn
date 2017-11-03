@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AdquisicioneController extends Controller
 {
-    
+
+  public function __construct()
+  {
+     $this->middleware('auth');
+  }
     public function index()
     {
         $adquisiciones =adquisicione::join('piezas', 'adquisiciones.idpieza', '=', 'piezas.id')
@@ -32,25 +36,25 @@ class AdquisicioneController extends Controller
        return view('adquisicion.index',compact('adquisiciones'));
     }
 
- 
+
     public function create()
     {
         //
     }
 
- 
+
     public function store(Request $request)
     {
         //
     }
 
-   
+
     public function show(adquisicione $adquisicione)
     {
         //
     }
 
-    
+
     public function edit(adquisicione $adquisicione)
     {
         //
@@ -61,7 +65,7 @@ class AdquisicioneController extends Controller
         //
     }
 
-    
+
     public function destroy(adquisicione $adquisicione)
     {
         //

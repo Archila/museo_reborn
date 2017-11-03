@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class AutoreController extends Controller
 {
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
     public function index()
     {
       $result=autore::all();
@@ -57,7 +62,7 @@ class AutoreController extends Controller
       alert()-> success('Se actualizaron los campos','Autor');
       return redirect('Autor/');
     }
-    
+
     public function destroy($id)
     {
       $autor = autore::find($id);

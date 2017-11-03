@@ -8,13 +8,17 @@ use Illuminate\Http\Request;
 
 class RangoEdadeController extends Controller
 {
-    
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
     public function index()
     {
         $rangos = rango_edade::orderBy('id','DESC')->get();
         return view('rangos.index',compact('rangos'));
     }
-    
+
     public function show()
     {
         return redirect()->route('rangos.index');
@@ -33,12 +37,12 @@ class RangoEdadeController extends Controller
         return view('rangos.edit', compact('rango'));
     }
 
-    
+
     public function create()
     {
-        return view('rangos.create'); 
+        return view('rangos.create');
     }
-    
+
     public function store(Request $request)
     {
         $rango = new rango_edade;
@@ -56,5 +60,5 @@ class RangoEdadeController extends Controller
         return redirect()->route('rangos.index');
     }
 
-    
+
 }

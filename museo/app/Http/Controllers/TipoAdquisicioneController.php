@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class TipoAdquisicioneController extends Controller
 {
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
     public function index()
     {
         $tpadquisiciones = tipo_adquisicione::all();

@@ -8,13 +8,18 @@ use Illuminate\Http\Request;
 
 class FichasInformativaController extends Controller
 {
-   
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
+
     public function index()
     {
         //
     }
 
-   
+
     public function create()
     {
         //
@@ -37,13 +42,13 @@ class FichasInformativaController extends Controller
         //
     }
 
-    
+
     public function update(Request $request, fichas_informativa $fichas_informativa)
     {
         //
     }
 
-    
+
     public function destroy(fichas_informativa $fichas_informativa)
     {
         //

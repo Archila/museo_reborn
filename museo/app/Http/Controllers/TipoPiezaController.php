@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class TipoPiezaController extends Controller
 {
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
     public function index()
     {
         $result=tipo_pieza::all();
