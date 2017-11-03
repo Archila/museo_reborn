@@ -37,6 +37,18 @@
   font-smoothing: antialiased;
 
       }
+
+      .input-field div.error{
+        position: relative;
+        top: -1rem;
+        left: 0rem;
+        font-size: 0.8rem;
+        color:#f10d0d;
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+      }
       body .menu {
   position: absolute;
   width: 100%;
