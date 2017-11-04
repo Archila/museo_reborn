@@ -131,8 +131,7 @@ trait AuthenticatesUsers
             return response()->json($errors, 422);
         }
         Session::flash('flash_message', 'Credenciales incorrectos');
-        return redirect()->back()
-
+        return redirect()->back();
     }
 
     /**
