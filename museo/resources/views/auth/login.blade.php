@@ -135,7 +135,13 @@
                 </div>
 
             </form>
-          </div><br><br>
+          </div>
+          @if(Session::has('flash_message'))
+          <span class="help-block red-text">
+              <strong>{{Session::get('flash_message')}}</strong>
+          </span>
+          @endif
+          <br><br>
         </div>
       </div>
     </div>

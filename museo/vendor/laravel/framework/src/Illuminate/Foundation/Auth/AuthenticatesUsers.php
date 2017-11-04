@@ -4,6 +4,7 @@ namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 trait AuthenticatesUsers
 {
@@ -129,10 +130,9 @@ trait AuthenticatesUsers
         if ($request->expectsJson()) {
             return response()->json($errors, 422);
         }
-
+        Session::flash('flash_message', 'Credenciales incorrectos');
         return redirect()->back()
-            ->withInput($request->only($this->username(), 'remember'))
-            ->withErrors($errors);
+
     }
 
     /**
