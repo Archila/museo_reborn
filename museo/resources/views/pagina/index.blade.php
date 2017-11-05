@@ -47,9 +47,9 @@
         <!-- Features -->
         <div id="js__scroll-to-section" class="container g-padding-y-80--xs g-padding-y-125--sm">
             <div class="g-text-center--xs g-margin-b-100--xs">
-                <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Bienvendio a la página del Museo de Historia de Quezaltenango</p>
+                <p class="g-font-size-20--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Bienvendio a la página del Museo de Historia de Quezaltenango</p>
 
-                <h2 class="g-font-size-16--xs g-font-size-26--md">presentando varias exhibiciones:  </h2>
+                <h2 class="g-font-size-16--xs g-font-size-26--md">El Museo presenta varias exhibiciones:  </h2>
             </div>
             <div class="row g-margin-b-60--xs g-margin-b-70--md">
                 <div class="col-sm-4 g-margin-b-60--xs g-margin-b-0--md">
@@ -60,8 +60,8 @@
                             </div>
                         </div>
                         <div class="g-media__body g-padding-x-20--xs">
-                            <h3 class="g-font-size-18--xs">Fotografias</h3>
-                            <p class="g-margin-b-0--xs">Fotografias de los edificios sobresalientes de Quetzaltenango de la epoca de 1930.</p>
+                            <h3 class="g-font-size-18--xs">Fotografías</h3>
+                            <p class="g-margin-b-0--xs">Se muestran fotografías de los edificios sobresalientes de Quetzaltenango de la época de 1930.</p>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                         </div>
                         <div class="g-media__body g-padding-x-20--xs">
                             <h3 class="g-font-size-18--xs">Planos</h3>
-                            <p class="g-margin-b-0--xs">Planos de la arquitectura del Centro Historico y la antigua Estación del Ferrocarril de los Altos</p>
+                            <p class="g-margin-b-0--xs">Planos de la arquitectura del Centro Histórico y la antigua estación del Ferrocarril de los Altos</p>
                         </div>
                     </div>
                 </div>
@@ -86,8 +86,8 @@
                             </div>
                         </div>
                         <div class="g-media__body g-padding-x-20--xs">
-                            <h3 class="g-font-size-18--xs">Guia interactivo</h3>
-                            <p class="g-margin-b-0--xs">El museo cuenta con Tablets que contienen un sistema que le mostrara información detallada de cada pieza al escanear el código QR de cada una.</p>
+                            <h3 class="g-font-size-18--xs">Guía interactivo</h3>
+                            <p class="g-margin-b-0--xs">El museo cuenta con Tablets que contienen un sistema que muestra información detallada de cada pieza al escanear el código QR de cada una.</p>
                         </div>
                     </div>
                 </div>
@@ -102,8 +102,8 @@
                             </div>
                         </div>
                         <div class="g-media__body g-padding-x-20--xs">
-                            <h3 class="g-font-size-18--xs">Video historico</h3>
-                            <p class="g-margin-b-0--xs">Como introducción al tour, se proyecta un video que trata de la historia de Quetzaltenango. </p>
+                            <h3 class="g-font-size-18--xs">Video histórico</h3>
+                            <p class="g-margin-b-0--xs">Como introducción al tour se proyecta un video que trata de la historia de Quetzaltenango. </p>
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                         <div class="g-media__body g-padding-x-20--xs">
-                            <h3 class="g-font-size-18--xs">Piezas historicas</h3>
+                            <h3 class="g-font-size-18--xs">Piezas históricas</h3>
                             <p class="g-margin-b-0--xs">Piezas reales del antiguo Ferrocarril de los Altos.</p>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                         </div>
                         <div class="g-media__body g-padding-x-20--xs">
                             <h3 class="g-font-size-18--xs">Exposición de literatura Guatemalteca</h3>
-                            <p class="g-margin-b-0--xs">Se cuenta con exposiciones temporales de libros de autores Guatemaltecos</p>
+                            <p class="g-margin-b-0--xs">Se cuenta con exposiciones temporales de libros de autores guatemaltecos</p>
                         </div>
                     </div>
                 </div>
@@ -177,7 +177,7 @@
         <div class="container g-padding-y-80--xs" id="piezas">
             <div class="g-text-center--xs g-margin-b-40--xs">
                 <h2 class="g-font-size-32--xs g-font-size-36--md">Piezas</h2>
-                <h3 class="g-font-size-18--xs g-color--primary g-margin-b-30--xs">Listado de algunas piezas que puede encontrar en el Museo</h3>
+                <h3 class="g-font-size-18--xs g-color--primary g-margin-b-30--xs">Listado de algunas piezas que puede encontrar en el museo</h3>
             </div>
             <div class="s-portfolio">
                 <div id="js__filters-portfolio-gallery" class="s-portfolio__filter-v1 cbp-l-filters-text cbp-l-filters-center">
@@ -198,7 +198,7 @@
                 <!-- Pieza-->
                 <div class="s-portfolio__item cbp-item {{$pieza->nombretipo}}">
                     <div class="s-portfolio__img-effect">
-                        <img src="{{$pieza->foto}}" alt="Imagenes Museo" style="width:377px;height:251px;">
+                        <img src="{{$pieza->foto}}" alt="Imágenes de piezas" style="width:377px;height:251px;">
                     </div>
                     <div class="s-portfolio__caption-hover--cc">
                         <div class="g-margin-b-25--xs">
@@ -221,38 +221,66 @@
         </div>
         <!-- End Portfolio -->
 
-        <!-- Testimonials -->
-        <div class="js__parallax-window" style="background: url(pagina/img/1920x1080/04.jpg) 50% 0 no-repeat fixed;">
+        <!-- Datos de antigua estación -->
+        <div class="js__parallax-window" style="background: url(pagina/img/1920x1080/estacion.jpg) 1% 0 no-repeat fixed;">
             <div class="container g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
-                <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-50--xs">Experiencias</p>
+                <p class="g-font-size-20--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-50--xs">Datos relevantes de la antigua estación del Ferrocarril de los Altos</p>
                 <div class="s-swiper js__swiper-testimonials">
                     <!-- Swiper Wrapper -->
                     <div class="swiper-wrapper g-margin-b-50--xs">
                         <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
                             <div class="g-padding-x-20--xs g-padding-x-50--lg">
                                 <div class="g-margin-b-40--xs">
-                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>"Los museos son lugares donde el tiempo se transforma en espacio"</i></p>
+                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>Se inicia la construcción de lo que fuera la Estación del Ferrocarril de los Altos</i></p>
                                 </div>
                                 <div class="center-block g-hor-divider__solid--white-opacity-lightest g-width-100--xs g-margin-b-30--xs"></div>
-                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">Orhan Pamuk</h4>
+                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">1912</h4>
                             </div>
                         </div>
                         <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
                             <div class="g-padding-x-20--xs g-padding-x-50--lg">
                                 <div class="g-margin-b-40--xs">
-                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>" Dado que el arte ha muerto en la vida real de las naciones civilizadas, se ha relegado a estos depósitos de cadáveres grotescos: los museos "</i></p>
+                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>Se inaugura la Estación del Ferrocarril de los Altos</i></p>
                                 </div>
                                 <div class="center-block g-hor-divider__solid--white-opacity-lightest g-width-100--xs g-margin-b-30--xs"></div>
-                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">Walter Gropius</h4>
+                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">1930</h4>
                             </div>
                         </div>
                         <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
                             <div class="g-padding-x-20--xs g-padding-x-50--lg">
                                 <div class="g-margin-b-40--xs">
-                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>" Frase "</i></p>
+                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>Una tormenta destruyo las vías ferroviarias, las cuales por decisión del Gobierno en curso fueron desmanteladas y la estación quedo abandonada</i></p>
                                 </div>
                                 <div class="center-block g-hor-divider__solid--white-opacity-lightest g-width-100--xs g-margin-b-30--xs"></div>
-                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">Jake Richardson / Google</h4>
+                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">1933</h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
+                            <div class="g-padding-x-20--xs g-padding-x-50--lg">
+                                <div class="g-margin-b-40--xs">
+                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>La antigua estación del ferrocarril se tomó para instalar una Zona Militar</i></p>
+                                </div>
+                                <div class="center-block g-hor-divider__solid--white-opacity-lightest g-width-100--xs g-margin-b-30--xs"></div>
+                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">1961</h4>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
+                            <div class="g-padding-x-20--xs g-padding-x-50--lg">
+                                <div class="g-margin-b-40--xs">
+                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>Tras la firma de los  acuerdos de paz se establece la reducción de bases militares y se devuelve el edificio a la municipalidad, con el fin de promover actividades culturales</i></p>
+                                </div>
+                                <div class="center-block g-hor-divider__solid--white-opacity-lightest g-width-100--xs g-margin-b-30--xs"></div>
+                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">1996</h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
+                            <div class="g-padding-x-20--xs g-padding-x-50--lg">
+                                <div class="g-margin-b-40--xs">
+                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>El Centro Intercultural recibe un usufructo de 50 años otorgado por la municipalidad de Quetzaltenango a favor del conejo Intercultural</i></p>
+                                </div>
+                                <div class="center-block g-hor-divider__solid--white-opacity-lightest g-width-100--xs g-margin-b-30--xs"></div>
+                                <h4 class="g-font-size-15--xs g-font-size-25--sm g-color--white-opacity-light g-margin-b-5--xs">2015</h4>
                             </div>
                         </div>
                     </div>
@@ -266,7 +294,7 @@
                 </div>
             </div>
         </div>
-        <!-- End Testimonials -->
+        <!-- / Datos de antigua estación-->
 
 
 
@@ -279,7 +307,6 @@
                 </div>
 
                 <div class="row g-row-col--12">
-
                     @foreach ($eventos as $evento)
                     <!-- Evento -->
                     <div class="col-md-3 col-lg-4 g-margin-b-10--xs g-margin-b-0--lg">
@@ -348,7 +375,7 @@
                     </div>
                     <div class="col-md-4 col-md-offset-1" align="justify">
                         <p class="g-font-size-18--xs">Historia</p>
-                        <p class="g-font-size-18--xs">Conozcamos la historia Guatemala narrada desde la perspectiva de occidente. Iniciamos este recorrido narrado la historia de los presidentes de la región que transformaron al país...<a href="{{ url('/presidentes') }}"> Ver más</a></p>
+                        <p class="g-font-size-18--xs">Conozcamos la historia de Guatemala narrada desde la perspectiva de occidente. Iniciamos este recorrido narrado la historia de los presidentes de la región que transformaron al país...<a href="{{ url('/presidentes') }}"> Ver más</a></p>
                     </div>
                 </div>
             </div>
