@@ -341,7 +341,7 @@ class PiezaController extends Controller
 
                             <span class="caption activator grey-text text-darken-4">'.$donantes->nombre.'<i class="material-icons right">more_vert</i></span>
                             <p><strong>Tipo:</strong>'.$donantes->nombretipopieza.'</p>
-                            <p><strong>Adquisición:'.$donantes->nombretipoad.'</p>
+                            <p><strong>Adquisición:</strong>'.$donantes->nombretipoad.'</p>
                           </div>
                           <div class="card-reveal" style="display: none; transform: translateY(0px);">
                             <span class="card-title grey-text text-darken-4">Historia<i class="material-icons right">close</i></span>
