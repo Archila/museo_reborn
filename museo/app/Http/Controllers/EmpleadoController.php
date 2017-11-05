@@ -97,9 +97,9 @@ class EmpleadoController extends Controller
                 $resultadoEidUser = intval(preg_replace('/[^0-9]+/', '', $idUsG), 10);
 
 
-                $admin=false;
-                $encmuseo=false;
-                $roles=false;
+                $admin=true;
+                $encmuseo=true;
+                $roles=true;
                  foreach ($_POST['roles'] as  $valor)
                  {
                    if ($admin)
@@ -113,9 +113,9 @@ class EmpleadoController extends Controller
                     $permiso->iduser = $resultadoEidUser;
                     $permiso->save();
                     }
-                  $admin=true;
-                  $encmuseo=true;
-                  $roles=true;
+                  $admin=false;
+                  $encmuseo=false;
+                  $roles=false;
                    }
                  }
                  if ($encmuseo)
@@ -129,9 +129,9 @@ class EmpleadoController extends Controller
                     $permiso->iduser = $resultadoEidUser;
                     $permiso->save();
                    }
-                   $admin=true;
-                   $encmuseo=true;
-                   $roles=true;
+                   $admin=false;
+                   $encmuseo=false;
+                   $roles=false;
                   }
                  }
                  if ($roles)
