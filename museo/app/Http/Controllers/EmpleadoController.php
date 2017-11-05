@@ -97,41 +97,51 @@ class EmpleadoController extends Controller
                 $resultadoEidUser = intval(preg_replace('/[^0-9]+/', '', $idUsG), 10);
 
 
-
-                 foreach ($_POST['roles'] as  $valor){
-
+                $admin=false;
+                $encmuseo=false;
+                $roles=false;
+                 foreach ($_POST['roles'] as  $valor)
+                 {
+                   if ($admin)
+                  {
                    if ($valor==1)
                    {
-                     for ($i=1; $i <5 ; $i++) {
-
+                     for ($i=1; $i <5 ; $i++)
+                    {
                     $permiso = new permiso;
                     $permiso->idrol=$i;
                     $permiso->iduser = $resultadoEidUser;
                     $permiso->save();
-
-                  }
+                    }
+                  $admin=true;
+                  $encmuseo=true;
+                  $roles=true;
                    }
-                   elseif ($valor==2)
-                   {
-                     for ($i=2; $i <4 ; $i++) {
-
-                    $permiso = new permiso;
-                    $permiso->idrol=$i;
-                    $permiso->iduser = $resultadoEidUser;
-                    $permiso->save();
-
-                  }
-                   }
-                   else  {
-                     $permiso = new permiso;
-                    $permiso->idrol=$valor;
-                    $permiso->iduser = $resultadoEidUser;
-                    $permiso->save();
-                   }
-
-
-
                  }
+                 if ($encmuseo)
+                 {
+                   if ($valor==2)
+                   {
+                     for ($i=2; $i <4 ; $i++)
+                    {
+                    $permiso = new permiso;
+                    $permiso->idrol=$i;
+                    $permiso->iduser = $resultadoEidUser;
+                    $permiso->save();
+                   }
+                   $admin=true;
+                   $encmuseo=true;
+                   $roles=true;
+                  }
+                 }
+                 if ($roles)
+                 {
+                  $permiso = new permiso;
+                  $permiso->idrol=$valor;
+                  $permiso->iduser = $resultadoEidUser;
+                  $permiso->save();
+                 }
+               }
 
 
                 DB::commit();
