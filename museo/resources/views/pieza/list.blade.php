@@ -41,8 +41,26 @@
      </ul>
 
  </div>
+
+ <div class="row">
+   <div class="center">
+ <div class="col s10 m8 l6 offset-s1 offset-s2 offset-l3 center">
+     <nav>
+       <div class="nav-wrapper teal darken-3">
+           <div class="input-field">
+             <input id="buscar" type="search" placeholder="Nombre de pieza, tipo de pieza, tipo de adquisición " >
+             <label class="label-icon" for="search"><i class="material-icons prefix">search</i></label>
+             <i class="material-icons">close</i>
+           </div>
+       </div>
+     </nav>
+ </div>
+ </div>
+ </div>
 </nav>
 <div id="historia" class="row section scrollspy">
+  <section>
+  </section>
 @foreach ($piezas as $pieza)
 <div class="col s6 m4 l3">
     <div class="card z-depth-2" style="overflow: visible;">
@@ -61,10 +79,45 @@
             </div>
   </div>
   @endforeach
+
+
 </div>
 @endif
 </div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+		$(document).ready(function(){
+        $value=$(this).val();
+        $.ajax({
+          type : 'get',
+           url : '{{URL::to('buscarpieza')}}',
+           data : {'search':$value},
+           success:function(data){
+             $('section').html(data);
+           }
+        });
+buscarDon();
+		});
 
+</script>
+<script>
+
+function buscarDon()
+{
+  $('#buscar').on('keyup',function(){
+    $value=$(this).val();
+    $.ajax({
+      type : 'get',
+       url : '{{URL::to('buscarpieza')}}',
+       data : {'search':$value},
+       success:function(data){
+         $('section').html(data);
+       }
+    });
+  })
+}
+
+</script>
 @endsection
 @section('section')
 <blockquote>

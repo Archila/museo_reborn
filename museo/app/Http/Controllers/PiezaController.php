@@ -307,4 +307,43 @@ class PiezaController extends Controller
       alert()-> success('eliminada','pieza');
       return back();
     }
+
+    public function search(Request $request)
+    {
+      if ($request->ajax())
+      {
+     $output="";
+      $donantes=pieza::join('fichas_informativas','piezas.id',"=","fichas_informativas.id_pieza")
+        ->select('piezas.*', 'fichas_informativas.historia as historia','fichas_informativas.epoca as epoca')
+                  ->where('piezas.nombre','LIKE','%'.$request->search.'%')
+                   ->get();
+     $cont=1;
+      if ($donantes)
+       {
+         foreach ($donantes as $key => $donantes)
+          {
+            $output.='
+            <div class="col s6 m4 l3">
+                <div class="card z-depth-2" style="overflow: visible;">
+                          <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{URL::asset('.$donantes->fotografia.')}}" WIDTH=100 HEIGHT=180>
+                          </div>
+                          <div class="card-content">
+
+                            <span class="caption activator grey-text text-darken-4">'.$donantes->nombre.'<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#!">'.$donantes->epoca.'</a></p>
+                          </div>
+                          <div class="card-reveal" style="display: none; transform: translateY(0px);">
+                            <span class="card-title grey-text text-darken-4">Historia<i class="material-icons right">close</i></span>
+                            <p>'.$donantes->historia.'</p>
+                          </div>
+                        </div>
+              </div>';
+                     $cont++;
+         }
+         return Response($output);
+
+       }
+      }
+    }
 }

@@ -15,6 +15,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/busquedalibros', function() { return view('pagina.libros2'); });
     Route::get('/buscarLibro','LibroController@search');
     Route::get('/buscarLibro2','LibroController@searchsystem');
+
 });
 
 Route::middleware(['admin'])->group(function () {
@@ -27,6 +28,7 @@ Route::middleware(['admin'])->group(function () {
   Route::get('/find/{param1}{param2}','BoletoController@findtarifa');
   Route::resource('/Pieza','PiezaController');
   Route::resource('/TipoPieza','TipoPiezaController');
+  Route::get('/buscarpieza','PiezaController@search');
   Route::resource('/Genero','GeneroController');
   Route::resource('/Libro','LibroController');
   Route::resource('/Editorial','EditorialeController');
@@ -69,6 +71,7 @@ Route::middleware(['encmuseo', 'secre'])->group(function () {
   Route::get('/find/{param1}{param2}','BoletoController@findtarifa');
   Route::resource('/Pieza','PiezaController');
   Route::resource('/TipoPieza','TipoPiezaController');
+  Route::get('/buscarpieza','PiezaController@search');
   Route::resource('/Genero','GeneroController');
   Route::resource('/Categoria','CategoriaController');
   Route::resource('/Adquisiciones','AdquisicioneController');
