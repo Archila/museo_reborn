@@ -329,10 +329,10 @@ class PiezaController extends Controller
 
       if ($donantes)
        {
-
+         $c=0;
          foreach ($donantes as $key => $donantes)
           {
-
+            $c++;
             $output.='
             <div class="col s6 m4 l3">
                 <div class="card z-depth-2" style="overflow: visible;">
@@ -351,6 +351,11 @@ class PiezaController extends Controller
                           </div>
                         </div>
               </div> ';
+
+              if ($c==4) {
+                $output.='<div class="col s12 m12 l12"></div>';
+                $c=0;
+              }
 
          }
          return Response($output);
