@@ -97,11 +97,40 @@ class EmpleadoController extends Controller
                 $resultadoEidUser = intval(preg_replace('/[^0-9]+/', '', $idUsG), 10);
 
 
+
                  foreach ($_POST['roles'] as  $valor){
-                   $permiso = new permiso;
-                   $permiso->idrol=$valor;
-                   $permiso->iduser = $resultadoEidUser;
-                   $permiso->save();
+
+                   if ($valor==1)
+                   {
+                     for ($i=1; $i <5 ; $i++) {
+
+                    $permiso = new permiso;
+                    $permiso->idrol=$i;
+                    $permiso->iduser = $resultadoEidUser;
+                    $permiso->save();
+
+                  }
+                   }
+                   elseif ($valor==3)
+                   {
+                     for ($i=2; $i <4 ; $i++) {
+
+                    $permiso = new permiso;
+                    $permiso->idrol=$i;
+                    $permiso->iduser = $resultadoEidUser;
+                    $permiso->save();
+
+                  }
+                   }
+                   else  {
+                     $permiso = new permiso;
+                    $permiso->idrol=$valor;
+                    $permiso->iduser = $resultadoEidUser;
+                    $permiso->save();
+                   }
+
+
+
                  }
 
 
