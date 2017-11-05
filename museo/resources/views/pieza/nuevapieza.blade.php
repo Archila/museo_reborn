@@ -31,13 +31,13 @@
     <div id="test1" class="col s12"> <!-- PIEZA -->
       <br><br>
       <div class="col-md-12 well text-center">
-          <div class="input-field col s3">
+          <div class="input-field col s12 m6  l3">
              <i class="material-icons prefix">vpn_key</i>
             <input disabled  name="codigopiez" id="disabled" value="SBX{{$newcod}}" type="text">
             <input type="hidden" name="codigopieza" value="SBX{{$newcod}}">
             <label for="disabled">Codigo de pieza</label>
           </div>
-          <div class="input-field col s4">
+          <div class="input-field col s12 m6 l4">
               <i class="material-icons prefix">mode_edit</i>
               <input name="nombrepieza" type="text" class="required">
                   @if ($errors->has('nombrepieza'))
@@ -45,7 +45,7 @@
                   @endif
               <label for="nombrepieza">Nombre de la pieza</label>
           </div>
-          <div class="input-field col s4">
+          <div class="input-field col s8  l4">
             <i class="material-icons prefix">extension</i>
             <select name="idtipo" id="" class="required_option">
               <option value="" disabled selected>Elige el tipo</option>
@@ -62,7 +62,7 @@
             <a class="tooltipped  btn-floating btn-small waves-effect waves-light blue modal-trigger" data-position="bottom" href="#modalcreate" data-delay="50" data-tooltip="Agregar tipo"><i class="material-icons">add</i></a>
           </div>
       </div>
-      <div class="input-field col s8">
+      <div class="input-field col s12 m6 l7">
         <div class="file-field input-field">
             <div class="btn">
               <span>Foto<i class="material-icons right">photo</i></span>
@@ -77,7 +77,7 @@
 
     <div id="test2" class="col s12 "><!-- FICHA INFORMATIVA -->
       <br><br>
-      <div class="input-field col s3 l4 ">
+      <div class="input-field col s8 m7 l4 ">
         <i class="material-icons prefix">date_range</i>
         <input id="" name="epoca" type="text" class="cnumber">
         @if ($errors->has('epoca'))
@@ -94,7 +94,7 @@
       <!-- / Radio Buttons Multimedia -->
 
       <!-- BOTON PARA CARGAR IMAGEN DEL SISTEMA -->
-      <div class="input-field col s8" id="btnmult" style='display:none;' >
+      <div class="input-field col s12" id="btnmult" style='display:none;' >
         <div class="file-field input-field">
             <div class="btn">
               <span>multimedia<i class="material-icons right">movie</i></span>
@@ -107,7 +107,7 @@
       </div> <!-- / BOTON PARA CARGAR IMAGEN DEL SISTEMA -->
 
       <!-- INGRESAR URL DE VIDEO -->
-      <div class="input-field col s8" id="txturl" style='display:none;'>
+      <div class="input-field col s12" id="txturl" style='display:none;'>
           <i class="material-icons prefix">theaters</i>
           <input name="urlvideo" type="text" >
           <label for="urlvideo">URL del video de Youtube</label>
@@ -123,28 +123,28 @@
 
     <div id="test3" class="col s12"> <!-- FICHA TECNICA -->
       <br><br>
-      <div class="input-field col s2">
+      <div class="input-field col s4 m4 l2">
         <input id="" name="peso" type="text" class="cnumber">
         @if ($errors->has('peso'))
         <div id="uname-error" class="error">{{$errors->First('peso')}}</div>
         @endif
         <label for="pesopieza">Peso (lbs)</label>
       </div>
-      <div class="input-field col s2">
+      <div class="input-field col s4 m4 l2">
         <input id="" name="altura" type="text" class="cnumber">
         @if ($errors->has('altura'))
         <div id="uname-error" class="error">{{$errors->First('altura')}}</div>
         @endif
         <label for="alturapieza">Altura (mts)</label>
       </div>
-      <div class="input-field col s2">
+      <div class="input-field col s4 m4 l2">
         <input id="" name="ancho" type="text" class="cnumber">
         @if ($errors->has('ancho'))
         <div id="uname-error" class="error">{{$errors->First('ancho')}}</div>
         @endif
         <label for="ancho">Ancho (mts)</label>
       </div>
-      <div class="input-field col s4 offset-s1">
+      <div class="input-field col s8 m4 l4 offset-l1">
         <select name="idgenero">
           <option value="" disabled selected>Elige un género</option>
           @foreach ($genero as $gen)
