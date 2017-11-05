@@ -70,7 +70,8 @@
               <div class="card-content">
 
                 <span class="caption activator grey-text text-darken-4">{{$pieza->nombre}}<i class="material-icons right">more_vert</i></span>
-                <p><a href="#!">{{$pieza->epoca}}</a></p>
+                <p><strong>Tipo:</strong> {{$pieza->nombretipopieza}}</p>
+                <p><strong>Adquisición:</strong> {{$pieza->nombretipoad}}</p>
               </div>
               <div class="card-reveal" style="display: none; transform: translateY(0px);">
                 <span class="card-title grey-text text-darken-4">Historia<i class="material-icons right">cerrar</i></span>

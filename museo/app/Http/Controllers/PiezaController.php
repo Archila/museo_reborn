@@ -33,6 +33,10 @@ class PiezaController extends Controller
     {
         $piezas = DB::table('piezas')
         ->join('fichas_informativas','piezas.id',"=","fichas_informativas.id_pieza")
+        ->join('tipo_piezas','piezas.id_tipopieza',"=","tipo_piezas.id_tipo")
+        ->join('adquisiciones','piezas.id',"=","adquisiciones.idpieza")
+        ->join('tipo_adquisiciones','adquisiciones.idtipoad',"=","tipo_adquisiciones.id")
+        ->select('piezas.*','fichas_informativas.*','adquisiciones.*', 'tipo_adquisiciones.nombre as nombretipoad','tipo_piezas.nombre as nombretipopieza')
         ->where('activo', '!=', 0)
         ->get();
         $tipos=tipo_pieza::all();
@@ -314,8 +318,13 @@ class PiezaController extends Controller
       {
      $output="";
       $donantes=pieza::join('fichas_informativas','piezas.id',"=","fichas_informativas.id_pieza")
-        ->select('piezas.*', 'fichas_informativas.historia as historia','fichas_informativas.epoca as epoca')
+        ->join('tipo_piezas','piezas.id_tipopieza',"=","tipo_piezas.id_tipo")
+        ->join('adquisiciones','piezas.id',"=","adquisiciones.idpieza")
+        ->join('tipo_adquisiciones','adquisiciones.idtipoad',"=","tipo_adquisiciones.id")
+        ->select('piezas.*','fichas_informativas.*','adquisiciones.*', 'tipo_adquisiciones.nombre as nombretipoad','tipo_piezas.nombre as nombretipopieza')
                   ->where('piezas.nombre','LIKE','%'.$request->search.'%')
+                    ->orwhere('tipo_adquisiciones.nombre','LIKE','%'.$request->search.'%')
+                      ->orwhere('tipo_piezas.nombre','LIKE','%'.$request->search.'%')
                    ->get();
      $cont=1;
       if ($donantes)
@@ -331,7 +340,8 @@ class PiezaController extends Controller
                           <div class="card-content">
 
                             <span class="caption activator grey-text text-darken-4">'.$donantes->nombre.'<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#!">'.$donantes->epoca.'</a></p>
+                            <p><strong>Tipo:</strong>'.$donantes->nombretipopieza.'</p>
+                            <p><strong>Adquisición:'.$donantes->nombretipoad.'</p>
                           </div>
                           <div class="card-reveal" style="display: none; transform: translateY(0px);">
                             <span class="card-title grey-text text-darken-4">Historia<i class="material-icons right">close</i></span>
