@@ -326,7 +326,7 @@ class PiezaController extends Controller
             <div class="col s6 m4 l3">
                 <div class="card z-depth-2" style="overflow: visible;">
                           <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="{{URL::asset('.$donantes->fotografia.')}}" WIDTH=100 HEIGHT=180>
+                            <img class="activator" src="'.$donantes->fotografia.'" WIDTH=100 HEIGHT=180>
                           </div>
                           <div class="card-content">
 
