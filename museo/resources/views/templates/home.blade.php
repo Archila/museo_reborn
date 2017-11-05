@@ -200,6 +200,30 @@
              </div>
            </li>
            <div class="divider"></div>
+           <li class="bold"><a class="collapsible-header waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">description</i>Nomeclatura</a>
+             <div class="collapsible-body">
+             <ul>
+             @if ($rol === 1)
+             <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
+             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
+             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
+             <li><a class="waves-effect waves-sbx" href="{{route('Donante.index')}}"> Donantes</a></li>
+             @elseif ($rol=== 2)
+             <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
+             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
+             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
+             <li><a class="waves-effect waves-sbx" href="{{route('Donante.index')}}"> Donantes</a></li>
+             @elseif ($rol=== 3)
+             <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
+             <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
+             <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
+             <li><a class="waves-effect waves-sbx" href="{{route('Donante.index')}}"> Donantes</a></li>
+             @elseif ($rol=== 4)
+             @endif
+             </ul>
+             </div>
+           </li>
+           <div class="divider"></div>
            <li class="bold"><a class="collapsible-header  waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">confirmation_number</i>Boletos</a>
              <div class="collapsible-body">
                <ul>
@@ -283,30 +307,7 @@
 
              <div class="divider"></div>
 
-             <li class="bold"><a class="collapsible-header waves-effect waves-sbx"><i class="medium material-icons  blue-grey-text text-darken-4">description</i>Nomeclatura</a>
-               <div class="collapsible-body">
-               <ul>
-               @if ($rol === 1)
-               <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
-               <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
-               <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
-               <li><a class="waves-effect waves-sbx" href="{{route('Donante.index')}}"> Donantes</a></li>
-               @elseif ($rol=== 2)
-               <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
-               <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
-               <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
-               <li><a class="waves-effect waves-sbx" href="{{route('Donante.index')}}"> Donantes</a></li>
-               @elseif ($rol=== 3)
-               <li><a class="waves-effect waves-sbx" href="{{route('TipoPieza.index')}}"> Tipo de pieza      </a></li>
-               <li><a class="waves-effect waves-sbx" href="{{route('Genero.index')}}">    Género      </a></li>
-               <li><a class="waves-effect waves-sbx" href="{{route('TipoAdquisicion.index')}}">    Tipo de adquisición     </a></li>
-               <li><a class="waves-effect waves-sbx" href="{{route('Donante.index')}}"> Donantes</a></li>
-               @elseif ($rol=== 4)
-               @endif
-               </ul>
-               </div>
-             </li>
-             <div class="divider"></div>
+
 
          <li class="bold"><a class="collapsible-header waves-effect waves-sbx"><i class="medium material-icons blue-grey-text text-darken-4">account_circle</i>Personal</a>
          <div class="collapsible-body">
