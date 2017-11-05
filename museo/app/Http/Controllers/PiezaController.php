@@ -326,11 +326,13 @@ class PiezaController extends Controller
                     ->orwhere('tipo_adquisiciones.nombre','LIKE','%'.$request->search.'%')
                       ->orwhere('tipo_piezas.nombre','LIKE','%'.$request->search.'%')
                    ->get();
-     $cont=1;
+
       if ($donantes)
        {
+
          foreach ($donantes as $key => $donantes)
           {
+
             $output.='
             <div class="col s6 m4 l3">
                 <div class="card z-depth-2" style="overflow: visible;">
@@ -348,8 +350,8 @@ class PiezaController extends Controller
                             <p>'.$donantes->historia.'</p>
                           </div>
                         </div>
-              </div>';
-                     $cont++;
+              </div> ';
+
          }
          return Response($output);
 
