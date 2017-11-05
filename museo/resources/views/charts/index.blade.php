@@ -153,6 +153,11 @@ $(document).ready(function () {
         text: 'Ventas recaudadas en el Año {{$fecha2}}'
     },
 
+    subtitle: {
+        text: 'Biblioteca Pública de Quetzaltenango'
+    },
+
+
     xAxis: {
         categories: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
     },
@@ -166,7 +171,13 @@ $(document).ready(function () {
             dataLabels: {
                 enabled: true
             },
-            enableMouseTracking: false
+            enableMouseTracking: true
+        },
+        series: {
+            label: {
+                connectorAllowed: false
+            }
+
         }
     },
     series: [{

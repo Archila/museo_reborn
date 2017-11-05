@@ -16,6 +16,7 @@ class ChartsController extends Controller
     {
        $this->middleware('auth');
     }
+
   public function main()
   {
     $fecha      = date ('Y-m-d');
