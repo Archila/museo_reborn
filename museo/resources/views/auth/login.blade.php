@@ -85,10 +85,10 @@
 
     </ul>
     <ul class="right hide-on-med-and-down">
-      <li><a href="">Terminos & Condiciones</a></li>
+      <li><a href="">Términos & Condiciones</a></li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
-      <li><a href="">Terminos & Condiciones</a></li>
+      <li><a href="">Términos & Condiciones</a></li>
       <li><a href="{{ url('/') }}">Pagina Web</a></li>
     </ul>
   </div>

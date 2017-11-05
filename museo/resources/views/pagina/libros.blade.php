@@ -22,7 +22,7 @@
     <nav>
       <div class="nav-wrapper teal darken-3">
           <div class="input-field">
-            <input id="buscar" type="search" placeholder="Nombre de libro, autor, categoria" onclick="ocular()" >
+            <input id="buscar" type="search" placeholder="Nombre de libro, autor, categoría" >
             <label class="label-icon" for="search"><i class="material-icons prefix">search</i></label>
             <i class="material-icons">close</i>
           </div>
@@ -57,11 +57,6 @@ buscarDon();
 
 </script>
 <script>
-
-function ocultar(){
-document.getElementById('libros').style.display = 'none';
-}
-
 
 function buscarDon()
 {
