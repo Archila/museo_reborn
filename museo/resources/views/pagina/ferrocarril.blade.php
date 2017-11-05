@@ -54,7 +54,7 @@
 
         <!-- Portfolio Gallery -->
         <div class="container">
-          <h2 class="g-font-size-32--xs g-font-size-36--md g-text-center--xs g-margin-b-80--xs">Galeria de Fotos </h2>
+          <h2 class="g-font-size-32--xs g-font-size-36--md g-text-center--xs g-margin-b-80--xs">Galería de fotos </h2>
 
             <div id="js__grid-portfolio-gallery" class="cbp">
                 <!-- Item -->
@@ -109,7 +109,7 @@
                     </div>
                     <div class="s-portfolio__caption-hover--cc">
                         <div class="g-margin-b-25--xs">
-                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Ferrocarril de los altos y sus trabajadores</h4>
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Ferrocarril de los Altos y sus trabajadores</h4>
                         </div>
                     </div>
                 </div>
