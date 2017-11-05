@@ -111,7 +111,7 @@ class EmpleadoController extends Controller
 
                   }
                    }
-                   elseif ($valor==3)
+                   elseif ($valor==2)
                    {
                      for ($i=2; $i <4 ; $i++) {
 
