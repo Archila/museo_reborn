@@ -75,7 +75,7 @@ class EmpleadoController extends Controller
                 $empleado->save();
 
                 $empleadoG = empleado::where('nombre','=',$request->uname)
-                          ->orWhere('dpi','=',$request->dpi)
+                          ->Where('dpi','=',$request->dpi)
                           ->select('empleados.id as id')
                           ->get();
 
@@ -89,60 +89,52 @@ class EmpleadoController extends Controller
                 $usuario->save();
 
                 $userG = user::where('name','=',$request->usuario)
-                          ->orWhere('email','=',$request->email)
+                          ->Where('email','=',$request->email)
                           ->select('users.id as id')
                           ->get();
 
                 $idUsG=$userG[0];
                 $resultadoEidUser = intval(preg_replace('/[^0-9]+/', '', $idUsG), 10);
 
-
-                $admin=true;
-                $encmuseo=true;
-                $roles=true;
-                 foreach ($_POST['roles'] as  $valor)
+               $admin=true;
+               $encmuseo=true;
+               $roles=true;
+                foreach ($_POST['roles'] as  $valor)
+                {
+                  if ($admin==true && $valor==1)
                  {
-                   if ($admin)
-                  {
-                   if ($valor==1)
+                    for ($i=1; $i <5 ; $i++)
                    {
-                     for ($i=1; $i <5 ; $i++)
-                    {
-                    $permiso = new permiso;
-                    $permiso->idrol=$i;
-                    $permiso->iduser = $resultadoEidUser;
-                    $permiso->save();
-                    }
+                   $permiso = new permiso;
+                   $permiso->idrol=$i;
+                   $permiso->iduser = $resultadoEidUser;
+                   $permiso->save();
+                   }
                   $admin=false;
                   $encmuseo=false;
                   $roles=false;
-                   }
-                 }
-                 if ($encmuseo)
-                 {
-                   if ($valor==2)
+                }
+                elseif($encmuseo==true && $valor==2)
+                {
+                    for ($i=2; $i <4 ; $i++)
                    {
-                     for ($i=2; $i <4 ; $i++)
-                    {
-                    $permiso = new permiso;
-                    $permiso->idrol=$i;
-                    $permiso->iduser = $resultadoEidUser;
-                    $permiso->save();
+                   $permiso = new permiso;
+                   $permiso->idrol=$i;
+                   $permiso->iduser = $resultadoEidUser;
+                   $permiso->save();
                    }
-                   $admin=false;
-                   $encmuseo=false;
-                   $roles=false;
-                  }
-                 }
-                 if ($roles)
-                 {
-                  $permiso = new permiso;
-                  $permiso->idrol=$valor;
-                  $permiso->iduser = $resultadoEidUser;
-                  $permiso->save();
-                 }
-               }
-
+                 $admin=false;
+                 $encmuseo=false;
+                 $roles=false;
+                }
+                elseif($roles==true)
+                {
+                 $permiso = new permiso;
+                 $permiso->idrol=$valor;
+                 $permiso->iduser = $resultadoEidUser;
+                 $permiso->save();
+                }
+              }
 
                 DB::commit();
 
