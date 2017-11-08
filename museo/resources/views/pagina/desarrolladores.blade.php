@@ -27,7 +27,7 @@
                             <div class="g-bg-color--primary g-padding-x-15--xs g-padding-y-10--xs g-margin-b-20--xs">
                                 <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Yordan de la Cruz</h4>
                             </div>
-                            <p class="g-font-weight--400 ">Originario de San Carlos Sija, Quetzaltenango. Se graduó e Bachiller en Computación con orientación comercial en el Instituto Tecnológico Privado de Occidente ITPO. Actualmente, se encuentra cursando el 8vo semestre de la carrera de  Ingenieria en Sistemas, Informática y Ciencias de la Computación en la en la Universidad Mesoamericana sede Quetzaltenango, Guatemala.</p>
+                            <p class="g-font-weight--400 ">Originario de San Carlos Sija, Quetzaltenango. Se graduó e Bachiller en Computación con orientación comercial en el Instituto Tecnológico Privado de Occidente ITPO. Actualmente, se encuentra cursando el 8vo semestre de la carrera de  Ingenieria en Sistemas, Informática y Ciencias de la Computación en la Universidad Mesoamericana sede Quetzaltenango, Guatemala.</p>
                         </div>
                     </div>
                     <!-- End Speaker -->
