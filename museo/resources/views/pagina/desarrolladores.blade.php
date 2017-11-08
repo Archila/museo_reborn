@@ -9,7 +9,7 @@
                 <div class="col-xs-6 g-full-width--xs g-margin-b-30--xs g-margin-b-0--lg">
                     <!-- Speaker -->
                     <div class="center-block g-box-shadow__dark-lightest-v1 g-width-100-percent--xs g-width-400--lg">
-                        <img class="img-responsive g-width-100-percent--xs" src="pagina/img/400x400/John.jpg" alt="Image">
+                        <img class="img-responsive g-width-100-percent--xs" src="pagina/img/400x400/john.jpg" alt="Image">
                         <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
                             <div class="g-bg-color--primary g-padding-x-15--xs g-padding-y-10--xs g-margin-b-20--xs">
                                 <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Cuá Tumax Juan Santos</h4>
@@ -22,12 +22,12 @@
                 <div class="col-xs-6 g-full-width--xs">
                     <!-- Speaker -->
                     <div class="center-block g-box-shadow__dark-lightest-v1 g-width-100-percent--xs g-width-400--lg">
-                        <img class="img-responsive g-width-100-percent--xs" src="pagina/img/400x400/Yordan.jpg" alt="Image">
+                        <img class="img-responsive g-width-100-percent--xs" src="pagina/img/400x400/yordan.jpg" alt="Image">
                         <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
                             <div class="g-bg-color--primary g-padding-x-15--xs g-padding-y-10--xs g-margin-b-20--xs">
                                 <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Yordan de la Cruz</h4>
                             </div>
-                            <p class="g-font-weight--400 ">Originario de San Carlos Sija. Se graduó en el Instituto Tecnológico Privado de Occidente de Bachiller en Computación con orientación comercial. Actualmente se encuentra estudiando la Licenciatura en Ingeniería en Sistemas en la ciudad de Quetzaltenango, Quetzaltenango, Guatemala.</p>
+                            <p class="g-font-weight--400 ">Originario de San Carlos Sija, Quetzaltenango. Se graduó e Bachiller en Computación con orientación comercial en el Instituto Tecnológico Privado de Occidente ITPO. Actualmente, se encuentra cursando el 8vo semestre de la carrera de  Ingenieria en Sistemas, Informática y Ciencias de la Computación en la en la Universidad Mesoamericana sede Quetzaltenango, Guatemala.</p>
                         </div>
                     </div>
                     <!-- End Speaker -->
@@ -56,7 +56,7 @@
                 <div class="col-xs-6 g-full-width--xs">
                     <!-- Speaker -->
                     <div class="center-block g-box-shadow__dark-lightest-v1 g-width-100-percent--xs g-width-400--lg">
-                        <img class="img-responsive g-width-100-percent--xs" src="pagina/img/400x400/Erick.jpg" alt="Image">
+                        <img class="img-responsive g-width-100-percent--xs" src="pagina/img/400x400/erick.jpg" alt="Image">
                         <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
                             <div class="g-bg-color--primary g-padding-x-15--xs g-padding-y-10--xs g-margin-b-20--xs">
                                 <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Estrada Barrios Erick</h4>
