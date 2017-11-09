@@ -18,6 +18,9 @@ Route::group(['prefix' => '/'], function () {
 
 });
 
+//Rutas de prueba para la ficha informativa
+Route::any('/fichaJP/{id}', 'AsistenteController@fichaJP');
+
 Route::middleware(['admin'])->group(function () {
   Route::resource('/Empleado','EmpleadoController');
   Route::resource('/PruebaBoleto','TestBoletoController');

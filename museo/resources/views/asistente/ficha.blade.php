@@ -19,7 +19,7 @@
 	      <div class="card teal light-blue accent-1 z-depth-4">
 	      	<img  class="col s12 m12 l12" src="/images/museologo.jpg">
 	        <div class="card-image ">
-	                	
+
 	          <img class="materialboxed" src="{{$multimedia}}">
 	          <a class="btn-floating halfway-fab waves-effect waves-light green activator"><i class="material-icons">arrow_upward</i></a>
 	        </div>
