@@ -357,6 +357,7 @@ class PiezaController extends Controller
                 $c=0;
               }
 
+
          }
          return Response($output);
 

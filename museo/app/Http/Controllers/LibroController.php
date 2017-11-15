@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\libro;
 use App\autore;
 use App\categoria;
@@ -12,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class LibroController extends Controller
 {
 
-  
+
     public function index()
     {
         $libros=libro::join('autores', 'libros.idautor', '=', 'autores.id')

@@ -18,9 +18,13 @@ Route::group(['prefix' => '/'], function () {
 
 });
 
+Route::get('breweries', ['middleware' => 'cors']);
+
+
 Route::middleware(['admin'])->group(function () {
   Route::resource('/Empleado','EmpleadoController');
   Route::resource('/PruebaBoleto','TestBoletoController');
+  Route::get('/BoletoIframe', function() { return view('boletos.local'); });
   Route::resource('boletos','BoletoController');
   Route::resource('rangos','RangoEdadeController');
   Route::resource('visitantes','TipoVisitantesController');
