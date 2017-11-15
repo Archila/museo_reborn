@@ -10,10 +10,6 @@ use Illuminate\Http\Request;
 class AsistenteController extends Controller
 {
 
-    public function __construct()
-    {
-       $this->middleware('auth');
-    }
     public function index()
     {
         $piezas = pieza::all();
@@ -42,10 +38,15 @@ class AsistenteController extends Controller
     public function ficha($id){
         $cod_pieza = $id;
         $pieza=\App\pieza::find($cod_pieza);
-        $ficha =\App\fichas_informativa::where('pieza', $id)->first();
-        return view('Asistente.ficha')->with(['pieza'=>$pieza, 'ficha'=>$ficha]);
+        $ficha =\App\fichas_informativa::where('id_pieza', $id)->first();
+        return view('asistente.ficha')->with(['pieza'=>$pieza, 'ficha'=>$ficha]);
      }
 
+    public function fichaJP($id){
+      $pieza=pieza::find($id);
+      $ficha =fichas_informativa::where('id_pieza', $id)->first();
+      return view('asistente.fichaJP')->with(['pieza'=>$pieza, 'ficha'=>$ficha]);
+    }
 
     public function create()
     {
