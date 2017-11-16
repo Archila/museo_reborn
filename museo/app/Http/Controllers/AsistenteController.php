@@ -35,13 +35,7 @@ class AsistenteController extends Controller
         $pieza->save();
             return view('asistente.ver_qr')->with('pieza',$pieza);
     }
-    public function ficha($id){
-        $cod_pieza = $id;
-        $pieza=\App\pieza::find($cod_pieza);
-        $ficha =\App\fichas_informativa::where('id_pieza', $id)->first();
-        return view('asistente.ficha')->with(['pieza'=>$pieza, 'ficha'=>$ficha]);
-     }
-
+    
     public function Ficha($id){
       $pieza=pieza::where('cod_pieza', $id)->first();
       $ficha =fichas_informativa::where('cod_pieza', $id)->first();
