@@ -35,11 +35,22 @@ class AsistenteController extends Controller
         $pieza->save();
             return view('asistente.ver_qr')->with('pieza',$pieza);
     }
-    
+
     public function Ficha($id){
-      $pieza=pieza::where('cod_pieza', $id)->first();
-      $ficha =fichas_informativa::where('cod_pieza', $id)->first();
-      return view('asistente.fichaJP')->with(['pieza'=>$pieza, 'ficha'=>$ficha]);
+      try {
+        $pieza=pieza::where('cod_pieza', $id)->first();
+        if (isset($pieza)) {
+          $id_pieza = $pieza->id;
+          $ficha =fichas_informativa::where('id_pieza', $id_pieza)->first();
+          return view('asistente.ficha')->with(['pieza'=>$pieza, 'ficha'=>$ficha]);
+        }
+        else {
+          return view('asistente.no_qr')->with(['error'=>true]);
+        }
+
+      } catch (Exception $e) {
+        return view('asistente.no_qr')->with(['error'=>true]);
+      }
     }
 
     public function create()
