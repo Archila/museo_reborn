@@ -72,8 +72,8 @@
     </article>
     <div class="row">
       <div class="col m10">
-        <h2 class="white-text">Volver a escanear
-                <i class="material-icons medium white-text right">arrow_forward</i></h2>
+        <h3 class="white-text">Volver a escanear
+                <i class="material-icons white-text right">arrow_forward</i></h3>
       </div>
     </div>
 
