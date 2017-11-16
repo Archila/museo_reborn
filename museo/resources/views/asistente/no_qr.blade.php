@@ -62,19 +62,19 @@
 <body>
   <section class="center">
     <article>
-      <h1 class="white-text">Museo de Historia de Quetzaltenango</h1>
+      <p class="error">QR inválido</p>
       <div class="check">
       <span></span>
       <img src="http://www.qrcodify.com/code.php?URL=progromatic" />
       </div>
-      <p class="error">QR inválido</p>
-    </article>
-    <div class="row">
-      <div class="col l8 m8 offset-l4">
-        <h2 class="white-text">Volver a escanear <i class="material-icons medium white-text">arrow_forward</i></h2>
+      <div class="row">
+        <div class="col l8 m8 offset-l4">
+          <h2 class="white-text">Volver a escanear <i class="material-icons medium white-text">arrow_forward</i></h2>
 
+        </div>
       </div>
-    </div>
+    </article>
+
 
   </section>
 
