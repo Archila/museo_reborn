@@ -24,7 +24,7 @@ Route::any('/fichaJP/{id}', 'AsistenteController@fichaJP');
 Route::middleware(['admin'])->group(function () {
   Route::resource('/Empleado','EmpleadoController');
   Route::resource('/PruebaBoleto','TestBoletoController');
-  Route::get('/BoletoIframe', function() { return view('boletos.local'); });
+  Route::get('/GenerarBoleto', function() { return view('boletos.local'); });
   Route::resource('boletos','BoletoController');
   Route::resource('rangos','RangoEdadeController');
   Route::resource('visitantes','TipoVisitantesController');
