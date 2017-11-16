@@ -71,7 +71,7 @@
       <p class="error">QR inválido</p>
     </article>
     <div class="row">
-      <div class="col m6 offset-m4">
+      <div class="col m5 offset-m5">
         <span class="white-text" style="font-size: 3rem;">Volver a escanear</span>
       </div>
       <div class="col m1">
