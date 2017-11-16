@@ -55,7 +55,7 @@
         margin: 0px 0 2% 0;
       	font-size: 7.4rem;
       	text-shadow: 0px 3px 0px #7f8c8d;
-      	font-weight: 100;
+      	font-weight: 50;
       }
     </style>
   </head>
@@ -71,7 +71,7 @@
       <p class="error">QR inválido</p>
     </article>
     <div class="row">
-      <div class="col l8 m8 offset-l4">
+      <div class="col l8 m8 offset-l2">
         <h2 class="white-text">Volver a escanear <i class="material-icons medium white-text">arrow_forward</i></h2>
 
       </div>
