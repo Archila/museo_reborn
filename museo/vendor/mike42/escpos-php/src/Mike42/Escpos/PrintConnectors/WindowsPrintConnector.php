@@ -219,7 +219,7 @@ class WindowsPrintConnector implements PrintConnector
         } else {
             // No authentication information at all
             $command = sprintf(
-                "Errorsito smbclient %s -c %s -N",
+                "smbclient %s -c %s -N",
                 escapeshellarg($device),
                 escapeshellarg("print -")
             );

@@ -42,9 +42,9 @@ class AsistenteController extends Controller
         return view('asistente.ficha')->with(['pieza'=>$pieza, 'ficha'=>$ficha]);
      }
 
-    public function fichaJP($id){
-      $pieza=pieza::find($id);
-      $ficha =fichas_informativa::where('id_pieza', $id)->first();
+    public function Ficha($id){
+      $pieza=pieza::where('cod_pieza', $id)->first();
+      $ficha =fichas_informativa::where('cod_pieza', $id)->first();
       return view('asistente.fichaJP')->with(['pieza'=>$pieza, 'ficha'=>$ficha]);
     }
 
