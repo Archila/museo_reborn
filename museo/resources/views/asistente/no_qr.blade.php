@@ -71,8 +71,8 @@
       <p class="error">QR inválido</p>
     </article>
     <div class="row">
-      <div class="col m8 offset-m2">
-        <span class="white-text" style="font-size: 3rem;"><b>Volver a escanear</b></span>        
+      <div class="col m7 offset-m3">
+        <span class="white-text" style="font-size: 3rem;"><b>Volver a escanear</b></span>
       </div>
       <div class="col m1">
         <i class="material-icons large white-text right">arrow_forward</i>
