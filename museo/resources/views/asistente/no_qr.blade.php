@@ -72,8 +72,8 @@
     </article>
     <div class="row">
       <div class="col m8 offset-m3">
-        <h3 class="white-text">Volver a escanear
-                <i class="material-icons large white-text right">arrow_forward</i></h3>
+        <span class="white-text" style="font-size: 3rem;"><b>Volver a escanear</b>
+                <i class="material-icons large white-text right">arrow_forward</i></span>
       </div>
     </div>
 
