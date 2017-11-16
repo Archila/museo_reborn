@@ -131,24 +131,25 @@
                         <div class="col-xs-6 g-full-width--xs g-margin-b-30--xs g-margin-b-0--lg">
                             <!-- Speaker -->
                             <div class="center-block g-box-shadow__dark-lightest-v1 g-width-100-percent--xs g-width-400--lg">
-                                <img class="img-responsive g-width-100-percent--xs" src="pagina/img/400x400/luis.jpg" alt="Image">
-                                <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
-                                  <div class="g-text-center--xs g-bg-color--white g-padding-x-30--xs g-padding-y-40--xs">
-                                      <h3 class="g-font-size-18--xs g-margin-b-5--xs">Luis Fernando Gómez Mejía</h3>
-                                      <span class="g-font-size-15--xs g-color--text"><i>Originario de la ciudad de Quetzaltenango, graduado de Mercadotecnia y Comercio Internacional en la Universidad Rafael Landívar, cofundador y director de Ciudades Sostenibles misma que administra a “Sacándole Brillo a Xela” en la ciudad de Quetzaltenango</i></span>
-                                  </div>
-                                </div>
-                            </div>
-                            <!-- End Speaker -->
-                        </div>
-                        <div class="col-xs-6 g-full-width--xs">
-                            <!-- Speaker -->
-                            <div class="center-block g-box-shadow__dark-lightest-v1 g-width-100-percent--xs g-width-400--lg">
                                 <img class="img-responsive g-width-100-percent--xs" src="pagina/img/400x400/Aldo.jpg" alt="Image">
                                 <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
                                   <div class="g-text-center--xs g-bg-color--white g-padding-x-30--xs g-padding-y-40--xs">
                                       <h2 class="g-font-size-18--xs g-margin-b-5--xs">Aldo Fernando Herrera Scheel</h2>
                                       <span class="g-font-size-15--xs g-color--text"><i>Originario de Quetzaltenango, graduado de la Universidad Francisco Marroquín en la carrera de Licenciatura. Desde finales de junio de dos mil doce, fundador de la “Asociación Sacándole Brillo a Xela”</i></span>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <!-- End Speaker -->
+                        </div>
+                        <div class="col-xs-6 g-full-width--xs">
+                            <!-- Speaker -->
+                            <div class="center-block g-box-shadow__dark-lightest-v1 g-width-100-percent--xs g-width-400--lg">
+                                <img class="img-responsive g-width-100-percent--xs" src="pagina/img/400x400/luis.jpg" alt="Image">
+                                <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
+                                  <div class="g-text-center--xs g-bg-color--white g-padding-x-30--xs g-padding-y-40--xs">
+                                      <h3 class="g-font-size-18--xs g-margin-b-5--xs">Luis Fernando Gómez Mejía</h3>
+                                      <span class="g-font-size-15--xs g-color--text"><i>Originario de la ciudad de Quetzaltenango, graduado de Mercadotecnia y Comercio Internacional en la Universidad Rafael Landívar, cofundador y director de Ciudades Sostenibles misma que administra a “Sacándole Brillo a Xela” en la ciudad de Quetzaltenango</i></span>
                                   </div>
                                 </div>
                             </div>
@@ -206,7 +207,7 @@
               </div>
               <div class="col-sm-1"></div>
               <div class="col-sm-5 col-sm-pull-5 g-hor-centered-row__col g-text-left--xs g-text-right--md">
-                  <img class="img-responsive" src="pagina/img/400x400/basureros.png" alt="Mockup Image">
+                  <img class="img-responsive" src="pagina/img/400x400/basureros.jpg" alt="Mockup Image">
               </div>
           </div>
             </div>
