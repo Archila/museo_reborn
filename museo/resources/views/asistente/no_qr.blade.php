@@ -23,7 +23,7 @@
         width: 200px;
         height: 200px;
         border: 5px solid #000;
-        margin: 100px auto;
+        margin: 20px auto;
       }
       .check > span {
         position: absolute;
@@ -52,7 +52,7 @@
       }
       /* Error Styling */
       .error{
-        margin: -70px 0 2% 0;
+        margin: 0px 0 2% 0;
       	font-size: 7.4rem;
       	text-shadow: 0px 3px 0px #7f8c8d;
       	font-weight: 100;
@@ -62,19 +62,20 @@
 <body>
   <section class="center">
     <article>
-      <p class="error">QR inválido</p>
+      <h2 class="white-text">Museo de Historia de Quetzaltenango</h2>
+
       <div class="check">
       <span></span>
       <img src="http://www.qrcodify.com/code.php?URL=progromatic" />
       </div>
-      <div class="row">
-        <div class="col l8 m8 offset-l4">
-          <h2 class="white-text">Volver a escanear <i class="material-icons medium white-text">arrow_forward</i></h2>
-
-        </div>
-      </div>
+      <p class="error">QR inválido</p>
     </article>
+    <div class="row">
+      <div class="col l8 m8 offset-l4">
+        <h2 class="white-text">Volver a escanear <i class="material-icons medium white-text">arrow_forward</i></h2>
 
+      </div>
+    </div>
 
   </section>
 
