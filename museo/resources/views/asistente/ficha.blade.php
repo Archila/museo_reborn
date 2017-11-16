@@ -1,65 +1,59 @@
-@extends('asistente.home')
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ficha</title>
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/ghpages-materialize.css')}}"  media="screen,projection"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{URL::asset('css/prism.css')}}" rel="stylesheet" />
 
-@section('titulo','Ficha')
+    <script type="text/javascript" src="{{URL::asset('js/init.js')}}"></script>
 
-@section('encabezado','Ficha Informativa')
+    <script type="text/javascript" src="{{URL::asset('js/jquery-3.2.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/jquery.timeago.min.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/prism.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('bin/materialize.js')}}"></script>
 
-@section('contenido')
-      <?php
-          $multimedia =URL::asset($pieza->fotografia);
-          if (!is_null($ficha->multimedia)) {
-            $multimedia=URL::asset($ficha->multimedia);
-          }
 
-          ?>
-						<div class="row ">
-								<div class="col s12 m12 l6 ">
-									<div class="card teal light-blue accent-1 z-depth-4">
-										<img  class="col s12 m12 l12" src="/images/museologo.jpg">
-										<div class="card-image ">
-											<img class="materialboxed" src="{{URL::asset($pieza->fotografia)}}">
-											<a class="btn-floating halfway-fab waves-effect waves-light green activator"><i class="material-icons">arrow_upward</i></a>
-										</div>
-										<div class="card-content">
-											<span class="card-title "><h4>{{$pieza->nombre}}</h4></span>
-										</div>
-										<div class="card-reveal" style="background-color:#e1f5fe;">
-											<span class="card-title grey-text text-darken-4">{{$pieza->nombre}}<i class="material-icons right">arrow_downward</i></span>
-											<h5 class="left-align">Época: {{$ficha->epoca}}</h4>
-											<h5 class="center-align">{{$ficha->historia}}</h5>
-								</div>
-									</div>
-								</div>
-
-							<div class="fixed-action-btn ">
-								<a href="/" class="btn-floating btn-large blue">
-									<i class="large material-icons">account_balance</i>
-								</a>
-							</div>
-							@if($ficha->multimedia != "")
-							<div class="col s6 m6 l6">
-
-										 <img class="materialboxed" width="385"  src="{{URL::asset($ficha->multimedia)}}">
-								</div>
-							</div>
-							@endif
-
-						</div>
-
-						@if($ficha->video != "")
-							<div class="col s12 m12 l12">
-							<div class="card-panel">
-								<div class="video-container">
-								 <iframe width="560" height="315" src="{{$ficha->video}}" frameborder="0" allowfullscreen></iframe>
-								 </div>
-							 </div>
-							</div>
-						@endif
-					
-
-    @endsection
-    <script type="text/javascript">
-       $(document).ready(function(){
-        $('.materialboxed').materialbox();
-      });
-    </script>
+  </head>
+  <body>
+    <div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </body>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.slider').slider();
+  });
+  </script>
+</html>
