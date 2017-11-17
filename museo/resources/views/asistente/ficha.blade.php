@@ -83,7 +83,7 @@
     }
 
     body {
-      background: #e1f5fe ;
+      background: #81d4fa ;
       font-family: 'Lato', sans-serif;
       font-size: 2em;
       line-height: 1.5;
@@ -145,6 +145,7 @@
           </div>
           <div class="row">
             <div class="slides">
+
               <div class="slide">
                 <a href="#">Pieza</a>
                 <div class="content">
@@ -180,23 +181,34 @@
 
               <div class="slide">
                 <a href="#">Multimedia</a>
-                <div class="content">
+                <div class="content" >
                   <div class="row center-align">
-                    @if($ficha->multimedia != "")
-            					 <img class="materialboxed" style="width: 300px; height:200px;"  src="{{URL::asset($ficha->multimedia)}}">
-                		@endif
-                	</div>
-                	@if($ficha->video != "")
-              			<div class="video-container">
-              			 <iframe width="560" height="315" src="{{$ficha->video}}" frameborder="0" allowfullscreen></iframe>
-              			</div>
-                	@endif
+                    <div class="col m12 center-align">
+                      @if($ficha->multimedia != "")
+                      <div class="col m6 offset-m3">
+                        <img class="materialboxed" style="width: 100%; height:240px;" src="{{URL::asset($ficha->multimedia)}}">
+                      </div>
+                      @elseif($ficha->video != "")
+                        <iframe width="480" height="270" src="{{$ficha->video}}" frameborder="0" allowfullscreen></iframe>
+                      @else
+                        <div class="col m6 offset-m3">
+                          <img class="materialboxed" style="width: 100%; height:240px;" src="/images/no_multimedia.jpg" class="center-align">
+                        </div>
+
+                      @endif
+                    </div>
+
                   </div>
                 </div>
               </div>
+
+
+
           </div>
 
         </div>
+      </div>
+
   </body>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script type="text/javascript">
