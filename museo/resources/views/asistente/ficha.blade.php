@@ -3,14 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Ficha</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('css/ghpages-materialize.css')}}"  media="screen,projection"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{URL::asset('css/prism.css')}}" rel="stylesheet" />
 
+    <script type="text/javascript" src="{{URL::asset('js/init.js')}}"></script>
+
+    <script type="text/javascript" src="{{URL::asset('js/jquery-3.2.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/jquery.timeago.min.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/prism.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('bin/materialize.js')}}"></script>
 
     <style>
     /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
     @import url(https://fonts.googleapis.com/css?family=Lato:300|Oswald);
     .slides {
       position: relative;
+      margin-top: -35px;
     }
     .slides .slide {
       position: absolute;
@@ -19,7 +29,7 @@
       max-height: 3.5em;
       margin: 0.5em;
       padding: 1em;
-      background: #ad1f36;
+      background: #03a9f4 ;
       color: white;
       float: left;
       overflow: hidden;
@@ -40,7 +50,7 @@
       font-family: 'Oswald';
       text-transform: uppercase;
       text-decoration: none;
-      color: #ec93a2;
+      color: #004d40 ;
       transition: color 2s;
     }
     .slides .slide.active {
@@ -73,7 +83,7 @@
     }
 
     body {
-      background: #e05269;
+      background: #e1f5fe ;
       font-family: 'Lato', sans-serif;
       font-size: 2em;
       line-height: 1.5;
@@ -85,15 +95,6 @@
       margin: 0 auto;
     }
 
-    h1 {
-      margin: 0;
-      padding: 1em;
-      font-family: 'Oswald', sans-serif;
-      font-size: 2em;
-      text-transform: uppercase;
-      text-align: center;
-      color: white;
-    }
 
     /**
      * For modern browsers
@@ -139,32 +140,59 @@
 
         ?>
         <div class="container">
-          <h1>Slidin' Slidey Things</h1>
-          <div class="slides">
-            <div class="slide">
-              <a href="#">The Lorem</a>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi rem ab voluptate provident voluptatum veniam cupiditate beatae expedita veritatis aliquid officia doloribus dolore maiores doloremque mollitia! A ducimus autem ut!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus obcaecati velit autem tenetur doloribus perferendis esse odit animi quasi deserunt recusandae perspiciatis a sapiente aliquam qui libero dolor officiis assumenda.
-              </div>
-            </div>
-
-            <div class="slide">
-              <a href="#">The Ipsum</a>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi rem ab voluptate provident voluptatum veniam cupiditate beatae expedita veritatis aliquid officia doloribus dolore maiores doloremque mollitia! A ducimus autem ut!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse harum eius voluptas dicta. Vero tempore rerum itaque? Quidem nobis vel consectetur sit amet illo dicta veniam ab ut libero officia!
-              </div>
-            </div>
-
-            <div class="slide">
-              <a href="#">The Dolor Sit Amet</a>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi rem ab voluptate provident voluptatum veniam cupiditate beatae expedita veritatis aliquid officia doloribus dolore maiores doloremque mollitia! A ducimus autem ut!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim fugiat officiis repellat reprehenderit incidunt deserunt illum eum ipsa quod nihil eligendi hic delectus quaerat. Ad sint tempore cumque mollitia reiciendis!
-              </div>
-            </div>
+          <div class="row center-align">
+            <img src="/images/museologo.png" alt="" style="hidth: 30px; height:120px;" class="center-align">
           </div>
+          <div class="row">
+            <div class="slides">
+              <div class="slide">
+                <a href="#">Pieza</a>
+                <div class="content">
+                  <div class="row">
+                    <div class="col m6 l6 ">
+                      <div class="col m4">
+                        <h4>Nombre:</h4>
+                        <h4>Época:</h4>
+                      </div>
+                      <div class="col m8">
+                        <h4><b>{{$pieza->nombre}}</b></h4>
+                        <h4><b>{{$ficha->epoca}}</b></h4>
+                      </div>
+                    </div>
+                    <div class="col m6 l6 center-align">
+                      <img src="{{URL::asset($pieza->fotografia)}}" alt="" style="width: 320px; height:200px;" class="materialboxed">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide">
+                <a href="#">Información</a>
+                <div class="content" style="font-size: 1.5em; text-align : justify;">
+                  {{$ficha->historia}}
+                </div>
+              </div>
+
+              <div class="slide">
+                <a href="#">Multimedia</a>
+                <div class="content">
+                  <div class="row center-align">
+                    @if($ficha->multimedia != "")
+            					 <img class="materialboxed" width="385"  src="{{URL::asset($ficha->multimedia)}}">
+                		@endif
+                	</div>
+
+                	@if($ficha->video != "")
+              			<div class="video-container">
+              			 <iframe width="560" height="315" src="{{$ficha->video}}" frameborder="0" allowfullscreen></iframe>
+              			</div>                		
+                	@endif
+                  </div>
+                </div>
+              </div>
+          </div>
+
+        </div>
   </body>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script type="text/javascript">
