@@ -52,6 +52,7 @@ class AsistenteController extends Controller
         return view('asistente.no_qr')->with(['error'=>true]);
       }
     }
+    
 
     public function create()
     {
