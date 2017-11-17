@@ -55,7 +55,7 @@
 
             <div class="input-field col s6">
               <i class="material-icons prefix">keyboard</i>
-              <input class="required" id="password" type="password"  name="password" >
+              <input  id="password" type="password"  name="password" >
               <label for="password">Password</label>
             </div>
               <input  type="hidden"  name="idusuario" value="{{$usuario->id}}" >
