@@ -58,7 +58,7 @@
       top: 4.5em;
       left: 0;
       width: 100%;
-      max-height: 30em;
+      max-height: 29em;
       float: none;
       transition: top        0.25s 1s    ease-in-out, left       0.25s 1.25s ease-in-out, width      0.25s 1.5s  ease-in-out, max-height 0.25s 1.75s ease-in-out;
     }
