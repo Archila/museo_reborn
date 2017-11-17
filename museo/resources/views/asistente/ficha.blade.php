@@ -54,10 +54,10 @@
     }
 
     #allcontent{
-    	margin:60px auto 0 auto;
+    	margin: 25px auto 0 auto;
         width:100%;
         max-width:800px;
-        height:700px;
+        height:800px;
         position:relative;
     	-webkit-animation: comein 1.5s ease-in-out;
     	-moz-animation: comein 1.5s ease-in-out;
@@ -131,7 +131,7 @@
         bottom:20px;
         left:10px;
         width:90%;
-    	height:20px;
+    	height:10px;
     	-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
     	-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
     	box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
@@ -262,24 +262,31 @@
 
   </head>
   <body>
-    <div class="row">
+    <?php
+        $multimedia =URL::asset($pieza->fotografia);
+        if (!is_null($ficha->multimedia)) {
+          $multimedia=URL::asset($ficha->multimedia);
+        }
+
+        ?>
+    <div class="row fullscreen">
       <div id="all" class="col m12 ">
         <div id="navi"></div>
         <div id="allcontent">
             <div id="maincontent">
 
                 <div class="portfolio">
-                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/graph01.jpg" alt="Portfolio img"><br>
-                    <span class="txt">Poster . Laperquisa Cinema . <a href="http://cargocollective.com/gomboli/Laperquisa-Cinema-Screening-Posters" target="_blank" title="see more">see more</a>.</span>
+                    <img src="{{URL::asset($pieza->fotografia)}}" alt="Portfolio img" style="" class="materialboxed"><br>
+                    <div class="txt">Poster . Laperquisa Cinema . <a href="http://cargocollective.com/gomboli/Laperquisa-Cinema-Screening-Posters" target="_blank" title="see more">see more</a>.</div>
                     <div class="ombra"></div>
                 </div>
                 <div class="portfolio">
-                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/web01.jpg" alt="Portfolio img"><br>
+                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/web01.jpg" alt="Portfolio img"  class="materialboxed"><br>
                     <span class="txt">Alfa Romeo <a href="http://www.alfaromeo.com/carconfigurator/IT/159/index.html" target="_blank" title="Alfa Romeo">Car Configurator</a> . <a href="http://wedoo.it" target="_blank" title="WEDOO">@Wedoo</a>.</span>
                     <div class="ombra"></div>
                 </div>
                 <div class="portfolio">
-                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/illu01.jpg" alt="Portfolio img"><br>
+                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/illu01.jpg" alt="Portfolio img"  class="materialboxed"><br>
                     <span class="txt">Mac Book Air . Keynote Illustration</span>
                     <div class="ombra"></div>
                 </div>
@@ -346,5 +353,9 @@
       $(this).addClass("activenav");
   });
   </script>
-
+  <script type="text/javascript">
+  $(document).ready(function(){
+     $('.materialboxed').materialbox();
+   });    
+  </script>
 </html>
