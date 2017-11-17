@@ -66,13 +66,13 @@
 
     .portfolio{
         width:100%;
-        max-width:600px;
+        max-width:500px;
         position:absolute;
         right:0;
         top:0;
-        -webkit-transition: .2s;
-        -moz-transition: .2s;
-        transition: .2s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        transition: .5s;
         cursor:pointer;
     	-webkit-box-shadow:-2px 0 3px rgba(0,0,0,0.3);
     	-moz-box-shadow:-2px 0 3px rgba(0,0,0,0.3);
@@ -83,41 +83,20 @@
     .portfolio:nth-child(1) {
     	left: 5px;
     }
-    .portfolio:nth-child(1):hover {
-    	-webkit-transform: rotate(-2deg);
-        -moz-transform: rotate(-2deg);
-        transform: rotate(-2deg);
-    	left: 0;
-    }
+
 
     .portfolio:nth-child(2) {
-    	left: 15%;
+    	left: 10%;
     }
-    .portfolio:nth-child(2):hover {
-    	-webkit-transform: rotate(-2deg);
-        -moz-transform: rotate(-2deg);
-        transform: rotate(-2deg);
-    	left: 5%;
-    }
+
 
     .portfolio:nth-child(3) {
-    	left: 30%;
-    }
-    .portfolio:nth-child(3):hover {
-    	-webkit-transform: rotate(-2deg);
-        -moz-transform: rotate(-2deg);
-        transform: rotate(-2deg);
-    	left: 15%;
+    	left: 20%;
     }
 
+
     .portfolio:nth-child(4) {
-    	left: 45%;
-    }
-    .portfolio:nth-child(4):hover {
-    	-webkit-transform: rotate(-2deg);
-        -moz-transform: rotate(-2deg);
-        transform: rotate(-2deg);
-    	left: 25%;
+    	left: 30%;
     }
 
     .portfolio:nth-child(5) {
@@ -131,7 +110,7 @@
     }
 
     .opened {
-    	z-index: 800;
+    	z-index: 1000;
     	left:0 !important;
     	-webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -191,9 +170,7 @@
 
     #navi{
     	position:absolute;
-    	bottom: 20%;
     	left:50%;
-
     	background:blue;
     	opacity:0.8;
     	color:black;
@@ -287,6 +264,7 @@
   <body>
     <div class="row">
       <div id="all" class="col m12 ">
+        <div id="navi"></div>
         <div id="allcontent">
             <div id="maincontent">
 
@@ -303,11 +281,16 @@
                 <div class="portfolio">
                     <img src="http://www.claudiogomboli.com/lab/gallery/imgs/illu01.jpg" alt="Portfolio img"><br>
                     <span class="txt">Mac Book Air . Keynote Illustration</span>
-
+                    <div class="ombra"></div>
+                </div>
+                <div class="portfolio">
+                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/web01.jpg" alt="Portfolio img"><br>
+                    <span class="txt">Alfa Romeo <a href="http://www.alfaromeo.com/carconfigurator/IT/159/index.html" target="_blank" title="Alfa Romeo">Car Configurator</a> . <a href="http://wedoo.it" target="_blank" title="WEDOO">@Wedoo</a>.</span>
+                    <div class="ombra"></div>
                 </div>
             </div>
-            <div id="navi"></div>
-      </div>      
+
+      </div>
     </div>
 
 
