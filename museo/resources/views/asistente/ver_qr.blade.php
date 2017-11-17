@@ -7,6 +7,9 @@
 	</div>
 </div>
 <div class="container">
+	<div class="card-image">
+		<a href="{{route('Pieza.show')}}" class="btn-floating halfway-fab tooltipped waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Regresar"><i class="material-icons">arrow_back</i></a>
+	</div>
 	<div class="row">
 		<div class="col s6  offset-s3" style="border:1px">
 			  <div class="center">
