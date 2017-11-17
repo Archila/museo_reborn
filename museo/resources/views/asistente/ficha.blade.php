@@ -152,10 +152,14 @@
                     <div class="col m6 l6 ">
                       <div class="col m4">
                         <h4>Nombre:</h4>
-                        <h4>Época:</h4>
                       </div>
                       <div class="col m8">
                         <h4><b>{{$pieza->nombre}}</b></h4>
+                      </div>
+                      <div class="col m4">
+                        <h4>Época:</h4>
+                      </div>
+                      <div class="col m8">
                         <h4><b>{{$ficha->epoca}}</b></h4>
                       </div>
                     </div>
@@ -163,12 +167,13 @@
                       <img src="{{URL::asset($pieza->fotografia)}}" alt="" style="width: 320px; height:200px;" class="materialboxed">
                     </div>
                   </div>
+
                 </div>
               </div>
 
               <div class="slide">
                 <a href="#">Información</a>
-                <div class="content" style="font-size: 1.5em; text-align : justify;">
+                <div class="content" style="font-size: 1.2em; text-align : justify;">
                   {{$ficha->historia}}
                 </div>
               </div>
@@ -178,14 +183,13 @@
                 <div class="content">
                   <div class="row center-align">
                     @if($ficha->multimedia != "")
-            					 <img class="materialboxed" width="385"  src="{{URL::asset($ficha->multimedia)}}">
+            					 <img class="materialboxed" style="width: 300px; height:200px;"  src="{{URL::asset($ficha->multimedia)}}">
                 		@endif
                 	</div>
-
                 	@if($ficha->video != "")
               			<div class="video-container">
               			 <iframe width="560" height="315" src="{{$ficha->video}}" frameborder="0" allowfullscreen></iframe>
-              			</div>                		
+              			</div>
                 	@endif
                   </div>
                 </div>
