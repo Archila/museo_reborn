@@ -22,7 +22,7 @@
 
 			  <div class="row">
 
-          <form id="formValidate" method="POST" action="{{route('Evento.store')}}"><br>
+          <form id="formValidate" method="POST" action="#"><br>
            {{ csrf_field() }}
            {{ method_field('POST') }}
           <div class="row">

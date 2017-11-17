@@ -1,6 +1,11 @@
 @extends('templates.home')
 
 @section('content')
+<div class="col s6 offset-s8" style="position:right">
+	<div class="card-image">
+		<a href="{{URL('/Pieza/show')}}" class="btn-floating tooltipped waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Regresar"><i class="material-icons">arrow_back</i></a>
+	</div>
+</div>
 <div class="row">
 	<div class="center">
 		<h5 class="light">Codigo QR</h5>
