@@ -8,7 +8,7 @@
     </div>
 
     <div class="right"><br>
-      <a href="{{route('Donante.create')}}" class="modal-trigger btn-floating tooltipped btn-large waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Agregar"><i class="material-icons">add</i></a>
+      <a href="#" class="modal-trigger btn-floating tooltipped btn-large waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Agregar"><i class="material-icons">add</i></a>
     </div>
   </div>
 
@@ -35,25 +35,10 @@
 
                 <td>
                   <a class="tooltipped  btn-floating btn-small waves-effect waves-light light-blue darken-4" data-position="bottom" href="{{route('Donante.edit',$donante->id)}}" data-delay="50" data-tooltip="Editar"><i class="material-icons">edit</i></a>
-            
+
 
                 </td>
-                <form action="{{route('Donante.destroy',$donante->id)}}" method="POST">
-                  {{csrf_field()}}
-                  {{ method_field('DELETE') }}
-                    <div id="modal{{$donante->id}}" class="modal">
-                      <div class="modal-content">
-                        <h4 class="center-align">Desea eliminar?</h4>
-                        <center> <i class="center-align medium material-icons">error_outline</i></center>
-                        <p class="center-align">Nota: los cambios no pueden deshacerse </p>
-                      </div>
-
-                      <div class="modal-footer">
-                        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancelar</a>
-                        <button class="btn red" type="submit" name="action">Eliminar</button>
-                      </div>
-                    </div>
-                </form>
+            
               </tr>
             @endforeach
           </tbody>

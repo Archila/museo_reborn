@@ -15,14 +15,14 @@
 
       <div class="card-image">
 
-        <a href="{{route('Evento.index')}}" class="btn-floating halfway-fab tooltipped waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Regresar"><i class="material-icons">arrow_back</i></a>
+        <a href="#" class="btn-floating halfway-fab tooltipped waves-effect waves-light  light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Regresar"><i class="material-icons">arrow_back</i></a>
 
       </div>
       <div class="container">
 
 			  <div class="row">
 
-          <form id="formValidate" method="POST" action="{{route('Evento.store')}}"><br>
+          <form id="formValidate" method="POST" action="#"><br>
            {{ csrf_field() }}
            {{ method_field('POST') }}
           <div class="row">
