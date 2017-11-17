@@ -58,7 +58,7 @@
       top: 4.5em;
       left: 0;
       width: 100%;
-      max-height: 29em;
+      max-height: 30em;
       float: none;
       transition: top        0.25s 1s    ease-in-out, left       0.25s 1.25s ease-in-out, width      0.25s 1.5s  ease-in-out, max-height 0.25s 1.75s ease-in-out;
     }
@@ -189,7 +189,7 @@
                         <img class="materialboxed" style="width: 100%; height:auto;" src="{{URL::asset($ficha->multimedia)}}">
                       </div>
                       @elseif($ficha->video != "")
-                        <iframe width="720" height="520" src="{{$ficha->video}}" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="780" height="520" src="{{$ficha->video}}" frameborder="0" allowfullscreen></iframe>
                       @else
                         <div class="col m6 offset-m3">
                           <img class="materialboxed" style="width: 100%; height:240px;" src="/images/no_multimedia.jpg" class="center-align">
