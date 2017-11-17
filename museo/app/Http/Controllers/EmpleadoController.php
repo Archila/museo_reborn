@@ -215,12 +215,26 @@ class EmpleadoController extends Controller
        try {
 
 
-           $usuario=User::findOrFail($idusuarioE);
-           $usuario->name=$request->usuario;
-           $usuario->email=$request->email;
-           $usuario->password=bcrypt($request->password);
-           $usuario->empleado=$empleado;
-           $usuario->save();
+
+           if ($request->password=="")
+            {
+             $usuario=User::findOrFail($idusuarioE);
+             $usuario->name=$request->usuario;
+             $usuario->email=$request->email;
+             $usuario->empleado=$empleado;
+             $usuario->save();
+           }
+           else
+            {
+             $usuario=User::findOrFail($idusuarioE);
+             $usuario->name=$request->usuario;
+             $usuario->email=$request->email;
+             $usuario->password=bcrypt($request->password);
+             $usuario->empleado=$empleado;
+             $usuario->save();
+
+           }
+
 
            $empleado = empleado::findOrFail($empleado);
            $empleado->nombre = $request->uname;
