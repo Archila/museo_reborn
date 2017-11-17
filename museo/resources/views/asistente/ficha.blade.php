@@ -186,10 +186,10 @@
                     <div class="col m12 center-align">
                       @if($ficha->multimedia != "")
                       <div class="col m6 offset-m3">
-                        <img class="materialboxed" style="width: 100%; height:240px;" src="{{URL::asset($ficha->multimedia)}}">
+                        <img class="materialboxed" style="width: 100%; height:auto;" src="{{URL::asset($ficha->multimedia)}}">
                       </div>
                       @elseif($ficha->video != "")
-                        <iframe width="480" height="270" src="{{$ficha->video}}" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="620" height="360" src="{{$ficha->video}}" frameborder="0" allowfullscreen></iframe>
                       @else
                         <div class="col m6 offset-m3">
                           <img class="materialboxed" style="width: 100%; height:240px;" src="/images/no_multimedia.jpg" class="center-align">
