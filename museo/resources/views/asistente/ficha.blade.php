@@ -6,15 +6,15 @@
     <link type="text/css" rel="stylesheet" href="{{URL::asset('css/ghpages-materialize.css')}}"  media="screen,projection"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="{{URL::asset('css/prism.css')}}" rel="stylesheet" />
 
-    <script type="text/javascript" src="{{URL::asset('js/init.js')}}"></script>
-
-    <script type="text/javascript" src="{{URL::asset('js/jquery-3.2.1.min.js')}}"></script>
-    <script type="text/javascript" src="{{URL::asset('js/jquery.timeago.min.js')}}"></script>
-    <script type="text/javascript" src="{{URL::asset('js/prism.js')}}"></script>
-    <script type="text/javascript" src="{{URL::asset('bin/materialize.js')}}"></script>
     <style media="screen">
+    html,
+    body{
+      width:100%;
+    	height:100%;
+    	margin:0;
+    	padding:0;
+    }
 
     #all{
     	width:100%;
@@ -66,7 +66,7 @@
 
     .portfolio{
         width:100%;
-        max-width:500px;
+        max-width:1000px;
         position:absolute;
         right:0;
         top:0;
@@ -78,8 +78,10 @@
     	-moz-box-shadow:-2px 0 3px rgba(0,0,0,0.3);
     	box-shadow:-2px 0 3px rgba(0,0,0,0.3);
     }
+
+
     .portfolio:nth-child(1) {
-    	left: 15px;
+    	left: 10px;
     }
     .portfolio:nth-child(1):hover {
     	-webkit-transform: rotate(-2deg);
@@ -299,16 +301,7 @@
     <div id="all">
       <div id="allcontent">
           <div id="maincontent">
-    	        <div class="portfolio">
-    	            <img src="http://www.claudiogomboli.com/lab/gallery/imgs/ecomm.jpg" alt="Portfolio img"><br>
-    	            <span class="txt">eCommerce . iOS Icon.</span>
-    	            <div class="ombra"></div>
-    	        </div>
-    	        <div class="portfolio">
-    	            <img src="http://www.claudiogomboli.com/lab/gallery/imgs/speaker.jpg" alt="Portfolio img"><br>
-    	            <span class="txt">Speaker . iOS Icon.</span>
-    	            <div class="ombra"></div>
-    	        </div>
+    	        
     	        <div class="portfolio">
     	            <img src="http://www.claudiogomboli.com/lab/gallery/imgs/graph01.jpg" alt="Portfolio img"><br>
     	            <span class="txt">Poster . Laperquisa Cinema . <a href="http://cargocollective.com/gomboli/Laperquisa-Cinema-Screening-Posters" target="_blank" title="see more">see more</a>.</span>
@@ -332,6 +325,7 @@
 
 
   </body>
+
   <script type="text/javascript">
   $('.portfolio').each(function(index)
   {
@@ -382,9 +376,5 @@
       $(this).addClass("activenav");
   });
   </script>
-  <script type="text/javascript">
-  $(document).ready(function(){
-    $('.slider').slider();
-  });
-  </script>
+
 </html>
