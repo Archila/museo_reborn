@@ -6,15 +6,17 @@
     <link type="text/css" rel="stylesheet" href="{{URL::asset('css/ghpages-materialize.css')}}"  media="screen,projection"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{URL::asset('css/prism.css')}}" rel="stylesheet" />
+
+    <script type="text/javascript" src="{{URL::asset('js/init.js')}}"></script>
+
+    <script type="text/javascript" src="{{URL::asset('js/jquery-3.2.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/jquery.timeago.min.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/prism.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('bin/materialize.js')}}"></script>
 
     <style media="screen">
-    html,
-    body{
-      width:100%;
-    	height:100%;
-    	margin:0;
-    	padding:0;
-    }
+
 
     #all{
     	width:100%;
@@ -27,11 +29,9 @@
     body{
     	font-family: Helvetica, Arial, sans-serif;
     	font-size:12pt;
-    	background:#444;
+    	background: white;
     	color:#352e2a;
-    	background: url('http://www.claudiogomboli.com/lab/gallery/imgs/background.jpg');
-        background-size: cover;
-        background-position: center center;
+
     }
 
     a:link, a:visited {
@@ -56,7 +56,7 @@
     #allcontent{
     	margin:60px auto 0 auto;
         width:100%;
-        max-width:1140px;
+        max-width:800px;
         height:700px;
         position:relative;
     	-webkit-animation: comein 1.5s ease-in-out;
@@ -66,7 +66,7 @@
 
     .portfolio{
         width:100%;
-        max-width:1000px;
+        max-width:600px;
         position:absolute;
         right:0;
         top:0;
@@ -81,7 +81,7 @@
 
 
     .portfolio:nth-child(1) {
-    	left: 10px;
+    	left: 5px;
     }
     .portfolio:nth-child(1):hover {
     	-webkit-transform: rotate(-2deg);
@@ -91,7 +91,7 @@
     }
 
     .portfolio:nth-child(2) {
-    	left: 10%;
+    	left: 15%;
     }
     .portfolio:nth-child(2):hover {
     	-webkit-transform: rotate(-2deg);
@@ -101,7 +101,7 @@
     }
 
     .portfolio:nth-child(3) {
-    	left: 20%;
+    	left: 30%;
     }
     .portfolio:nth-child(3):hover {
     	-webkit-transform: rotate(-2deg);
@@ -111,7 +111,7 @@
     }
 
     .portfolio:nth-child(4) {
-    	left: 30%;
+    	left: 45%;
     }
     .portfolio:nth-child(4):hover {
     	-webkit-transform: rotate(-2deg);
@@ -131,7 +131,7 @@
     }
 
     .opened {
-    	z-index: 1000;
+    	z-index: 800;
     	left:0 !important;
     	-webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -180,24 +180,23 @@
     }
 
     .txt{
-        display:block;
-    	margin:-2px 0 0 0;
-    	padding-top:20px;
-    	width:98%;
-    	padding-left:2%;
-    	height:33px;
+      display:block;
+    	margin: -2px 0 0 0;
+    	padding-top: 0px;
+    	width:100%;
+    	height:100px;
     	background: #f7f7f7;
     }
 
 
     #navi{
     	position:absolute;
-    	bottom:-40px;
+    	bottom: 20%;
     	left:50%;
-    	margin:0 0 0 -62px;
-    	background:#000;
+
+    	background:blue;
     	opacity:0.8;
-    	color:#fff;
+    	color:black;
     	height:24px;
     	-webkit-border-radius:20px;
         -moz-border-radius:20px;
@@ -226,7 +225,7 @@
     .circle:active,
     .activenav,
     .activenav:hover{
-    	background:#666;
+    	background:cyan;
     	border:1px solid #333;
     }
 
@@ -266,18 +265,6 @@
     }
 
 
-    .footer{
-    	font-size:0.6em;
-    	color:#333;
-    	text-align:center;
-    	width:100%;
-    	height:30px;
-    	position:absolute;
-    	bottom:-100px;
-    	left:0;
-    }
-
-
     /*enter*/
     @-webkit-keyframes comein {
     	0% { opacity: 0; -webkit-transform: translateY(-3000px); }
@@ -298,29 +285,29 @@
 
   </head>
   <body>
-    <div id="all">
-      <div id="allcontent">
-          <div id="maincontent">
-    	        
-    	        <div class="portfolio">
-    	            <img src="http://www.claudiogomboli.com/lab/gallery/imgs/graph01.jpg" alt="Portfolio img"><br>
-    	            <span class="txt">Poster . Laperquisa Cinema . <a href="http://cargocollective.com/gomboli/Laperquisa-Cinema-Screening-Posters" target="_blank" title="see more">see more</a>.</span>
-    	            <div class="ombra"></div>
-    	        </div>
-    	        <div class="portfolio">
-    	            <img src="http://www.claudiogomboli.com/lab/gallery/imgs/web01.jpg" alt="Portfolio img"><br>
-    	            <span class="txt">Alfa Romeo <a href="http://www.alfaromeo.com/carconfigurator/IT/159/index.html" target="_blank" title="Alfa Romeo">Car Configurator</a> . <a href="http://wedoo.it" target="_blank" title="WEDOO">@Wedoo</a>.</span>
-    	            <div class="ombra"></div>
-    	        </div>
-    	        <div class="portfolio">
-    	            <img src="http://www.claudiogomboli.com/lab/gallery/imgs/illu01.jpg" alt="Portfolio img"><br>
-    	            <span class="txt">Mac Book Air . Keynote Illustration</span>
-    	            <div class="ombra"></div>
-    	        </div>
-    	    </div>
-    	    <div id="navi"></div>
-    		<div class="footer"><a href="http://theeggs.biz" alt="home">c.gomboli</a> / <a href="http://lab.theeggs.biz" alt="lab">lab</a></div>
-    	</div>
+    <div class="row">
+      <div id="all" class="col m12 ">
+        <div id="allcontent">
+            <div id="maincontent">
+
+                <div class="portfolio">
+                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/graph01.jpg" alt="Portfolio img"><br>
+                    <span class="txt">Poster . Laperquisa Cinema . <a href="http://cargocollective.com/gomboli/Laperquisa-Cinema-Screening-Posters" target="_blank" title="see more">see more</a>.</span>
+                    <div class="ombra"></div>
+                </div>
+                <div class="portfolio">
+                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/web01.jpg" alt="Portfolio img"><br>
+                    <span class="txt">Alfa Romeo <a href="http://www.alfaromeo.com/carconfigurator/IT/159/index.html" target="_blank" title="Alfa Romeo">Car Configurator</a> . <a href="http://wedoo.it" target="_blank" title="WEDOO">@Wedoo</a>.</span>
+                    <div class="ombra"></div>
+                </div>
+                <div class="portfolio">
+                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/illu01.jpg" alt="Portfolio img"><br>
+                    <span class="txt">Mac Book Air . Keynote Illustration</span>
+
+                </div>
+            </div>
+            <div id="navi"></div>
+      </div>      
     </div>
 
 
