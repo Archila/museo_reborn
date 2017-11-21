@@ -9,7 +9,6 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/ferrocarril', function() { return view('pagina.ferrocarril'); });
     Route::get('/presidentes', function() { return view('pagina.presidentes'); });
     Route::get('/administracion', function() { return view('pagina.equipo'); });
-    Route::get('/contacto', function() { return view('pagina.contacto'); });
     Route::get('/eventos', 'Pagina@eventos');
     Route::get('/libros', 'Pagina@libros');
     Route::get('/busquedalibros', function() { return view('pagina.libros2'); });
