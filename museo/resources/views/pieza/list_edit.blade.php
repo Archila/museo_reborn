@@ -14,7 +14,7 @@
 <div class="card z-depth-3 ">
 <ul class="collection ">
   @foreach ($piezas as $pieza)
-  @if ($pieza->activo ==1)
+  @if ($pieza->activo ==0)
   <li class="collection-item avatar">
     <img src="{{URL::asset($pieza->fotografia)}}" alt="" class="circle">
     <span class="title">{{$pieza->nombre}}</span>
@@ -29,12 +29,11 @@
     </div>
   </li>
   @else
-  <li class="collection-item avatar" style="background-color:#eceff1">
+  <li class="collection-item avatar" style="background-color:#e3f2fd">
     <img src="{{URL::asset($pieza->fotografia)}}" alt="" class="circle">
     <span class="title">{{$pieza->nombre}}</span>
-    <p>Esta pieza no se mostrara en el inventario<p ><i class="material-icons prefix">visibility_off</i><p><br>
+    <p>Esta pieza se visualizara en la página principal</p><i class="material-icons">visibility</i>
 
-    </p>
     <div class="secondary-content " >
       <a class="modal-trigger" href="{{route('FichaInformativa.show',$pieza->id)}}"><span class=" new badge " data-badge-caption="Ver Ficha"></span></a>
       <a class="modal-trigger" href="{{action('AsistenteController@generarQR',$pieza->cod_pieza)}}"><span class=" new badge green" data-badge-caption="Ver QR"></span></a>

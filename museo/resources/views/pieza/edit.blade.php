@@ -19,17 +19,17 @@
                         <div class="row"> <!-- Tofo el formulario -->
 
                           <div class="row">
-                          <p Heading h6>Estado de la pieza  <p>
+                          <p Heading h6>Visualizar en página principal<p>
                           <div class="switch modal-trigger"> <!-- ACTIVA / INACTIVA -->
                             <label>
-                              Inactiva
+                              No
                               @if (($p->activo) == 1)
                                 <input type="checkbox" name="si" checked>
                                 @else
                                 <input type="checkbox" name="si">
                               @endif
                               <span class="lever"></span>
-                              Activa
+                              Si
                             </label>
                           </div>
                           <br>
