@@ -6,7 +6,7 @@
 
 	<div class="row ">
 
-		<iframe id="js__scroll-to-section" src="/ficha/{{$pieza->cod_pieza}}" style="width:120%; height:720px; border:none;" scrolling="no">
+		<iframe id="js__scroll-to-section" src="/ficha/{{$pieza->cod_pieza}}" style="width:120%; height:780px; border:none;" scrolling="no">
 		  <p>Your browser does not support iframes.</p>
 		</iframe>
 	</div>
