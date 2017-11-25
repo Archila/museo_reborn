@@ -32,7 +32,7 @@
   <li class="collection-item avatar" style="background-color:#e3f2fd">
     <img src="{{URL::asset($pieza->fotografia)}}" alt="" class="circle">
     <span class="title">{{$pieza->nombre}}</span>
-    <p>Esta pieza se visualizara en la página principal</p><i class="material-icons">visibility</i>
+    <p>Esta pieza se visualizará en la página principal</p><i class="material-icons">visibility</i>
 
     <div class="secondary-content " >
       <a class="modal-trigger" href="{{route('FichaInformativa.show',$pieza->id)}}"><span class=" new badge " data-badge-caption="Ver Ficha"></span></a>
