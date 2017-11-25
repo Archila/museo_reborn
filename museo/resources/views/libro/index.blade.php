@@ -24,7 +24,7 @@ background-size: 100% 100%;
 <nav>
 <div class="nav-wrapper teal darken-3">
   <div class="input-field">
-    <input id="buscar" type="search" placeholder="Nombre de libro, autor, categoria" onclick="ocular()" >
+    <input id="buscar" type="search" placeholder="Nombre de libro, autor, código o categoría" onclick="ocular()" >
     <label class="label-icon" for="search"><i class="material-icons prefix">search</i></label>
     <i class="material-icons">close</i>
   </div>
@@ -42,7 +42,7 @@ background-size: 100% 100%;
 </div>
 
 </div>
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script>
 $(document).ready(function(){
 $value=$(this).val();

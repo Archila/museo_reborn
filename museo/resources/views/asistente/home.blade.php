@@ -6,7 +6,7 @@
 
     <link type="text/css" rel="stylesheet" href="{{URL::asset('css/ghpages-materialize.css')}}"  media="screen,projection"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{URL::asset('css/prism.css')}}" rel="stylesheet" />
 
     <script type="text/javascript" src="{{URL::asset('js/init.js')}}"></script>

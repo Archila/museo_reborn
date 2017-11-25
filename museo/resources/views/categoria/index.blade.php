@@ -20,6 +20,7 @@
             <tr>
               <th>Código</th>
               <th>Nombre categoría</th>
+              <th>Prefijo</th>
               <th></th>
             </tr>
           </thead>
@@ -29,26 +30,12 @@
               <tr>
                 <td>{{$r->id}}</td>
                 <td>{{$r->nombre}}</td>
+                <td>{{$r->prefijo}}</td>
                 <td class="right">
-                <a class="tooltipped  btn-floating btn-small waves-effect waves-light light-blue darken-4 modal-trigger" data-position="bottom" href="{{route('Categoria.edit',$r->id)}}" data-delay="50" data-tooltip="Editar categoria"><i class="material-icons">edit</i></a>
-                <a class="tooltipped  btn-floating btn-small waves-effect waves-light red modal-trigger" data-position="bottom" href="#modal{{$r->id}}" data-delay="50" data-tooltip="Eliminar categoria"><i class="material-icons">delete</i></a>
-                </td>
+                <a class="tooltipped  btn-floating btn-small waves-effect waves-light light-blue darken-1 modal-trigger" data-position="bottom" href="{{route('Categoria.edit',$r->id)}}" data-delay="50" data-tooltip="Editar categoria"><i class="material-icons">edit</i></a>
+
               </tr>
-              <form action="{{route('Categoria.destroy',$r->id)}}" method="POST">
-                {{csrf_field()}}
-                  <input type="hidden" name="_method" value="DELETE">
-                    <div id="modal{{$r->id}}" class="modal">
-                      <div class="modal-content">
-                        <h4 class="center-align">Desea eliminar la categoría ?</h4>
-                        <center> <i class="center-align medium material-icons">error_outline</i></center>
-                        <p class="center-align">Nota: los cambios no pueden deshacerse </p>
-                      </div>
-                      <div class="modal-footer">
-                        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancelar</a>
-                        <button class="btn red" type="submit" name="action">Eliminar</button>
-                      </div>
-                    </div>
-                </form>
+
             @endforeach
           </tbody>
         </table>
@@ -68,10 +55,15 @@
               </div>
 
               <div class="row"> <!-- INFORMACION GENERAL PIEZA -->
-                <div class="input-field col s12 center">
+                <div class="input-field col l6 s12 center">
                   <i class="material-icons prefix">mode_edit</i>
                   <input id="" name="categoria" type="text" class="required">
                   <label for="uname">Nombre de categoría</label>
+                </div>
+                <div class="input-field l6 col s12 center">
+                  <i class="material-icons prefix">sort_by_alpha</i>
+                  <input id="" name="prefijo" type="text" class="required">
+                  <label for="prefijo">Prefijo </label>
                 </div>
                 <div class="input-field col s12 center">
                   <button class="btn waves-effect waves-light  light-blue darken-4 center" type="submit" name="action">

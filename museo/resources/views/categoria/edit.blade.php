@@ -24,6 +24,11 @@
                      <input class="required" id="" name="nombrecategoria" type="text" value="{{$categoria->nombre}}">
                      <label for="uname">Nombre de la categoría</label>
                    </div>
+                   <div class="input-field col s7 offset-s2">
+                     <i class="material-icons prefix">mode_edit</i>
+                     <input class="required" id="pre" name="prefijo" type="text" value="{{$categoria->prefijo}}">
+                     <label for="prefijo">Prefijo de la categoría</label>
+                   </div>
                    <div class="input-field col s12">
                      <button class="btn light-blue waves-effect waves-light  light-blue darken-4 center" type="submit" name="action">
                       Actualizar

@@ -15,6 +15,7 @@ class CreateLibrosTable extends Migration
     {
         Schema::create('libros', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('codigo',25);
             $table->string('nombre');
             $table->string('anio');
             $table->string('edicion');
@@ -31,7 +32,7 @@ class CreateLibrosTable extends Migration
 
             $table->integer('idempleado')->unsigned();
             $table->foreign('idempleado')->references('id')->on('empleados');
-            
+
             $table->timestamps();
         });
     }

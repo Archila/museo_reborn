@@ -5,7 +5,7 @@
     <title>Ficha</title>
     <link type="text/css" rel="stylesheet" href="{{URL::asset('css/ghpages-materialize.css')}}"  media="screen,projection"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{URL::asset('css/prism.css')}}" rel="stylesheet" />
 
     <script type="text/javascript" src="{{URL::asset('js/init.js')}}"></script>
@@ -277,22 +277,22 @@
 
                 <div class="portfolio">
                     <img src="{{URL::asset($pieza->fotografia)}}" alt="Portfolio img" style="" ><br>
-                    <div class="txt">Poster . Laperquisa Cinema . <a href="http://cargocollective.com/gomboli/Laperquisa-Cinema-Screening-Posters" target="_blank" title="see more">see more</a>.</div>
+                    <div class="txt">Poster . Laperquisa Cinema . <a href="https://cargocollective.com/gomboli/Laperquisa-Cinema-Screening-Posters" target="_blank" title="see more">see more</a>.</div>
                     <div class="ombra"></div>
                 </div>
                 <div class="portfolio">
-                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/web01.jpg" alt="Portfolio img"  ><br>
-                    <span class="txt">Alfa Romeo <a href="http://www.alfaromeo.com/carconfigurator/IT/159/index.html" target="_blank" title="Alfa Romeo">Car Configurator</a> . <a href="http://wedoo.it" target="_blank" title="WEDOO">@Wedoo</a>.</span>
+                    <img src="https://www.claudiogomboli.com/lab/gallery/imgs/web01.jpg" alt="Portfolio img"  ><br>
+                    <span class="txt">Alfa Romeo <a href="https://www.alfaromeo.com/carconfigurator/IT/159/index.html" target="_blank" title="Alfa Romeo">Car Configurator</a> . <a href="https://wedoo.it" target="_blank" title="WEDOO">@Wedoo</a>.</span>
                     <div class="ombra"></div>
                 </div>
                 <div class="portfolio">
-                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/illu01.jpg" alt="Portfolio img"  ><br>
+                    <img src="https://www.claudiogomboli.com/lab/gallery/imgs/illu01.jpg" alt="Portfolio img"  ><br>
                     <span class="txt">Mac Book Air . Keynote Illustration</span>
                     <div class="ombra"></div>
                 </div>
                 <div class="portfolio">
-                    <img src="http://www.claudiogomboli.com/lab/gallery/imgs/web01.jpg" alt="Portfolio img"><br>
-                    <span class="txt">Alfa Romeo <a href="http://www.alfaromeo.com/carconfigurator/IT/159/index.html" target="_blank" title="Alfa Romeo">Car Configurator</a> . <a href="http://wedoo.it" target="_blank" title="WEDOO">@Wedoo</a>.</span>
+                    <img src="https://www.claudiogomboli.com/lab/gallery/imgs/web01.jpg" alt="Portfolio img"><br>
+                    <span class="txt">Alfa Romeo <a href="https://www.alfaromeo.com/carconfigurator/IT/159/index.html" target="_blank" title="Alfa Romeo">Car Configurator</a> . <a href="https://wedoo.it" target="_blank" title="WEDOO">@Wedoo</a>.</span>
                     <div class="ombra"></div>
                 </div>
             </div>

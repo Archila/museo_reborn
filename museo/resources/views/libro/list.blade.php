@@ -28,7 +28,7 @@
           <tbody>
             @foreach ($libros as $libro)
               <tr>
-                <td>{{$libro->id}}</td>
+                <td>{{$libro->codigo}}</td>
                 <td>{{$libro->nombre}}</td>
                 <td>{{$libro->aut}}</td>
                 <td>{{$libro->edit}}</td>

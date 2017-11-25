@@ -9,6 +9,6 @@ class libro extends Model
     protected $table="libros";
     protected $primarykey="id";
     protected $fillable=[
-      'nombre','anio','edicion','paginas','idautor','ideditorial','idcategoria','idempleado',
+      'codigo','nombre','anio','edicion','paginas','idautor','ideditorial','idcategoria','idempleado',
     ];
 }

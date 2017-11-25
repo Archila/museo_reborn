@@ -36,7 +36,7 @@
           title($printer, "Total Q.".$total."\n \n");
           //QR pequeño en el centro
 
-          $printer -> qrCode("http://museodehistoriaxela.com/"); //Iprmir el codigo QR
+          $printer -> qrCode("https://museodehistoriaxela.com/"); //Iprmir el codigo QR
           $printer -> text("-Visita nuestra página-\n");
           $printer -> setJustification();
           $printer -> feed();

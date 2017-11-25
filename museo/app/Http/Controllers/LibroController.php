@@ -1,5 +1,7 @@
 <?php
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
+
 use App\libro;
 use App\autore;
 use App\categoria;
@@ -9,7 +11,6 @@ use Illuminate\Support\Facades\Auth;
 
 class LibroController extends Controller
 {
-
 
     public function index()
     {
@@ -38,7 +39,6 @@ class LibroController extends Controller
     {
       $user = Auth::user();
       $empleado=$user->empleado;
-
       $libro = new libro;
       $libro->nombre = $request->nombrelibro;
       $libro->idautor = $request->autor;
@@ -48,6 +48,19 @@ class LibroController extends Controller
       $libro->ideditorial = $request->editorial;
       $libro->idcategoria = $request->categoria;
       $libro->idempleado = $empleado;
+      $libro->save();
+      $categoria = categoria::findOrFail($libro->idcategoria);
+      $cont = DB::table('libros')->where('idcategoria',$categoria->id)->count();
+      if ($cont<10) {
+        $libro->codigo = $categoria->prefijo .'00'. $cont;
+      }
+      elseif ($cont<100) {
+        $libro->codigo = $categoria->prefijo .'0'. $cont;
+      }
+      else {
+        $libro->codigo = $categoria->prefijo . $cont;
+      }
+
       $libro->save();
       alert()-> success('Se ingeso correctamente el libro','Libro');
       return back();
@@ -73,6 +86,7 @@ class LibroController extends Controller
                   'categorias.id as idcat','categorias.nombre as cat')
           ->where('libros.id', '=', $id)
           ->get();
+          
           $editoriales=editoriale::all();
           $autores=autore::all();
           $categorias=categoria::all();
@@ -113,8 +127,10 @@ class LibroController extends Controller
           ->join('categorias', 'libros.idcategoria', '=', 'categorias.id')
           ->select('libros.*', 'autores.nombre as aut','autores.id as idaut',
                   'editoriales.id as idedit','editoriales.nombre as edit',
-                  'categorias.id as idcat','categorias.nombre as cat')
+                  'categorias.id as idcat','categorias.nombre as cat',
+                  'libros.codigo as cod')
                   ->where('libros.nombre','LIKE','%'.$request->search.'%')
+                  ->orWhere('libros.codigo','LIKE','%'.$request->search.'%')
                   ->orWhere('categorias.nombre','LIKE','%'.$request->search.'%')
                   ->orWhere('autores.nombre','LIKE','%'.$request->search.'%')
                    ->get();
@@ -135,6 +151,7 @@ class LibroController extends Controller
                   <p class="light left">Páginas:</p><p class="medium">'.$donantes->paginas.'</p>
                   <p class="light left">Editorial:</p> <p class="medium">'.$donantes->edit.'</p>
                   <p class="light left ">Categoria: </p> <p class="medium">'.$donantes->cat.'</p>
+                  <p class="light left ">Código: </p> <p class="medium">'.$donantes->cod.'</p>
                 </div>
               </div>
            </div>';
@@ -156,8 +173,10 @@ class LibroController extends Controller
           ->join('categorias', 'libros.idcategoria', '=', 'categorias.id')
           ->select('libros.*', 'autores.nombre as aut','autores.id as idaut',
                   'editoriales.id as idedit','editoriales.nombre as edit',
-                  'categorias.id as idcat','categorias.nombre as cat')
+                  'categorias.id as idcat','categorias.nombre as cat',
+                  'libros.codigo as cod')
                   ->where('libros.nombre','LIKE','%'.$request->search.'%')
+                  ->orWhere('libros.codigo','LIKE','%'.$request->search.'%')
                   ->orWhere('categorias.nombre','LIKE','%'.$request->search.'%')
                   ->orWhere('autores.nombre','LIKE','%'.$request->search.'%')
                    ->get();
@@ -178,6 +197,7 @@ class LibroController extends Controller
                   <p class="light left">Páginas:</p><p class="medium">'.$libros->paginas.'</p>
                   <p class="light left">Editorial:</p> <p class="medium">'.$libros->edit.'</p>
                   <p class="light left ">Categoria: </p> <p class="medium">'.$libros->cat.'</p>
+                  <p class="light left ">Código: </p> <p class="medium">'.$libros->cod.'</p>
                 </div>
               </div>
            </div>';
@@ -186,6 +206,29 @@ class LibroController extends Controller
          return Response($output);
 
        }
+      }
+    }
+
+    private function ActualizarCodigos()
+    {
+      $categorias = DB::table('categorias')->get();
+
+      foreach ($categorias as $categoria) {
+        $cont =0;
+        $libros = DB::table('libros')->where('idcategoria',$categoria->id)->get();
+        foreach ($libros as $libro) {
+          $id = $libro->id;
+          $cont++;
+          if ($cont<10) {
+            $libro = DB::table('libros')->where('id',$id)->update(['codigo' => $categoria->prefijo. '00' . $cont]);
+          }
+          elseif ($cont<100) {
+            $libro = DB::table('libros')->where('id',$id)->update(['codigo' => $categoria->prefijo. '0' . $cont]);
+          }
+          else {
+            $libro = DB::table('libros')->where('id',$id)->update(['codigo' => $categoria->prefijo. $cont]);
+          }
+        }
       }
     }
 }

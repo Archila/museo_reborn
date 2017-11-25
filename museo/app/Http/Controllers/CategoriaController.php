@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\categoria;
 use App\libro;
 use Illuminate\Http\Request;
@@ -28,6 +28,7 @@ class CategoriaController extends Controller
     {
       $categoria = new categoria;
       $categoria->nombre = $request->categoria;
+      $categoria->prefijo = $request->prefijo;
       $categoria->save();
       alert()-> success('Se ingeso correctamente la nueva categoria','Categoria');
       return back();
@@ -59,7 +60,23 @@ class CategoriaController extends Controller
     {
       $categoria = categoria::find($id);
       $categoria->nombre =$request->nombrecategoria;
+      $categoria->prefijo = $request->prefijo;
       $categoria->save();
+      $libros = DB::table('libros')->where('idcategoria',$categoria->id)->get();
+      $cont =0;
+      foreach ($libros as $libro) {
+        $id = $libro->id;
+        $cont++;
+        if ($cont<10) {
+          $libro = DB::table('libros')->where('id',$id)->update(['codigo' => $categoria->prefijo. '00' . $cont]);
+        }
+        elseif ($cont<100) {
+          $libro = DB::table('libros')->where('id',$id)->update(['codigo' => $categoria->prefijo. '0' . $cont]);
+        }
+        else {
+          $libro = DB::table('libros')->where('id',$id)->update(['codigo' => $categoria->prefijo. $cont]);
+        }
+      }
       alert()-> success('Se actualizaron los campos','Categorias');
       return redirect('Categoria/');
     }

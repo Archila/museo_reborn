@@ -5,7 +5,7 @@
     <title>Ficha</title>
     <link type="text/css" rel="stylesheet" href="{{URL::asset('css/ghpages-materialize.css')}}"  media="screen,projection"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{URL::asset('css/prism.css')}}" rel="stylesheet" />
 
     <script type="text/javascript" src="{{URL::asset('js/init.js')}}"></script>
@@ -210,7 +210,7 @@
       </div>
 
   </body>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script type="text/javascript">
   $('.slide a').click(function () {
     $('.slide.active').removeClass('active');
