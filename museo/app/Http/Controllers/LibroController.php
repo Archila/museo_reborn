@@ -127,8 +127,8 @@ class LibroController extends Controller
           ->join('categorias', 'libros.idcategoria', '=', 'categorias.id')
           ->select('libros.*', 'autores.nombre as aut','autores.id as idaut',
                   'editoriales.id as idedit','editoriales.nombre as edit',
-                  'categorias.id as idcat','categorias.nombre as cat',
-                  'libros.codigo as cod')
+                  'categorias.id as idcat','categorias.nombre as cat')
+                  //'categorias.id as idcat','categorias.nombre as cat','libros.codigo as cod')
                   ->where('libros.nombre','LIKE','%'.$request->search.'%')
                 //  ->orWhere('libros.codigo','LIKE','%'.$request->search.'%')
                   ->orWhere('categorias.nombre','LIKE','%'.$request->search.'%')
