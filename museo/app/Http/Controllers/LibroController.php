@@ -86,7 +86,7 @@ class LibroController extends Controller
                   'categorias.id as idcat','categorias.nombre as cat')
           ->where('libros.id', '=', $id)
           ->get();
-          
+
           $editoriales=editoriale::all();
           $autores=autore::all();
           $categorias=categoria::all();
@@ -176,7 +176,7 @@ class LibroController extends Controller
                   'categorias.id as idcat','categorias.nombre as cat',
                   'libros.codigo as cod')
                   ->where('libros.nombre','LIKE','%'.$request->search.'%')
-                  ->orWhere('libros.codigo','LIKE','%'.$request->search.'%')
+                  //->orWhere('libros.codigo','LIKE','%'.$request->search.'%')
                   ->orWhere('categorias.nombre','LIKE','%'.$request->search.'%')
                   ->orWhere('autores.nombre','LIKE','%'.$request->search.'%')
                    ->get();
