@@ -12,7 +12,7 @@ $filename = $dir.$cod_pieza.'.png';
 $tamanio =14;
 $level ='H';
 $framsize =1;
-$contenido = 'https://www.museodehistoriaxela.com/pieza/'.$cod_pieza;
+$contenido = 'https://www.museodehistoriaxela.com/ficha/'.$cod_pieza;
 
 if(!file_exists($filename)){
 		qrcode::png($contenido,$filename,$level,$tamanio,$framsize);
