@@ -9,7 +9,7 @@ if(!file_exists($dir)){
 		mkdir($dir);
 }
 $filename = $dir.$cod_pieza.'.png';
-$tamanio =14;
+$tamanio =10;
 $level ='H';
 $framsize =1;
 $contenido = 'https://www.museodehistoriaxela.com/ficha/'.$cod_pieza;
