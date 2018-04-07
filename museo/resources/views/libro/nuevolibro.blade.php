@@ -121,15 +121,20 @@
           <div class="modal-content">
             <div class="row">
               <div class="center">
-                <h5 class="light">Nueva categoria de libros</h5>
+                <h5 class="light">Nueva categoría de libros</h5>
               </div>
             </div>
 
             <div class="row"> <!-- INFORMACION GENERAL PIEZA -->
-              <div class="input-field col s12">
+              <div class="input-field col s12 l8">
                 <i class="material-icons prefix">mode_edit</i>
                 <input id="" name="categoria" type="text" class="required">
-                <label for="uname">Nombre de categoria</label>
+                <label for="uname">Nombre de categoría</label>
+              </div>
+              <div class="input-field col s12 l4">
+                <i class="material-icons prefix">mode_edit</i>
+                <input id="prefijo" name="prefijo" type="text" class="required tooltipped" data-position="bottom" data-tooltip="Redomendado: 3 letras mayúsculas" >
+                <label for="prefijo">Prefijo de la categoría</label>
               </div>
               <div class="input-field col s12 center">
                 <button class="btn waves-effect waves-light  light-blue darken-4 center" type="submit" name="action">
