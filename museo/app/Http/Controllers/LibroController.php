@@ -141,18 +141,22 @@ class LibroController extends Controller
           {
 
             $output.='
-            <div class="col s6 m4 l2" >
+            <div class="col s6 m4 l3" style="margin: 5px; padding:1px;">
               <div class="card bgimg z-depth-5">
                 <div class="card-content white-text">
-                  <p class="card-title center small" style="max-height: 3em; overflow:auto">'.$donantes->nombre.'</p>
-                  <p class="small center">'.$donantes->aut.'</p>
+                  <div class="" style="height:125px;">
+                  <p class="card-title center " style="max-height: 5em; overflow:auto; font-size: 17px; ">'.$libros->nombre.'</p>
+                  <p class="medium center">'.$libros->aut.'</p>
+                  </div>
                   <div class="divider"></div>
-                  <p class="light left">Edicion: </p><p class="medium">'.$donantes->edicion.'</p>
-                  <p class="light left">Año: </p><p class="medium">'.$donantes->anio.'</p>
-                  <p class="light left">Páginas:</p><p class="medium">'.$donantes->paginas.'</p>
-                  <p class="light left">Editorial:</p> <p class="medium">'.$donantes->edit.'</p>
-                  <p class="light left ">Categoria: </p> <p class="medium">'.$donantes->cat.'</p>
-                  <p class="light left ">Códi: </p> <p class="medium">'.$donantes->cod.'</p>
+                  <div class="" style="height:220px;">
+                  <p class="light left">Edicion: </p><p class="medium"> '.$libros->edicion.'</p>
+                  <p class="light left">Año: </p><p class="medium"> '.$libros->anio.'</p>
+                  <p class="light left">Páginas: </p><p class="medium"> '.$libros->paginas.'</p>
+                  <p class="light left">Editorial: </p> <p class="medium"> '.$libros->edit.'</p>
+                  <p class="light left ">Categoria: </p> <p class="medium"> '.$libros->cat.'</p>
+                  <p class="light left ">Código: </p> <p class="medium"> '.$libros->cod.'</p>
+                  </div>
                 </div>
               </div>
            </div>';
@@ -194,11 +198,8 @@ class LibroController extends Controller
                   <p class="card-title center " style="max-height: 5em; overflow:auto; font-size: 17px; ">'.$libros->nombre.'</p>
                   <p class="medium center">'.$libros->aut.'</p>
                   </div>
-
                   <div class="divider"></div>
-
                   <div class="" style="height:220px;">
-
                   <p class="light left">Edicion: </p><p class="medium"> '.$libros->edicion.'</p>
                   <p class="light left">Año: </p><p class="medium"> '.$libros->anio.'</p>
                   <p class="light left">Páginas: </p><p class="medium"> '.$libros->paginas.'</p>
