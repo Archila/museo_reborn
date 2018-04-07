@@ -82,7 +82,7 @@ class CategoriaController extends Controller
     }
 
     public function destroy($id)
-    {
+    {      
       $categoria = categoria::find($id);
       $categoria->delete();
       alert()-> success('Eliminada correctamente','Categoria');
