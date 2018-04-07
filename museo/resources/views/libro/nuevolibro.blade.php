@@ -72,7 +72,7 @@
 
               <div class="input-field col s5">
                   <i class="material-icons prefix">bookmark_border</i>
-                  <select name="editorial" class=" required_option">
+                  <select name="editorial" class="required_option">
                     <option value="" disabled selected>Eliga la editorial</option>
                       @foreach($editoriales as $editorial)
                         <option value="{{$editorial->id}}">{{$editorial->nombre}}</option>
@@ -88,7 +88,7 @@
 
               <div class="input-field col s5">
                 <i class="material-icons prefix">library_books</i>
-                  <select name="categoria" class=" required_option">
+                  <select name="categoria" class=" required_option" id="mySelect" onchange="myFunction()">
                     <option value="" disabled selected>Eliga la categoría</option>
                       @foreach($categorias as $categoria)
                         <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
@@ -99,11 +99,15 @@
               <div class="input-field col s1">
                 <a class="tooltipped  btn-floating btn-small  blue modal-trigger" data-position="bottom" href="#modalcategoria" data-delay="50" data-tooltip="Agregar categoria"><i class="material-icons">add</i></a>
               </div>
+              <!-- Seccion donde se muestra el nuevo numero del libro -->
+              <div class="input-field col s5">
+                <span id="numero"></span>
+              </div>
               <div class="input-field col s6 center">
-              <button class="btn waves-effect waves-light  light-blue darken-4" type="submit" name="action">
-                Agregar
-              </button>
-            </div>
+                <button class="btn waves-effect waves-light  light-blue darken-4" type="submit" name="action">
+                  Agregar
+                </button>
+              </div>
             </div>
 
 
@@ -213,6 +217,19 @@
   </form>
 </div>
 <script src="{{URL::asset('js/sweetalert.min.js')}}"></script>
+<script>
+  function myFunction() {
+    $value = document.getElementById("mySelect").value;
+    $.ajax({
+      type : 'get',
+       url : '{{URL::to('buscarCategoria')}}',
+       data : {'search':$value},
+       success:function(data){
+         document.getElementById("numero").innerHTML = data;
+       }
+     });
+  }
+</script>
 @include('sweet::alert')
 @endsection
 @section('sections')

@@ -13,6 +13,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/libros', 'Pagina@libros');
     Route::get('/busquedalibros', function() { return view('pagina.libros2'); });
     Route::get('/buscarLibro','LibroController@search');
+    Route::get('/buscarCategoria','LibroController@searchCategoria');
     Route::get('/buscarLibro2','LibroController@searchsystem');
 
 });

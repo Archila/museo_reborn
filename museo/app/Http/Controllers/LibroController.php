@@ -162,6 +162,32 @@ class LibroController extends Controller
        }
       }
     }
+    public function searchCategoria(Request $request)
+    {
+      if ($request->ajax())
+      {
+       $output="";
+       $cont = DB::table('libros')->where('idcategoria',$request->search)->count();
+       $cont = $cont+1;
+       $sql = DB::table('categorias')->where('id',$request->search)
+                                         ->select('categorias.prefijo')
+                                         ->get();
+      $prefijo = 0;
+      try{
+        foreach ($sql as $tp)
+        {$prefijo= $tp->prefijo;}
+      }catch (\Exception $e)
+      {$prefijo="ERROR";}
+        if ($cont<10) {
+          $output.='<h4>Código: '. $prefijo.'00'.$cont.'</h4>';
+        }elseif($cont<100){
+          $output.='<h4>Código: '. $prefijo.'0'.$cont.'</h4>';
+        }else{
+          $output.='<h4>Código: '. $prefijo .$cont.'</h4>';
+        }
+         return Response($output);
+      }
+    }
 
     public function searchsystem(Request $request)
     {
