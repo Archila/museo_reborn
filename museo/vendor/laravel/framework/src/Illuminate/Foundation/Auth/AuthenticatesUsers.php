@@ -4,7 +4,7 @@ namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Validation\ValidationException;
 
 trait AuthenticatesUsers
 {
@@ -24,7 +24,7 @@ trait AuthenticatesUsers
      * Handle a login request to the application.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Http\JsonResponse
      */
     public function login(Request $request)
     {
@@ -74,7 +74,7 @@ trait AuthenticatesUsers
     protected function attemptLogin(Request $request)
     {
         return $this->guard()->attempt(
-            $this->credentials($request), $request->has('remember')
+            $this->credentials($request), $request->filled('remember')
         );
     }
 
@@ -121,17 +121,15 @@ trait AuthenticatesUsers
      * Get the failed login response instance.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws ValidationException
      */
     protected function sendFailedLoginResponse(Request $request)
     {
-        $errors = [$this->username() => trans('auth.failed')];
-
-        if ($request->expectsJson()) {
-            return response()->json($errors, 422);
-        }
-        Session::flash('flash_message', 'Credenciales incorrectos');
-        return redirect()->back();
+        throw ValidationException::withMessages([
+            $this->username() => [trans('auth.failed')],
+        ]);
     }
 
     /**
@@ -141,7 +139,7 @@ trait AuthenticatesUsers
      */
     public function username()
     {
-        return 'name';
+        return 'email';
     }
 
     /**

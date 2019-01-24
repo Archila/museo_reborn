@@ -51,16 +51,13 @@ class UriSigner
         }
 
         $uri = $this->buildUrl($url, $params);
+        $params[$this->parameter] = $this->computeHash($uri);
 
-        return $uri.(false === strpos($uri, '?') ? '?' : '&').$this->parameter.'='.$this->computeHash($uri);
+        return $this->buildUrl($url, $params);
     }
 
     /**
      * Checks that a URI contains the correct hash.
-     *
-     * The query string parameter must be the last one
-     * (as it is generated that way by the sign() method, it should
-     * never be a problem).
      *
      * @param string $uri A signed URI
      *
@@ -79,7 +76,7 @@ class UriSigner
             return false;
         }
 
-        $hash = urlencode($params[$this->parameter]);
+        $hash = $params[$this->parameter];
         unset($params[$this->parameter]);
 
         return $this->computeHash($this->buildUrl($url, $params)) === $hash;
@@ -87,7 +84,7 @@ class UriSigner
 
     private function computeHash($uri)
     {
-        return urlencode(base64_encode(hash_hmac('sha256', $uri, $this->secret, true)));
+        return base64_encode(hash_hmac('sha256', $uri, $this->secret, true));
     }
 
     private function buildUrl(array $url, array $params = array())
